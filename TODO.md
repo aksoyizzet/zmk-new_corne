@@ -1,0 +1,17 @@
+- punctuation
+- behavior
+  - mods
+  - tapdance
+    - punctuation
+    - accented Turkish, italian, french, spanish letters 
+  - layer movement bw mo & to
+- macro (or combo)
+  - strings
+    - mail etc commonly used shit
+    - punctuation
+      - ", " 
+      - ". " 
+      - ":" 
+
+- display
+- later, russian layer
