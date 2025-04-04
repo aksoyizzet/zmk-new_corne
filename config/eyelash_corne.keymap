@@ -105,7 +105,7 @@
         alpha_layer {
             display-name = "ABC";
             bindings = <
-&kp ESC         &kp X        &kp Y        &kp U         &kp Z        &kp FSLH                            &kp UP                &kp SQT     &kp H  &kp D     &kp G  &kp P  &kp J
+&kp ESC         &kp X         &kp Y         &kp U          &kp Z         &kp FSLH                            &kp UP                &kp SQT      &kp H         &kp D         &kp G         &kp P         &kp J
 &td_caps_print  &hml LCTRL A  &hml LSHFT E  &hml LALT I    &hml LGUI O   &kp COMMA                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp DOT      &hmr RGUI R   &hmr RALT S   &hmr RSHFT T  &hmr RCTRL N  &kp Q
 &kp LGUI        &hml LGUI W   &hml LALT V   &hml LSHFT F   &hml LCTRL C  &kp LPAR     &kp SPACE              &kp DOWN              &kp RPAR     &hmr RCTRL L  &hmr RSHFT K  &hmr RALT M   &hmr RGUI B   &kp DEL
                                           &kp TAB  MO_TOG(2)  &lt 3 SPACE                                                      &lt 4 ENTER  MO_TOG(1)  &kp BSPC
@@ -117,9 +117,9 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&trans  &kp LC(X)       &kp LC(Y)       &kp LA(F4)       &kp LC(Z)        &kp ASTRK                                     &mmv MOVE_UP                     &kp EXCL         &kp KP_N7        &kp KP_N8        &kp KP_N9        &none            &none
-&trans  &kp LEFT        &kp DOWN        &kp UP           &kp RIGHT        &kp MINUS                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp EQUAL        &mt RGUI KP_N1   &mt RALT KP_N2   &mt RSHFT KP_N3  &mt RCTRL KP_N0  &none
-&trans  &mt LGUI LC(W)  &mt LALT LC(V)  &mt LSHFT LC(F)  &mt LCTRL LC(C)  &kp LEFT_BRACE  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp RIGHT_BRACE  &mt RCTRL KP_N4  &mt RSHFT KP_N5  &mt RALT KP_N6   &kp RGUI         &kp BSPC
+&trans  &kp LC(X)        &kp LC(Y)        &kp LA(F4)        &kp LC(Z)         &kp ASTRK                                     &mmv MOVE_UP                     &kp EXCL         &kp KP_N7         &kp KP_N8         &kp KP_N9         &none             &none
+&trans  &kp LEFT         &kp DOWN         &kp UP            &kp RIGHT         &kp MINUS                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp EQUAL        &hmr RGUI KP_N1   &hmr RALT KP_N2   &hmr RSHFT KP_N3  &hmr RCTRL KP_N0  &none
+&trans  &hml LGUI LC(W)  &hml LALT LC(V)  &hml LSHFT LC(F)  &hml LCTRL LC(C)  &kp LEFT_BRACE  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp RIGHT_BRACE  &hmr RCTRL KP_N4  &hmr RSHFT KP_N5  &hmr RALT KP_N6   &kp RGUI         &kp BSPC
                                         &trans           &trans           &trans                                                                         &trans           &trans     &kp DEL
             >;
 
@@ -140,9 +140,9 @@
         media_layer {
             display-name = "MEDIA";
             bindings = <
-&trans        &bl BL_CYCLE  &rgb_ug RGB_BRI  &kp C_BRI_UP  &kp C_VOLUME_UP    &bt BT_SEL 0                                &mmv MOVE_UP                     &none  &none     &none      &none      &none    &bt BT_CLR_ALL
-&bt BT_SEL 5  &kp C_PREV    &kp C_RW         &kp C_FF      &kp C_NEXT         &bt BT_SEL 1                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END  &bt BT_CLR
-&bt BT_SEL 4  &bl BL_TOG    &rgb_ug RGB_BRD  &kp C_BRI_DN  &kp C_VOLUME_DOWN  &bt BT_SEL 2 &kp C_MUTE                     &mmv MOVE_DOWN                   &none  &kp INS   &none      &none      &none    &kp BSPC
+&rgb_ug RGB_TOG  &bl BL_CYCLE  &rgb_ug RGB_BRI  &kp C_BRI_UP  &kp C_VOLUME_UP    &bt BT_SEL 0                                &mmv MOVE_UP                     &none  &none     &none      &none      &none    &bt BT_CLR_ALL
+&bt BT_SEL 4     &kp C_PREV    &kp C_RW         &kp C_FF      &kp C_NEXT         &bt BT_SEL 1                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END  &bt BT_CLR
+&bt BT_SEL 3     &bl BL_TOG    &rgb_ug RGB_BRD  &kp C_BRI_DN  &kp C_VOLUME_DOWN  &bt BT_SEL 2 &kp C_MUTE                     &mmv MOVE_DOWN                   &none  &kp INS   &none      &none      &none    &kp BSPC
                                           &trans        &trans             &trans                                                                   &trans &trans &kp DEL
             >;
 
