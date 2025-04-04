@@ -150,7 +150,7 @@ layers:
   MEDIA:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&bl BL_CYCLE'
-  - RGB EFF
+  - RGB BRI
   - $$mdi:brightness-5$$
   - $$mdi:volume-high$$
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
@@ -178,7 +178,7 @@ layers:
   - $$mdi:bluetooth-off$$
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}
   - '&bl BL_TOG'
-  - RGB EFF
+  - RGB BRD
   - $$mdi:brightness-7$$
   - $$mdi:volume-low$$
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
