@@ -43,9 +43,17 @@
         mo_tog: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&tog>;
+        };
+        mt: mod_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+            display-name = "Mod-Tap";
         };
         td_caps_print: td_caps_print {
             compatible = "zmk,behavior-tap-dance";
@@ -90,7 +98,7 @@
 &trans  &kp LC(X)       &kp LC(Y)       &kp LA(F4)       &kp LC(Z)        &kp ASTRK                                     &mmv MOVE_UP                     &kp EXCL         &kp KP_N7        &kp KP_N8        &kp KP_N9        &none            &none
 &trans  &kp LEFT        &kp DOWN        &kp UP           &kp RIGHT        &kp MINUS                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp EQUAL        &mt RGUI KP_N1   &mt RALT KP_N2   &mt RSHFT KP_N3  &mt RCTRL KP_N0  &none
 &trans  &mt LGUI LC(W)  &mt LALT LC(V)  &mt LSHFT LC(F)  &mt LCTRL LC(C)  &kp LEFT_BRACE  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp RIGHT_BRACE  &mt RCTRL KP_N4  &mt RSHFT KP_N5  &mt RALT KP_N6   &kp RGUI         &kp BSPC
-                                        &trans           &trans           &trans                                                                         &trans           MO_TOG(0)     &kp DEL
+                                        &trans           &trans           &trans                                                                         &trans           &trans     &kp DEL
             >;
 
             sensor-bindings = <&scroll_encoder>;
