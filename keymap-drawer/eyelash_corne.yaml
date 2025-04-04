@@ -178,7 +178,7 @@ layers:
   - $$mdi:bluetooth-off$$
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - BT OFF
+  - '&bl BL_OFF'
   - $$mdi:brightness-7$$
   - $$mdi:volume-low$$
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
