@@ -1,4 +1,6 @@
 - symbols
+  - replace ' and /
+  - numpad layer -+/*=
 - behavior
   - tapdance
     - symbols
@@ -10,6 +12,10 @@
       - ", " 
       - ". " 
       - ":" 
+- led indicators
+  - layer
+  - bluetooth connection
+  - capslock
 
 - display
 - later, russian layer
