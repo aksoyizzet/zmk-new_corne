@@ -65,10 +65,10 @@
         alpha_layer {
             display-name = "ABC";
             bindings = <
-&kp ESC         &kp X  &kp Y  &kp U    &kp Z  &kp SQT                             &kp UP                &kp FSLH     &kp H  &kp D     &kp G  &kp P  &kp J
-&td_caps_print  &kp A  &kp E  &kp I    &kp O  &kp COMMA                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp DOT      &kp R  &kp S     &kp T  &kp N  &kp Q
-&kp LGUI        &kp W  &kp V  &kp F    &kp C  &kp LPAR     &kp SPACE              &kp DOWN              &kp RPAR     &kp L  &kp K     &kp M  &kp B  &kp DEL
-                        &kp TAB  &mo 2  &lt 3 SPACE                                               &lt 4 ENTER  &mo 1  &kp BSPC
+&kp ESC         &kp X        &kp Y        &kp U         &kp Z        &kp SQT                             &kp UP                &kp FSLH     &kp H  &kp D     &kp G  &kp P  &kp J
+&td_caps_print  &mt LCTRL A  &mt LSHFT E  &mt LALT I    &mt LGUI O   &kp COMMA                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp DOT      &mt RGUI R   &mt RALT S   &mt RSHFT T  &mt RCTRL N  &kp Q
+&kp LGUI        &mt LGUI W   &mt LALT V   &mt LSHFT F   &mt LCTRL C  &kp LPAR     &kp SPACE              &kp DOWN              &kp RPAR     &mt RCTRL L  &mt RSHFT K  &mt RALT M   &mt RGUI B   &kp DEL
+                                          &kp TAB  &mo 2  &lt 3 SPACE                                                          &lt 4 ENTER  &mo 1  &kp BSPC
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -77,10 +77,10 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&trans  &kp LC(X)  &kp LC(Y)  &kp LA(F4)  &kp LC(Z)  &kp ASTRK                                     &mmv MOVE_UP                     &kp EXCL         &kp KP_N7  &kp KP_N8  &kp KP_N9  &none      &none
-&trans  &kp LEFT   &kp DOWN   &kp UP      &kp RIGHT  &kp MINUS                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp EQUAL        &kp KP_N1  &kp KP_N2  &kp KP_N3  &kp KP_N0  &none
-&trans  &kp LC(W)  &kp LC(V)  &kp LC(F)   &kp LC(C)  &kp LEFT_BRACE  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp RIGHT_BRACE  &kp KP_N4  &kp KP_N5  &kp KP_N6  &none      &kp BSPC
-                              &trans      &trans     &trans                                                                         &trans           &trans     &kp DEL
+&trans  &kp LC(X)       &kp LC(Y)       &kp LA(F4)       &kp LC(Z)        &kp ASTRK                                     &mmv MOVE_UP                     &kp EXCL         &kp KP_N7        &kp KP_N8        &kp KP_N9        &none            &none
+&trans  &kp LEFT        &kp DOWN        &kp UP           &kp RIGHT        &kp MINUS                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp EQUAL        &mt RGUI KP_N1   &mt RALT KP_N2   &mt RSHFT KP_N3  &mt RCTRL KP_N0  &none
+&trans  &mt LGUI LC(W)  &mt LALT LC(V)  &mt LSHFT LC(F)  &mt LCTRL LC(C)  &kp LEFT_BRACE  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp RIGHT_BRACE  &mt RCTRL KP_N4  &mt RSHFT KP_N5  &mt RALT KP_N6   &kp RGUI         &kp BSPC
+                                        &trans           &trans           &trans                                                                         &trans           &trans     &kp DEL
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -89,10 +89,10 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&none  &kp ASTRK  &none      &kp UNDER  &none   &none                                    &mmv MOVE_UP                     &kp EXCL   &kp HASH  &kp DOLLAR     &none      &kp PERCENT       &none
-&none  &kp PLUS   &kp MINUS  &none      &none   &none                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp EQUAL  &kp PIPE  &kp CARET      &kp TILDE  &kp AMPS          &kp QMARK
-&none  &none      &none      &none      &none   &none      &kp C_MUTE                    &mmv MOVE_DOWN                   &none      &none     &kp LESS_THAN  &kp AT     &kp GREATER_THAN  &kp DEL
-                             &trans     &trans  &trans                                                                    &trans     &trans    &kp BSPC
+&trans  &kp ASTRK  &none      &kp UNDER  &none   &none                                    &mmv MOVE_UP                     &kp EXCL   &kp HASH  &kp DOLLAR     &none      &kp PERCENT       &none
+&trans  &kp PLUS   &kp MINUS  &none      &none   &none                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp EQUAL  &kp PIPE  &kp CARET      &kp TILDE  &kp AMPS          &kp QMARK
+&trans  &none      &none      &none      &none   &none      &kp C_MUTE                    &mmv MOVE_DOWN                   &none      &none     &kp LESS_THAN  &kp AT     &kp GREATER_THAN  &kp DEL
+                              &trans     &trans  &trans                                                                    &trans     &trans    &kp BSPC
             >;
             sensor-bindings = <&scroll_encoder>;
         };
