@@ -55,6 +55,28 @@
             bindings = <&kp>, <&kp>;
             display-name = "Mod-Tap";
         };
+        hml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            //hold-trigger-key-positions = < ... >; // List of keys on the right side of the keyboard
+            hold-trigger-on-release;
+        };
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            //hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
+            hold-trigger-on-release;
+        };
         td_caps_print: td_caps_print {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
@@ -84,8 +106,8 @@
             display-name = "ABC";
             bindings = <
 &kp ESC         &kp X        &kp Y        &kp U         &kp Z        &kp FSLH                            &kp UP                &kp SQT     &kp H  &kp D     &kp G  &kp P  &kp J
-&td_caps_print  &mt LCTRL A  &mt LSHFT E  &mt LALT I    &mt LGUI O   &kp COMMA                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp DOT      &mt RGUI R   &mt RALT S   &mt RSHFT T  &mt RCTRL N  &kp Q
-&kp LGUI        &mt LGUI W   &mt LALT V   &mt LSHFT F   &mt LCTRL C  &kp LPAR     &kp SPACE              &kp DOWN              &kp RPAR     &mt RCTRL L  &mt RSHFT K  &mt RALT M   &mt RGUI B   &kp DEL
+&td_caps_print  &hml LCTRL A  &hml LSHFT E  &hml LALT I    &hml LGUI O   &kp COMMA                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp DOT      &hmr RGUI R   &hmr RALT S   &hmr RSHFT T  &hmr RCTRL N  &kp Q
+&kp LGUI        &hml LGUI W   &hml LALT V   &hml LSHFT F   &hml LCTRL C  &kp LPAR     &kp SPACE              &kp DOWN              &kp RPAR     &hmr RCTRL L  &hmr RSHFT K  &hmr RALT M   &hmr RGUI B   &kp DEL
                                           &kp TAB  MO_TOG(2)  &lt 3 SPACE                                                      &lt 4 ENTER  MO_TOG(1)  &kp BSPC
             >;
 
