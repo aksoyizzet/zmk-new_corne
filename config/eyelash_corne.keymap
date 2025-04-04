@@ -35,8 +35,17 @@
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 20    // 10
 
+#define MO_TOG(layer) &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
+
 / {
     behaviors {
+        mo_tog: behavior_mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&tog>;
+        };
         td_caps_print: td_caps_print {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
@@ -68,7 +77,7 @@
 &kp ESC         &kp X        &kp Y        &kp U         &kp Z        &kp SQT                             &kp UP                &kp FSLH     &kp H  &kp D     &kp G  &kp P  &kp J
 &td_caps_print  &mt LCTRL A  &mt LSHFT E  &mt LALT I    &mt LGUI O   &kp COMMA                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp DOT      &mt RGUI R   &mt RALT S   &mt RSHFT T  &mt RCTRL N  &kp Q
 &kp LGUI        &mt LGUI W   &mt LALT V   &mt LSHFT F   &mt LCTRL C  &kp LPAR     &kp SPACE              &kp DOWN              &kp RPAR     &mt RCTRL L  &mt RSHFT K  &mt RALT M   &mt RGUI B   &kp DEL
-                                          &kp TAB  &mo 2  &lt 3 SPACE                                                          &lt 4 ENTER  &mo 1  &kp BSPC
+                                          &kp TAB  MO_TOG(2)  &lt 3 SPACE                                                      &lt 4 ENTER  MO_TOG(1)  &kp BSPC
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -80,7 +89,7 @@
 &trans  &kp LC(X)       &kp LC(Y)       &kp LA(F4)       &kp LC(Z)        &kp ASTRK                                     &mmv MOVE_UP                     &kp EXCL         &kp KP_N7        &kp KP_N8        &kp KP_N9        &none            &none
 &trans  &kp LEFT        &kp DOWN        &kp UP           &kp RIGHT        &kp MINUS                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp EQUAL        &mt RGUI KP_N1   &mt RALT KP_N2   &mt RSHFT KP_N3  &mt RCTRL KP_N0  &none
 &trans  &mt LGUI LC(W)  &mt LALT LC(V)  &mt LSHFT LC(F)  &mt LCTRL LC(C)  &kp LEFT_BRACE  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp RIGHT_BRACE  &mt RCTRL KP_N4  &mt RSHFT KP_N5  &mt RALT KP_N6   &kp RGUI         &kp BSPC
-                                        &trans           &trans           &trans                                                                         &trans           &trans     &kp DEL
+                                        &trans           &trans           &trans                                                                         &trans           MO_TOG(0)     &kp DEL
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -92,7 +101,7 @@
 &trans  &kp ASTRK  &none      &kp UNDER  &none   &none                                    &mmv MOVE_UP                     &kp EXCL   &kp HASH  &kp DOLLAR     &none      &kp PERCENT       &none
 &trans  &kp PLUS   &kp MINUS  &none      &none   &none                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp EQUAL  &kp PIPE  &kp CARET      &kp TILDE  &kp AMPS          &kp QMARK
 &trans  &none      &none      &none      &none   &none      &kp C_MUTE                    &mmv MOVE_DOWN                   &none      &none     &kp LESS_THAN  &kp AT     &kp GREATER_THAN  &kp DEL
-                              &trans     &trans  &trans                                                                    &trans     &trans    &kp BSPC
+                              &trans     MO_TOG(0)  &trans                                                                 &trans     MO_TOG(1) &kp BSPC
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -103,7 +112,7 @@
 &bt BT_SEL 4  &none         &bl BL_CYCLE  &kp C_BRI_UP  &kp C_VOLUME_UP    &none                                &mmv MOVE_UP                     &none  &none     &none      &none      &none    &bt BT_CLR_ALL
 &bt BT_SEL 3  &kp C_PREV    &kp C_RW      &kp C_FF      &kp C_NEXT         &none                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END  &bt BT_CLR
 &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &kp C_BRI_DN  &kp C_VOLUME_DOWN  &none &kp C_MUTE                     &mmv MOVE_DOWN                   &none  &kp INS   &none      &none      &none    &kp BSPC
-                                          &trans        &trans             &trans                                                                &trans &trans    &kp DEL
+                                          &trans        &trans             &trans                                                                &trans MO_TOG(1) &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -115,7 +124,7 @@
 &studio_unlock  &kp F2          &kp F3          &kp F4        &kp F5           &kp F6                               &mmv MOVE_UP                     &none  &mkp LCLK       &mkp MCLK     &mkp RCLK       &none            &sys_reset
 &kp F1          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp F7               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none  &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
 &bootloader     &kp F9          &kp F10         &kp F11       &kp F12          &kp F8  &kp C_MUTE                   &mmv MOVE_DOWN                   &none  &msc SCRL_LEFT  &msc SCRL_UP  &msc SCRL_DOWN  &msc SCRL_RIGHT  &bootloader        
-                                                &trans        &trans           &trans                                                                &trans &trans &kp DEL
+                                                &trans        &trans           &trans                                                                &trans MO_TOG(1) &kp DEL
             >;
 
             sensor-bindings = <&scroll_encoder>;

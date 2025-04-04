@@ -3,7 +3,6 @@
   - tapdance
     - symbols
     - accented Turkish, italian, french, spanish letters 
-  - layer movement bw mo & to (MO_TOG?)
 - macro (or combo)
   - strings
     - mail etc commonly used shit
