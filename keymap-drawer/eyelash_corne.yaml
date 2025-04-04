@@ -149,8 +149,8 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   MEDIA:
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&bl BL_ON'
+  - '&bl BL_CYCLE'
+  - RGB EFF
   - $$mdi:brightness-5$$
   - $$mdi:volume-high$$
   - {h: '1', s: '$$mdi:bluetooth-connect$$'}
@@ -177,8 +177,8 @@ layers:
   - END
   - $$mdi:bluetooth-off$$
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&bl BL_OFF'
+  - '&bl BL_TOG'
+  - RGB EFF
   - $$mdi:brightness-7$$
   - $$mdi:volume-low$$
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
