@@ -12,6 +12,9 @@
       - ", " 
       - ". " 
       - ":" 
+  - media
+    - pause
+    - mute
 - led indicators
   - layer
   - bluetooth connection

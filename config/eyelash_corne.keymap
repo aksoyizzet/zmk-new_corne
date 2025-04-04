@@ -140,9 +140,9 @@
         media_layer {
             display-name = "MEDIA";
             bindings = <
-&rgb_ug RGB_TOG  &bl BL_CYCLE  &rgb_ug RGB_BRI  &kp C_BRI_UP  &kp C_VOLUME_UP    &bt BT_SEL 0                                &mmv MOVE_UP                     &none  &none     &none      &none      &none    &bt BT_CLR_ALL
-&bt BT_SEL 4     &kp C_PREV    &kp C_RW         &kp C_FF      &kp C_NEXT         &bt BT_SEL 1                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END  &bt BT_CLR
-&bt BT_SEL 3     &bl BL_TOG    &rgb_ug RGB_BRD  &kp C_BRI_DN  &kp C_VOLUME_DOWN  &bt BT_SEL 2 &kp C_MUTE                     &mmv MOVE_DOWN                   &none  &kp INS   &none      &none      &none    &kp BSPC
+&trans        &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &kp C_BRI_UP  &kp C_VOLUME_UP    &bt BT_SEL 0                                &mmv MOVE_UP                     &BL_INC  &none     &none      &none      &none    &bt BT_CLR_ALL
+&bt BT_SEL 4  &kp C_PREV       &kp C_RW         &kp C_FF      &kp C_NEXT         &bt BT_SEL 1                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END  &bt BT_CLR
+&bt BT_SEL 3  &bl BL_TOG       &rgb_ug RGB_BRD  &kp C_BRI_DN  &kp C_VOLUME_DOWN  &bt BT_SEL 2 &kp C_MUTE                     &mmv MOVE_DOWN                   &BL_DEC  &kp INS   &none      &none      &none    &kp BSPC
                                           &trans        &trans             &trans                                                                   &trans &trans &kp DEL
             >;
 
