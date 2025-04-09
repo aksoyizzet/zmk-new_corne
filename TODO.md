@@ -3,7 +3,6 @@
   - Space delay?
 - symbols
   - all seem wrong
-  - replace ' and /
   - numpad layer -+/*=
 - behavior
   - tapdance
@@ -17,8 +16,6 @@
       - ". " 
       - ":" 
   - media
-    - pause
-    - mute
 - led indicators
   - layer
   - bluetooth connection
