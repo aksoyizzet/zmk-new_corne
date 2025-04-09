@@ -43,12 +43,12 @@ layers:
   - {t: M, h: '$$mdi:apple-keyboard-option$$'}
   - {t: B, h: RGUI}
   - $$mdi:backspace-reverse-outline$$
-  - $$mdi:keyboard-tab$$
-  - {t: SYMBOL, h: SYMBOL}
+  - {t: '$$mdi:keyboard-tab$$', h: MOUSE}
+  - SYMBOL
   - {t: '$$mdi:keyboard-space$$', h: MEDIA}
   - {t: '$$mdi:keyboard-return$$', h: MOUSE}
   - {t: NAV, h: NAV}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:backspace$$', h: MEDIA}
   NAV:
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+X
@@ -91,13 +91,13 @@ layers:
   - {t: KP 5, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: KP 6, h: '$$mdi:apple-keyboard-option$$'}
   - RGUI
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
   - '*'
@@ -140,13 +140,13 @@ layers:
   - <
   - '@'
   - '>'
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:transfer$$', type: trans}
   MEDIA:
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB TOG
@@ -157,7 +157,7 @@ layers:
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - '&bl BL_INC'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - RGB EFF
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - BT CLR ALL
@@ -170,14 +170,14 @@ layers:
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&bl BL_TOG'
   - HOME
   - PG UP
   - PG DN
   - END
   - $$mdi:bluetooth-off$$
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
-  - '&bl BL_TOG'
+  - RGB COLOR HSB(0,0,100)
   - RGB BRD
   - $$mdi:brightness-7$$
   - $$mdi:volume-low$$
@@ -186,16 +186,16 @@ layers:
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - '&bl BL_DEC'
   - INS
+  - RGB EFR
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:backspace$$', type: backspace}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:backspace-reverse-outline$$
+  - {type: held alternate}
   MOUSE:
   - '&studio_unlock'
   - F2
@@ -239,9 +239,18 @@ layers:
   - $$mdi:pan-down$$
   - $$mdi:pan-right$$
   - $$mdi:progress-download$$
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:backspace-reverse-outline$$
+combos:
+- p: [15, 16]
+  k: $$mdi:play-pause$$
+  l: [MEDIA]
+- p: [16, 17]
+  k: $$mdi:volume-off$$
+  l: [MEDIA]
+  a: top
+  o: 0.15
