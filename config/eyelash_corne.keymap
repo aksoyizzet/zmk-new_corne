@@ -14,10 +14,6 @@
        input-processors = <&zip_xy_scaler 20 1>;
    };
 
-   &msc_input_listener {
-       input-processors = <&zip_xy_scaler 200 1>;
-   };
-
     &mmv {
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
@@ -25,13 +21,17 @@
         acceleration-exponent = <1>;
     };
 
-    &msc {
+*/
+
+&msc_input_listener {
+    input-processors = <&zip_xy_scaler 200 1>;
+};
+&msc {
     x-input-code = <INPUT_REL_HWHEEL>;
     y-input-code = <INPUT_REL_WHEEL>;
     time-to-max-speed-ms = <300>;
     acceleration-exponent = <0>;
-    };
- */
+};
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 200    // 10
