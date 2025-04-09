@@ -29,7 +29,7 @@ layers:
   - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: N, h: '$$mdi:apple-keyboard-control$$'}
   - Q
-  - LGUI
+  - {t: LGUI, h: NAV}
   - {t: W, h: LGUI}
   - {t: V, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
@@ -44,7 +44,7 @@ layers:
   - {t: B, h: RGUI}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:keyboard-tab$$', h: MOUSE}
-  - SYMBOL
+  - {t: NAV, h: SYMBOL}
   - {t: '$$mdi:keyboard-space$$', h: MEDIA}
   - {t: '$$mdi:keyboard-return$$', h: MOUSE}
   - {t: NAV, h: NAV}
@@ -78,7 +78,7 @@ layers:
   - {t: KP 3, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: KP 0, h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: Ctl+W, h: LGUI}
   - {t: Ctl+V, h: '$$mdi:apple-keyboard-option$$'}
   - {t: Ctl+F, h: '$$mdi:apple-keyboard-shift$$'}
@@ -96,7 +96,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -177,7 +177,7 @@ layers:
   - END
   - $$mdi:bluetooth-off$$
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
-  - RGB COLOR HSB(0,0,100)
+  - RGB COLOR HSB(0,0,10)
   - RGB BRD
   - $$mdi:brightness-7$$
   - $$mdi:volume-low$$
