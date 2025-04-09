@@ -1,4 +1,8 @@
+- Fix
+  - Scroll by sensor
+  - Space delay?
 - symbols
+  - all seem wrong
   - replace ' and /
   - numpad layer -+/*=
 - behavior

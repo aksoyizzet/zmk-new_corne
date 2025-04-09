@@ -11,7 +11,7 @@
 /*
 
    &mmv_input_listener {
-       input-processors = <&zip_xy_scaler 2 1>;
+       input-processors = <&zip_xy_scaler 20 1>;
    };
 
    &msc_input_listener {
@@ -39,6 +39,21 @@
 #define MO_TOG(layer) &mo_tog layer layer   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_pp {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            layers = <3>;
+            bindings = <&kp C_PP>;
+        };
+        combo_mute {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            layers = <3>;
+            bindings = <&kp C_MUTE>;
+        };
+    };
     behaviors {
         mo_tog: behavior_mo_tog {
             compatible = "zmk,behavior-hold-tap";
@@ -58,7 +73,7 @@
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             require-prior-idle-ms = <150>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
@@ -69,7 +84,7 @@
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
             require-prior-idle-ms = <150>;
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
@@ -95,8 +110,7 @@
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-        tap-ms = <30>;
+        tap-ms = <50>;
     };
 
     keymap {
@@ -106,9 +120,9 @@
             display-name = "ABC";
             bindings = <
 &kp ESC         &kp X         &kp Y         &kp U          &kp Z         &kp FSLH                            &kp UP                &kp SQT      &kp H         &kp D         &kp G         &kp P         &kp J
-&td_caps_print  &hml LCTRL A  &hml LSHFT E  &hml LALT I    &hml LGUI O   &kp COMMA                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp DOT      &hmr RGUI R   &hmr RALT S   &hmr RSHFT T  &hmr RCTRL N  &kp Q
-&kp LGUI        &hml LGUI W   &hml LALT V   &hml LSHFT F   &hml LCTRL C  &kp LPAR     &kp SPACE              &kp DOWN              &kp RPAR     &hmr RCTRL L  &hmr RSHFT K  &hmr RALT M   &hmr RGUI B   &kp DEL
-                                          &kp TAB  MO_TOG(2)  &lt 3 SPACE                                                      &lt 4 ENTER  MO_TOG(1)  &kp BSPC
+&td_caps_print  &hml LCTRL A  &hml LSHFT E  &hml LALT I    &hml LGUI O   &kp COMMA                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp DOT      &hmr RGUI R   &hmr LALT S   &hmr RSHFT T  &hmr RCTRL N  &kp Q
+&kp LGUI        &hml LGUI W   &hml LALT V   &hml LSHFT F   &hml LCTRL C  &kp LPAR     &kp SPACE              &kp DOWN              &kp RPAR     &hmr RCTRL L  &hmr RSHFT K  &hmr LALT M   &hmr RGUI B   &kp DEL
+                                                       &lt 4 TAB  &mo 2  &lt 3 SPACE                                               &lt 4 ENTER  MO_TOG(1)  &lt 3 BSPC
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -118,9 +132,9 @@
             display-name = "NAV";
             bindings = <
 &trans  &kp LC(X)        &kp LC(Y)        &kp LA(F4)        &kp LC(Z)         &kp ASTRK                                     &mmv MOVE_UP                     &kp EXCL         &kp KP_N7         &kp KP_N8         &kp KP_N9         &none             &none
-&trans  &kp LEFT         &kp DOWN         &kp UP            &kp RIGHT         &kp MINUS                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp EQUAL        &hmr RGUI KP_N1   &hmr RALT KP_N2   &hmr RSHFT KP_N3  &hmr RCTRL KP_N0  &none
-&trans  &hml LGUI LC(W)  &hml LALT LC(V)  &hml LSHFT LC(F)  &hml LCTRL LC(C)  &kp LEFT_BRACE  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp RIGHT_BRACE  &hmr RCTRL KP_N4  &hmr RSHFT KP_N5  &hmr RALT KP_N6   &kp RGUI         &kp BSPC
-                                        &trans           &trans           &trans                                                                         &trans           &trans     &kp DEL
+&trans  &kp LEFT         &kp DOWN         &kp UP            &kp RIGHT         &kp MINUS                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp EQUAL        &hmr RGUI KP_N1   &hmr LALT KP_N2   &hmr RSHFT KP_N3  &hmr RCTRL KP_N0  &none
+&trans  &hml LGUI LC(W)  &hml LALT LC(V)  &hml LSHFT LC(F)  &hml LCTRL LC(C)  &kp LEFT_BRACE  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp RIGHT_BRACE  &hmr RCTRL KP_N4  &hmr RSHFT KP_N5  &hmr LALT KP_N6   &kp RGUI          &trans
+                                        &trans           &trans           &trans                                                                         &trans           &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -131,8 +145,8 @@
             bindings = <
 &trans  &kp ASTRK  &none      &kp UNDER  &none   &none                                    &mmv MOVE_UP                     &kp EXCL   &kp HASH  &kp DOLLAR     &none      &kp PERCENT       &none
 &trans  &kp PLUS   &kp MINUS  &none      &none   &none                    &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp EQUAL  &kp PIPE  &kp CARET      &kp TILDE  &kp AMPS          &kp QMARK
-&trans  &none      &none      &none      &none   &none      &kp C_MUTE                    &mmv MOVE_DOWN                   &none      &none     &kp LESS_THAN  &kp AT     &kp GREATER_THAN  &kp DEL
-                              &trans     &trans  &trans                                                                    &trans     &trans   &kp BSPC
+&trans  &none      &none      &none      &none   &none      &kp C_MUTE                    &mmv MOVE_DOWN                   &none      &none     &kp LESS_THAN  &kp AT     &kp GREATER_THAN  &trans
+                              &trans     &trans  &trans                                                                    &trans     &trans    &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -140,10 +154,10 @@
         media_layer {
             display-name = "MEDIA";
             bindings = <
-&trans        &rgb_ug RGB_TOG  &rgb_ug RGB_BRI  &kp C_BRI_UP  &kp C_VOLUME_UP    &bt BT_SEL 0                                &mmv MOVE_UP                     &bl BL_INC  &none     &none      &none      &none    &bt BT_CLR_ALL
-&bt BT_SEL 4  &kp C_PREV       &kp C_RW         &kp C_FF      &kp C_NEXT         &bt BT_SEL 1                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END  &bt BT_CLR
-&bt BT_SEL 3  &bl BL_TOG       &rgb_ug RGB_BRD  &kp C_BRI_DN  &kp C_VOLUME_DOWN  &bt BT_SEL 2 &kp C_MUTE                     &mmv MOVE_DOWN                   &bl BL_DEC  &kp INS   &none      &none      &none    &kp BSPC
-                                          &trans        &trans             &trans                                                                   &trans &trans &kp DEL
+&trans        &rgb_ug RGB_TOG                 &rgb_ug RGB_BRI  &kp C_BRI_UP  &kp C_VOLUME_UP    &bt BT_SEL 0                                &mmv MOVE_UP                     &bl BL_INC  &none     &rgb_ug RGB_EFF  &none      &none    &bt BT_CLR_ALL
+&bt BT_SEL 4  &kp C_PREV                      &kp C_RW         &kp C_FF      &kp C_NEXT         &bt BT_SEL 1                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bl BL_TOG  &kp HOME  &kp PG_UP        &kp PG_DN  &kp END  &bt BT_CLR
+&bt BT_SEL 3  &rgb_ug RGB_COLOR_HSB(0,0,100)  &rgb_ug RGB_BRD  &kp C_BRI_DN  &kp C_VOLUME_DOWN  &bt BT_SEL 2 &kp C_MUTE                     &mmv MOVE_DOWN                   &bl BL_DEC  &kp INS   &rgb_ug RGB_EFR  &none      &none    &trans
+                                          &trans        &trans             &trans                                                                             &trans &trans &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
