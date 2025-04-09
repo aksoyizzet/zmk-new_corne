@@ -15,7 +15,7 @@
    };
 
    &msc_input_listener {
-       input-processors = <&zip_xy_scaler 2 1>;
+       input-processors = <&zip_xy_scaler 200 1>;
    };
 
     &mmv {
