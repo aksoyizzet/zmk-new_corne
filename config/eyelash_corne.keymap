@@ -11,7 +11,7 @@
 /*
 
    &mmv_input_listener {
-       input-processors = <&zip_xy_scaler 200 1>;
+       input-processors = <&zip_xy_scaler 20 1>;
    };
 
    &msc_input_listener {
@@ -110,7 +110,7 @@
         compatible = "zmk,behavior-sensor-rotate";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-        tap-ms = <200>;
+        tap-ms = <20>;
     };
 
     keymap {
