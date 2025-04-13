@@ -2,7 +2,7 @@ layout: {zmk_keyboard: eyelash_corne}
 layers:
   ABC:
   - $$mdi:keyboard-esc$$
-  - '&td_2 CAPS PRINTSCREEN'
+  - '&td_2 CAPS PSCRN'
   - Y
   - U
   - Z
