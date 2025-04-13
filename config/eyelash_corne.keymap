@@ -119,9 +119,9 @@
         alpha_layer {
             display-name = "ABC";
             bindings = <
-&kp ESC         &kp X         &kp Y         &kp U          &kp Z         &kp FSLH                            &kp UP                &kp SQT      &kp H         &kp D         &kp G         &kp P         &kp J
-&td_caps_print  &hml LCTRL A  &hml LSHFT E  &hml LALT I    &hml LGUI O   &kp COMMA                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp DOT      &hmr RGUI R   &hmr LALT S   &hmr RSHFT T  &hmr RCTRL N  &kp Q
-&lt 1 LGUI      &hml LGUI W   &hml LALT V   &hml LSHFT F   &hml LCTRL C  &kp LPAR     &kp SPACE              &kp DOWN              &kp RPAR     &hmr RCTRL L  &hmr RSHFT K  &hmr LALT M   &hmr RGUI B   &kp DEL
+&kp ESC         &td_caps_print  &kp Y         &kp U          &kp Z         &kp FSLH                            &kp UP                &kp SQT      &kp H         &kp D         &kp G         &kp Q         &kp J
+&kp X           &hml LCTRL A    &hml LSHFT E  &hml LALT I    &hml LGUI O   &kp COMMA                 &kp LEFT  &kp ENTER  &kp RIGHT  &kp DOT      &hmr RGUI R   &hmr LALT S   &hmr RSHFT T  &hmr RCTRL N  &kp P
+&lt 1 LGUI      &hml LGUI W     &hml LALT V   &hml LSHFT F   &hml LCTRL C  &kp LPAR     &kp SPACE              &kp DOWN              &kp RPAR     &hmr RCTRL L  &hmr RSHFT K  &hmr LALT M   &hmr RGUI B   &kp DEL
                                                 &lt 4 TAB  MO_TOG(2, 1)  &lt 3 SPACE                                               &lt 4 ENTER  MO_TOG(1, 1)  &lt 3 BSPC
             >;
 
@@ -131,9 +131,9 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&trans  &kp LC(X)        &kp LC(Y)        &kp LA(F4)        &kp LC(Z)         &kp ASTRK                                     &mmv MOVE_UP                     &kp EXCL         &kp KP_N7         &kp KP_N8         &kp KP_N9         &none             &none
-&trans  &kp LEFT         &kp DOWN         &kp UP            &kp RIGHT         &kp MINUS                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp EQUAL        &hmr RGUI KP_N1   &hmr LALT KP_N2   &hmr RSHFT KP_N3  &hmr RCTRL KP_N0  &none
-&trans  &hml LGUI LC(W)  &hml LALT LC(V)  &hml LSHFT LC(F)  &hml LCTRL LC(C)  &kp LEFT_BRACE  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp RIGHT_BRACE  &hmr RCTRL KP_N4  &hmr RSHFT KP_N5  &hmr LALT KP_N6   &kp RGUI          &trans
+&trans     &trans           &kp LC(Y)        &kp LA(F4)        &kp LC(Z)         &kp ASTRK                                     &mmv MOVE_UP                     &kp EXCL         &kp KP_N7         &kp KP_N8         &kp KP_N9         &none             &none
+&kp LC(X)  &kp LEFT         &kp DOWN         &kp UP            &kp RIGHT         &kp MINUS                     &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp EQUAL        &hmr RGUI KP_N1   &hmr LALT KP_N2   &hmr RSHFT KP_N3  &hmr RCTRL KP_N0  &none
+&trans     &hml LGUI LC(W)  &hml LALT LC(V)  &hml LSHFT LC(F)  &hml LCTRL LC(C)  &kp LEFT_BRACE  &kp C_MUTE                    &mmv MOVE_DOWN                   &kp RIGHT_BRACE  &hmr RCTRL KP_N4  &hmr RSHFT KP_N5  &hmr LALT KP_N6   &kp RGUI          &trans
                                         &trans           &trans           &trans                                                                         &trans           &trans     &trans
             >;
 
