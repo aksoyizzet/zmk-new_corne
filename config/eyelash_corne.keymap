@@ -95,11 +95,11 @@
         };
         td_dc: td_double_click {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "Double click Tap Dance";
+            display-name = "Double click Tap Dance";ns
             #binding-cells = <0>;
             bindings = <&kp>, <&kp>;
         };
-        td_d: td_double_click {
+        td_d: td_double_tap {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double click Tap Dance";
             #binding-cells = <0>;
