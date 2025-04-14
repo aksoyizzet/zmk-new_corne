@@ -51,7 +51,7 @@ layers:
   - {t: '$$mdi:backspace$$', h: MEDIA}
   NAV:
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&td_alttab_print'
   - Ctl+Y
   - Ctl+S
   - Ctl+Z
