@@ -99,7 +99,7 @@
             #binding-cells = <0>;
             bindings = <&kp CAPS>, <&kp PSCRN>;
         };
-        td_caps_print: td_alttab_print {
+        td_alttab_print: td_alttab_print {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double Tap Dance";
             #binding-cells = <0>;
