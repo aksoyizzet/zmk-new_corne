@@ -99,6 +99,12 @@
             #binding-cells = <0>;
             bindings = <&kp CAPS>, <&kp PSCRN>;
         };
+        td_caps_print: td_alttab_print {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Double Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp LA(TAB)>, <&kp PSCRN>;
+        };
         td_quote: td_quote {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double Tap Dance";
@@ -174,9 +180,9 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&trans     &trans           &kp LC(Y)        &kp LC(S)         &kp LC(Z)         &trans                              &mmv MOVE_UP                &kp ASTRK  &kp N7         &kp N8         &kp N9         &kp KP_PLUS         &kp LA(F4)
-&kp LC(X)  &kp LEFT         &kp DOWN         &kp UP            &kp RIGHT         &trans              &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &trans     &hmr RGUI N1   &hmr LALT N2   &hmr RSHFT N3  &hmr RCTRL N0       &kp KP_EQUAL
-&trans     &hml LGUI LC(W)  &hml LALT LC(V)  &hml LSHFT LC(F)  &hml LCTRL LC(C)  &trans  &kp C_MUTE                  &mmv MOVE_DOWN              &trans     &hmr RCTRL N4  &hmr RSHFT N5  &hmr LALT N6   &hmr RGUI KP_MINUS  &trans
+&trans     &td_alttab_print  &kp LC(Y)        &kp LC(S)         &kp LC(Z)         &trans                              &mmv MOVE_UP                &kp ASTRK  &kp N7         &kp N8         &kp N9         &kp KP_PLUS         &kp LA(F4)
+&kp LC(X)  &kp LEFT          &kp DOWN         &kp UP            &kp RIGHT         &trans              &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &trans     &hmr RGUI N1   &hmr LALT N2   &hmr RSHFT N3  &hmr RCTRL N0       &kp KP_EQUAL
+&trans     &hml LGUI LC(W)   &hml LALT LC(V)  &hml LSHFT LC(F)  &hml LCTRL LC(C)  &trans  &kp C_MUTE                  &mmv MOVE_DOWN              &trans     &hmr RCTRL N4  &hmr RSHFT N5  &hmr LALT N6   &hmr RGUI KP_MINUS  &trans
                                         &trans           &trans           &trans                                                                         &trans           &trans     &trans
             >;
 
