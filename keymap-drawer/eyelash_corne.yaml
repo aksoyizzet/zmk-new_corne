@@ -53,7 +53,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ctl+Y
-  - Alt+F4
+  - Ctl+S
   - Ctl+Z
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
@@ -61,8 +61,8 @@ layers:
   - {t: '7', s: '&'}
   - {t: '8', s: '*'}
   - {t: '9', s: (}
-  - +
-  - Ctl+S
+  - KP PLUS
+  - Alt+F4
   - Ctl+X
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
@@ -77,7 +77,7 @@ layers:
   - {t: '2', h: '$$mdi:apple-keyboard-option$$', s: '@'}
   - {t: '3', h: '$$mdi:apple-keyboard-shift$$', s: '#'}
   - {t: '0', h: '$$mdi:apple-keyboard-control$$', s: )}
-  - {t: '=', s: +}
+  - KP EQUAL
   - {type: held}
   - {t: Ctl+W, h: LGUI}
   - {t: Ctl+V, h: '$$mdi:apple-keyboard-option$$'}
@@ -90,7 +90,7 @@ layers:
   - {t: '4', h: '$$mdi:apple-keyboard-control$$', s: $}
   - {t: '5', h: '$$mdi:apple-keyboard-shift$$', s: '%'}
   - {t: '6', h: '$$mdi:apple-keyboard-option$$', s: ^}
-  - {t: '-', h: RGUI, s: _}
+  - {t: KP MINUS, h: RGUI}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -110,7 +110,7 @@ layers:
   - KP 7
   - KP 8
   - KP 9
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '"'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '!'
   - _
