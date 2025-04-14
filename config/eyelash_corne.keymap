@@ -95,7 +95,7 @@
         };
         td_dc: td_double_click {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "Double click Tap Dance";ns
+            display-name = "Double click Tap Dance";
             #binding-cells = <0>;
             bindings = <&kp>, <&kp>;
         };
