@@ -2,13 +2,13 @@ layout: {zmk_keyboard: eyelash_corne}
 layers:
   ABC:
   - $$mdi:keyboard-esc$$
-  - '&td_2 CAPS PSCRN'
+  - '&td_dc CAPS PSCRN'
   - Y
   - U
   - Z
   - {t: /, s: '?'}
   - $$mdi:arrow-up-bold$$
-  - '&td_2 SQT DQT'
+  - '&td_dc SQT DQT'
   - H
   - D
   - G
@@ -19,11 +19,11 @@ layers:
   - {t: E, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: I, h: '$$mdi:apple-keyboard-option$$'}
   - {t: O, h: LGUI}
-  - '&td_2 COMMA SEMI'
+  - '&td_dc COMMA SEMI'
   - $$mdi:arrow-left-bold$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - $$mdi:arrow-right-bold$$
-  - '&td_2 DOT COLON'
+  - '&td_dc DOT COLON'
   - {t: R, h: RGUI}
   - {t: S, h: '$$mdi:apple-keyboard-option$$'}
   - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
@@ -34,10 +34,10 @@ layers:
   - {t: V, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: C, h: '$$mdi:apple-keyboard-control$$'}
-  - '&td_2 LPAR LBRC'
+  - '&td_dc LPAR LBRC'
   - $$mdi:keyboard-space$$
   - $$mdi:arrow-down-bold$$
-  - '&td_2 RPAR RBRC'
+  - '&td_dc RPAR RBRC'
   - {t: L, h: '$$mdi:apple-keyboard-control$$'}
   - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: M, h: '$$mdi:apple-keyboard-option$$'}
@@ -132,10 +132,10 @@ layers:
   - {t: /, s: '?'}
   - '*'
   - '|'
-  - '&td_2 LBKT LBRC'
+  - '&td_dc LBKT LBRC'
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - '&td_2 RBKT RBRC'
+  - '&td_dc RBKT RBRC'
   - {t: KP 4, h: '$$mdi:apple-keyboard-control$$'}
   - {t: KP 5, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: KP 6, h: '$$mdi:apple-keyboard-option$$'}

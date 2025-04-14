@@ -334,7 +334,7 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-1.2em">&amp;td_2</tspan><tspan x="0" dy="1.2em">CAPS</tspan><tspan x="0" dy="1.2em">PSCRN</tspan>
+<tspan x="0" dy="-1.2em">&amp;td_dc</tspan><tspan x="0" dy="1.2em">CAPS</tspan><tspan x="0" dy="1.2em">PSCRN</tspan>
 </text>
 </g>
 <g transform="translate(140, 35)" class="key keypos-2">
@@ -367,7 +367,7 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-1.2em">&amp;td_2</tspan><tspan x="0" dy="1.2em">SQT</tspan><tspan x="0" dy="1.2em">DQT</tspan>
+<tspan x="0" dy="-1.2em">&amp;td_dc</tspan><tspan x="0" dy="1.2em">SQT</tspan><tspan x="0" dy="1.2em">DQT</tspan>
 </text>
 </g>
 <g transform="translate(728, 35)" class="key keypos-8">
@@ -428,7 +428,7 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-1.2em">&amp;td_2</tspan><tspan x="0" dy="1.2em">COMMA</tspan><tspan x="0" dy="1.2em">SEMI</tspan>
+<tspan x="0" dy="-1.2em">&amp;td_dc</tspan><tspan x="0" dy="1.2em">COMMA</tspan><tspan x="0" dy="1.2em">SEMI</tspan>
 </text>
 </g>
 <g transform="translate(490, 97)" class="key keypos-19">
@@ -450,7 +450,7 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-1.2em">&amp;td_2</tspan><tspan x="0" dy="1.2em">DOT</tspan><tspan x="0" dy="1.2em">COLON</tspan>
+<tspan x="0" dy="-1.2em">&amp;td_dc</tspan><tspan x="0" dy="1.2em">DOT</tspan><tspan x="0" dy="1.2em">COLON</tspan>
 </text>
 </g>
 <g transform="translate(728, 91)" class="key keypos-23">
@@ -517,7 +517,7 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-1.2em">&amp;td_2</tspan><tspan x="0" dy="1.2em">LPAR</tspan><tspan x="0" dy="1.2em">LBRC</tspan>
+<tspan x="0" dy="-1.2em">&amp;td_dc</tspan><tspan x="0" dy="1.2em">LPAR</tspan><tspan x="0" dy="1.2em">LBRC</tspan>
 </text>
 </g>
 <g transform="translate(378, 153)" class="key keypos-34">
@@ -534,7 +534,7 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-1.2em">&amp;td_2</tspan><tspan x="0" dy="1.2em">RPAR</tspan><tspan x="0" dy="1.2em">RBRC</tspan>
+<tspan x="0" dy="-1.2em">&amp;td_dc</tspan><tspan x="0" dy="1.2em">RPAR</tspan><tspan x="0" dy="1.2em">RBRC</tspan>
 </text>
 </g>
 <g transform="translate(728, 147)" class="key keypos-37">
@@ -1079,7 +1079,7 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-1.2em">&amp;td_2</tspan><tspan x="0" dy="1.2em">LBKT</tspan><tspan x="0" dy="1.2em">LBRC</tspan>
+<tspan x="0" dy="-1.2em">&amp;td_dc</tspan><tspan x="0" dy="1.2em">LBKT</tspan><tspan x="0" dy="1.2em">LBRC</tspan>
 </text>
 </g>
 <g transform="translate(378, 153)" class="key keypos-34">
@@ -1097,7 +1097,7 @@ rect.held, rect.combo.held {
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key side"/>
 <rect rx="4" ry="4" x="-20" y="-24" width="40" height="40" class="key"/>
 <text x="0" y="-4" class="key tap">
-<tspan x="0" dy="-1.2em">&amp;td_2</tspan><tspan x="0" dy="1.2em">RBKT</tspan><tspan x="0" dy="1.2em">RBRC</tspan>
+<tspan x="0" dy="-1.2em">&amp;td_dc</tspan><tspan x="0" dy="1.2em">RBKT</tspan><tspan x="0" dy="1.2em">RBRC</tspan>
 </text>
 </g>
 <g transform="translate(728, 147)" class="key keypos-37">
