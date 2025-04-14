@@ -37,7 +37,7 @@
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 200    // 10
 
 #define MO_TOG(layer_mo, layer_tog) &mo_tog layer_mo layer_tog   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
-// #define TD_DC(single_click, double_click) &td_dc single_click double_click   // Macro to apply tap dance
+// #define TD_DC(single_tap, double_tap) &td_dc single_tap double_tap   // Macro to apply tap dance
 
 / {
     combos {
@@ -174,9 +174,9 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&trans     &trans           &kp LC(Y)        &kp LA(F4)        &kp LC(Z)         &trans                              &mmv MOVE_UP                &kp ASTRK  &kp N7         &kp N8         &kp N9         &kp PLUS         &kp LC(S)
-&kp LC(X)  &kp LEFT         &kp DOWN         &kp UP            &kp RIGHT         &trans              &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &trans     &hmr RGUI N1   &hmr LALT N2   &hmr RSHFT N3  &hmr RCTRL N0    &kp EQUAL
-&trans     &hml LGUI LC(W)  &hml LALT LC(V)  &hml LSHFT LC(F)  &hml LCTRL LC(C)  &trans  &kp C_MUTE                  &mmv MOVE_DOWN              &trans     &hmr RCTRL N4  &hmr RSHFT N5  &hmr LALT N6   &hmr RGUI MINUS  &trans
+&trans     &trans           &kp LC(Y)        &kp LC(S)         &kp LC(Z)         &trans                              &mmv MOVE_UP                &kp ASTRK  &kp N7         &kp N8         &kp N9         &kp KP_PLUS         &kp LA(F4)
+&kp LC(X)  &kp LEFT         &kp DOWN         &kp UP            &kp RIGHT         &trans              &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &trans     &hmr RGUI N1   &hmr LALT N2   &hmr RSHFT N3  &hmr RCTRL N0       &kp KP_EQUAL
+&trans     &hml LGUI LC(W)  &hml LALT LC(V)  &hml LSHFT LC(F)  &hml LCTRL LC(C)  &trans  &kp C_MUTE                  &mmv MOVE_DOWN              &trans     &hmr RCTRL N4  &hmr RSHFT N5  &hmr LALT N6   &hmr RGUI KP_MINUS  &trans
                                         &trans           &trans           &trans                                                                         &trans           &trans     &trans
             >;
 
@@ -186,7 +186,7 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans    &kp HASH   &kp LT     &kp GT     &kp AMPS   &kp PERCENT                        &mmv MOVE_UP                  &trans    &kp KP_N7         &kp KP_N8         &kp KP_N9         &none             &none
+&trans    &kp HASH   &kp LT     &kp GT     &kp AMPS   &kp PERCENT                        &mmv MOVE_UP                  &trans    &kp KP_N7         &kp KP_N8         &kp KP_N9         &kp DQT             &none
 &kp EXCL  &kp UNDER  &kp MINUS  &kp PLUS   &kp EQUAL  &kp DOLLAR         &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &trans    &hmr RGUI KP_N1   &hmr LALT KP_N2   &hmr RSHFT KP_N3  &hmr RCTRL KP_N0  &kp CARET
 &trans    &kp QMARK  &kp FSLH   &kp ASTRK  &kp PIPE   &td_lbkt   &kp C_MUTE              &mmv MOVE_DOWN                &td_rbkt  &hmr RCTRL KP_N4  &hmr RSHFT KP_N5  &hmr LALT KP_N6   &hmr RGUI TILDE   &trans
                               &trans     &trans  &trans                                                                    &trans     &trans    &trans
