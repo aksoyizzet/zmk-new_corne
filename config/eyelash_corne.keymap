@@ -37,7 +37,7 @@
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 200    // 10
 
 #define MO_TOG(layer_mo, layer_tog) &mo_tog layer_mo layer_tog   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
-#define TD_DC(single_click, double_click) &td_dc single_click double_click   // Macro to apply tap dance
+// #define TD_DC(single_click, double_click) &td_dc single_click double_click   // Macro to apply tap dance
 
 / {
     combos {
@@ -93,17 +93,53 @@
             //hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
-        td_dc: td_double_click {
+        td_caps_print: td_caps_print {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "Double click Tap Dance";
-            #binding-cells = <0>;
-            bindings = <&kp>, <&kp>;
-        };
-        td_d: td_double_tap {
-            compatible = "zmk,behavior-tap-dance";
-            display-name = "Double click Tap Dance";
+            display-name = "Double Tap Dance";
             #binding-cells = <0>;
             bindings = <&kp CAPS>, <&kp PSCRN>;
+        };
+        td_quote: td_quote {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Double Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>, <&kp DQT>;
+        };
+        td_comma: td_comma {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Double Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp SEMI>;
+        };
+        td_dot: td_dot {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Double Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
+        };
+        td_lpar: td_lpar {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Double Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp LBRC>;
+        };
+        td_rpar: td_rpar {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Double Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp RPAR>, <&kp RBRC>;
+        };
+        td_lbkt: td_lbkt {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Double Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp LBKT>, <&kp LBRC>;
+        };
+        td_rbkt: td_rbkt {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Double Tap Dance";
+            #binding-cells = <0>;
+            bindings = <&kp RBKT>, <&kp RBRC>;
         };
     };
 
@@ -126,9 +162,9 @@
         alpha_layer {
             display-name = "ABC";
             bindings = <
-&kp ESC     &td_d               &kp Y         &kp U          &kp Z         &kp FSLH                                 &kp UP                  TD_DC(SQT, DQT)    &kp H         &kp D         &kp G         &kp Q         &kp J
-&kp X       &hml LCTRL A        &hml LSHFT E  &hml LALT I    &hml LGUI O   TD_DC(COMMA, SEMI)               &kp LEFT  &kp ENTER  &kp RIGHT  TD_DC(DOT, COLON)  &hmr RGUI R   &hmr LALT S   &hmr RSHFT T  &hmr RCTRL N  &kp P
-&lt 1 LGUI  &hml LGUI W         &hml LALT V   &hml LSHFT F   &hml LCTRL C  TD_DC(LPAR, LBRC)  &kp SPACE               &kp DOWN              TD_DC(RPAR, RBRC)  &hmr RCTRL L  &hmr RSHFT K  &hmr LALT M   &hmr RGUI B   &kp DEL
+&kp ESC     &td_caps_print  &kp Y         &kp U          &kp Z         &kp FSLH                          &kp UP                &td_quote  &kp H         &kp D         &kp G         &kp Q         &kp J
+&kp X       &hml LCTRL A    &hml LSHFT E  &hml LALT I    &hml LGUI O   &td_comma               &kp LEFT  &kp ENTER  &kp RIGHT  &td_dot    &hmr RGUI R   &hmr LALT S   &hmr RSHFT T  &hmr RCTRL N  &kp P
+&lt 1 LGUI  &hml LGUI W     &hml LALT V   &hml LSHFT F   &hml LCTRL C  &td_lpar  &kp SPACE               &kp DOWN              &td_rpar   &hmr RCTRL L  &hmr RSHFT K  &hmr LALT M   &hmr RGUI B   &kp DEL
                                                 &lt 4 TAB  MO_TOG(2, 1)  &lt 3 SPACE                                                                      &lt 4 ENTER  MO_TOG(1, 1)  &lt 3 BSPC
             >;
 
@@ -150,9 +186,9 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans    &kp HASH   &kp LT     &kp GT     &kp AMPS   &kp PERCENT                        &mmv MOVE_UP                  &trans           &kp KP_N7         &kp KP_N8         &kp KP_N9         &none             &none
-&kp EXCL  &kp UNDER  &kp MINUS  &kp PLUS   &kp EQUAL  &kp DOLLAR         &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &trans           &hmr RGUI KP_N1   &hmr LALT KP_N2   &hmr RSHFT KP_N3  &hmr RCTRL KP_N0  &kp CARET
-&trans    &kp QMARK  &kp FSLH   &kp ASTRK  &kp PIPE   TD_DC(LBKT, LBRC)   &kp C_MUTE     &mmv MOVE_DOWN                TD_DC(RBKT, RBRC)  &hmr RCTRL KP_N4  &hmr RSHFT KP_N5  &hmr LALT KP_N6   &hmr RGUI TILDE   &trans
+&trans    &kp HASH   &kp LT     &kp GT     &kp AMPS   &kp PERCENT                        &mmv MOVE_UP                  &trans    &kp KP_N7         &kp KP_N8         &kp KP_N9         &none             &none
+&kp EXCL  &kp UNDER  &kp MINUS  &kp PLUS   &kp EQUAL  &kp DOLLAR         &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &trans    &hmr RGUI KP_N1   &hmr LALT KP_N2   &hmr RSHFT KP_N3  &hmr RCTRL KP_N0  &kp CARET
+&trans    &kp QMARK  &kp FSLH   &kp ASTRK  &kp PIPE   &td_lbkt   &kp C_MUTE              &mmv MOVE_DOWN                &td_rbkt  &hmr RCTRL KP_N4  &hmr RSHFT KP_N5  &hmr LALT KP_N6   &hmr RGUI TILDE   &trans
                               &trans     &trans  &trans                                                                    &trans     &trans    &trans
             >;
             sensor-bindings = <&scroll_encoder>;
