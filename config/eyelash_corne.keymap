@@ -103,7 +103,7 @@
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double click Tap Dance";
             #binding-cells = <0>;
-            bindings = <&kp CAPS>, <&PSCRN>;
+            bindings = <&kp CAPS>, <&kp PSCRN>;
         };
     };
 
