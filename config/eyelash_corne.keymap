@@ -95,8 +95,8 @@
         };
         td_2: td_double_click {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "Shift/Caps Lock Tap Dance";
-            #binding-cells = <0>;
+            display-name = "Double click Tap Dance";
+            #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
     };
