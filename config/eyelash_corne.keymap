@@ -1,40 +1,37 @@
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 25    // 10
+
+#include <input/processors.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/backlight.h>
 
-#include <input/processors.dtsi>
 
-/*
+&mmv_input_listener {
+    input-processors = <&zip_xy_scaler 2 1>;
+};
 
-   &mmv_input_listener {
-       input-processors = <&zip_xy_scaler 20 1>;
-   };
-
-    &mmv {
-        x-input-code = <INPUT_REL_X>;
-        y-input-code = <INPUT_REL_Y>;
-        time-to-max-speed-ms = <300>;
-        acceleration-exponent = <1>;
-    };
-
-*/
+&mmv {
+    time-to-max-speed-ms = <500>;
+    acceleration-exponent = <1>;
+    trigger-period-ms = <16>;
+};
 
 &msc_input_listener {
-    input-processors = <&zip_xy_scaler 200 1>;
-};
-&msc {
-    x-input-code = <INPUT_REL_HWHEEL>;
-    y-input-code = <INPUT_REL_WHEEL>;
-    time-to-max-speed-ms = <300>;
-    acceleration-exponent = <0>;
+    input-processors = <&zip_scroll_scaler 200 1>;
 };
 
-#define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
-#define ZMK_MOUSE_DEFAULT_SCRL_VAL 200    // 10
+&msc {
+    acceleration-exponent = <1>;      // 0
+    time-to-max-speed-ms = <100>;     // 300
+    delay-ms = <0>;                   // 0
+};
+
 
 #define MO_TOG(layer_mo, layer_tog) &mo_tog layer_mo layer_tog   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
 // #define TD_DC(single_tap, double_tap) &td_dc single_tap double_tap   // Macro to apply tap dance
