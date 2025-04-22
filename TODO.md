@@ -1,9 +1,8 @@
 - Fix
   - Scroll by sensor
   - Space delay?
+  - consumer keys not working on android: when CONFIG_ZMK_HID_CONSUMER_REPORT_USAGES_BASIC is uncommented, works on android but not on windows.
 - symbols
-  - all seem wrong
-  - numpad layer -+/*=
 - behavior
   - tapdance
     - symbols
@@ -14,7 +13,6 @@
     - symbols
       - ", " 
       - ". " 
-      - ":" 
   - media
 - led indicators
   - layer
