@@ -127,13 +127,13 @@
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double Tap Dance";
             #binding-cells = <0>;
-            bindings = <&kp KP_LPAR>, <&kp LBRC>;
+            bindings = <&kp LPAR>, <&kp LBRC>;
         };
         td_rpar: td_rpar {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double Tap Dance";
             #binding-cells = <0>;
-            bindings = <&kp KP_RPAR>, <&kp RBRC>;
+            bindings = <&kp RPAR>, <&kp RBRC>;
         };
         td_lbkt: td_lbkt {
             compatible = "zmk,behavior-tap-dance";
