@@ -212,8 +212,8 @@ layers:
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - F1
   - '&msc MOVE_LEFT'
-  - '&msc MOVE_DOWN'
   - '&msc MOVE_UP'
+  - '&msc MOVE_DOWN'
   - '&msc MOVE_RIGHT'
   - F7
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
