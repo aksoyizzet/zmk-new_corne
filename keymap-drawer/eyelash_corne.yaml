@@ -211,10 +211,10 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:backup-restore$$', type: bootloader}
   - F1
-  - $$mdi:pan-left$$
-  - $$mdi:pan-down$$
-  - $$mdi:pan-up$$
-  - $$mdi:pan-right$$
+  - '&msc MOVE_LEFT'
+  - '&msc MOVE_UP'
+  - '&msc MOVE_DOWN'
+  - '&msc MOVE_RIGHT'
   - F7
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
