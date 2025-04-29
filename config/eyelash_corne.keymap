@@ -1,5 +1,5 @@
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 100  // 10
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 200  // 10
 
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -14,11 +14,11 @@
 
 &mmv_input_listener { input-processors = <&zip_xy_scaler 2 1>; };
 
-&msc_input_listener { input-processors = <&zip_scroll_scaler 1 4>; };
+&msc_input_listener { input-processors = <&zip_scroll_scaler 1 8>; };
 
 &msc {
     acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <1000>;    // 300
+    time-to-max-speed-ms = <100>;     // 300
     delay-ms = <30>;                  // 0
 };
 
@@ -209,7 +209,7 @@
             display-name = "MOUSE";
             bindings = <
 &studio_unlock  &kp F2          &kp F3          &kp F4        &kp F5           &kp F6                               &mmv MOVE_UP                     &none  &mkp LCLK       &mkp MCLK       &mkp RCLK       &none            &sys_reset
-&kp F1          &msc MOVE_LEFT  &msc MOVE_UP  &msc MOVE_DOWN  &msc MOVE_RIGHT  &kp F7               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
+&kp F1          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp F7               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
 &bootloader     &kp F9          &kp F10         &kp F11       &kp F12          &kp F8  &kp C_MUTE                   &mmv MOVE_DOWN                   &none  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &bootloader        
                                                 &trans          &trans           &trans                                                                &trans &trans &kp DEL
             >;
