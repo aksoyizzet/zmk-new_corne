@@ -14,7 +14,7 @@ layers:
   - {t: '9', s: (}
   - KP PLUS
   - Alt+F4
-  - Ctl+X
+  - Alt+$$mdi:arrow-left-bold$$
   - $$mdi:arrow-left-bold$$
   - $$mdi:arrow-down-bold$$
   - $$mdi:arrow-up-bold$$
@@ -30,7 +30,7 @@ layers:
   - {t: '0', h: '$$mdi:apple-keyboard-control$$', s: )}
   - KP EQUAL
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: Ctl+W, h: LGUI}
+  - {t: Ctl+X, h: LGUI}
   - {t: Ctl+V, h: '$$mdi:apple-keyboard-option$$'}
   - {t: Ctl+F, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: Ctl+C, h: '$$mdi:apple-keyboard-control$$'}
@@ -63,7 +63,7 @@ layers:
   - G
   - Q
   - J
-  - X
+  - W
   - {t: A, h: '$$mdi:apple-keyboard-control$$'}
   - {t: E, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: I, h: '$$mdi:apple-keyboard-option$$'}
@@ -79,7 +79,7 @@ layers:
   - {t: N, h: '$$mdi:apple-keyboard-control$$'}
   - P
   - {t: LGUI, h: ABC}
-  - {t: W, h: LGUI}
+  - {t: X, h: LGUI}
   - {t: V, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: C, h: '$$mdi:apple-keyboard-control$$'}
