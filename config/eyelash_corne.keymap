@@ -158,29 +158,30 @@
     keymap {
         compatible = "zmk,keymap";
 
-        alpha_layer {
-            display-name = "ABC";
-            bindings = <
-&kp ESC     &td_caps_print  &kp Y         &kp U          &kp Z         &kp FSLH                          &kp UP                &td_quote  &kp H         &kp D         &kp G         &kp Q         &kp J
-&kp X       &hml LCTRL A    &hml LSHFT E  &hml LALT I    &hml LGUI O   &td_comma               &kp LEFT  &kp ENTER  &kp RIGHT  &td_dot    &hmr RGUI R   &hmr LALT S   &hmr RSHFT T  &hmr RCTRL N  &kp P
-&lt 1 LGUI  &hml LGUI W     &hml LALT V   &hml LSHFT F   &hml LCTRL C  &td_lpar  &kp SPACE               &kp DOWN              &td_rpar   &hmr RCTRL L  &hmr RSHFT K  &hmr LALT M   &hmr RGUI B   &kp DEL
-                                                &lt 4 TAB  MO_TOG(2, 1)  &lt 3 SPACE                                                                      &lt 4 ENTER  MO_TOG(1, 1)  &lt 3 BSPC
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
-        };
-
         nav_layer {
             display-name = "NAV";
             bindings = <
 &trans     &td_alttab_print  &kp LC(Y)        &kp LC(S)         &kp LC(Z)         &trans                              &mmv MOVE_UP                &kp ASTRK  &kp N7         &kp N8         &kp N9         &kp KP_PLUS         &kp LA(F4)
 &kp LC(X)  &kp LEFT          &kp DOWN         &kp UP            &kp RIGHT         &trans              &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &trans     &hmr RGUI N1   &hmr LALT N2   &hmr RSHFT N3  &hmr RCTRL N0       &kp KP_EQUAL
 &trans     &hml LGUI LC(W)   &hml LALT LC(V)  &hml LSHFT LC(F)  &hml LCTRL LC(C)  &trans  &kp C_MUTE                  &mmv MOVE_DOWN              &trans     &hmr RCTRL N4  &hmr RSHFT N5  &hmr LALT N6   &hmr RGUI KP_MINUS  &trans
+                                                &lt 4 TAB  MO_TOG(2, 1)  &lt 3 SPACE                                                                      &lt 4 ENTER  MO_TOG(1, 1)  &lt 3 BSPC
+            >;
+
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        alpha_layer {
+            display-name = "ABC";
+            bindings = <
+&kp ESC     &td_caps_print  &kp Y         &kp U          &kp Z         &kp FSLH                          &kp UP                &td_quote  &kp H         &kp D         &kp G         &kp Q         &kp J
+&kp X       &hml LCTRL A    &hml LSHFT E  &hml LALT I    &hml LGUI O   &td_comma               &kp LEFT  &kp ENTER  &kp RIGHT  &td_dot    &hmr RGUI R   &hmr LALT S   &hmr RSHFT T  &hmr RCTRL N  &kp P
+&lt 1 LGUI  &hml LGUI W     &hml LALT V   &hml LSHFT F   &hml LCTRL C  &td_lpar  &kp SPACE               &kp DOWN              &td_rpar   &hmr RCTRL L  &hmr RSHFT K  &hmr LALT M   &hmr RGUI B   &kp DEL
                                         &trans           &trans           &trans                                                                         &trans           &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
         };
+
 
         symbol_layer {
             display-name = "SYMBOL";

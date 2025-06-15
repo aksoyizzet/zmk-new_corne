@@ -2,11 +2,18 @@
   - Scroll by sensor
   - Space delay?
   - consumer keys not working on android: when CONFIG_ZMK_HID_CONSUMER_REPORT_USAGES_BASIC is uncommented, works on android but not on windows.
+  - forward slash
+  - remove ctrlW
+  - add at 
+  - double click speed
+  - mod keys can remain pressed a bit longer? after releasing
 - symbols
 - behavior
   - tapdance
     - symbols
     - accented Turkish, italian, french, spanish letters 
+    - home modes over arrow keys
+    - sure way to enter to nav layer
 - macro (or combo)
   - strings
     - mail etc commonly used shit
