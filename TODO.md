@@ -19,7 +19,7 @@
   - [x] sure way to enter to nav layer
 - shortcuts
   - [ ] ctrl home 
-  - [ ] alt left arrow
+  - [?] alt left arrow. seems doable from nav
 - macro (or combo)
   -  [ ] shortcut combos for ctrlACVFX
   -  [ ] enter, del, backspace on left side on nav layer

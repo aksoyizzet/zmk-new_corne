@@ -61,6 +61,24 @@
             layers = <3>;
             bindings = <&kp C_MUTE>;
         };
+        combo_bspc {
+            timeout-ms = <50>;
+            key-positions = <29 30>;
+            layers = <0 1>;
+            bindings = <&kp BSPC>;
+        };
+        combo_del {
+            timeout-ms = <50>;
+            key-positions = <30 31>;
+            layers = <0 1>;
+            bindings = <&kp DEL>;
+        };
+        combo_enter {
+            timeout-ms = <50>;
+            key-positions = <31 31>;
+            layers = <0 1>;
+            bindings = <&kp ENTER>;
+        };
     };
     behaviors {
         mo_tog: behavior_mo_tog {
