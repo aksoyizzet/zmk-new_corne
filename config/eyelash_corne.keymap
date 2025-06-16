@@ -170,6 +170,7 @@
             bindings = <&kp>, <&kp>;
             //hold-trigger-key-positions = < ... >; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
+            retro-tap;
         };
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
@@ -181,6 +182,7 @@
             bindings = <&kp>, <&kp>;
             //hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
+            retro-tap;
         };
         td_caps_print: td_caps_print {
             compatible = "zmk,behavior-tap-dance";
