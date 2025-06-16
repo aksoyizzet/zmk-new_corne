@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   NAV:
-  - $$mdi:keyboard-esc$$
+  - {t: '$$mdi:keyboard-esc$$', h: NUMPAD}
   - '&td_alttab_print'
   - Ctl+Y
   - Ctl+S
@@ -245,6 +245,55 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backspace-reverse-outline$$', type: held alternate}
+  NUMPAD:
+  - {type: held}
+  - '#'
+  - <
+  - '>'
+  - '&'
+  - '%'
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - KP 7
+  - KP 8
+  - KP 9
+  - '"'
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '!'
+  - {t: _, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '-', h: '$$mdi:apple-keyboard-shift$$', s: _}
+  - {t: +, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '=', h: LGUI, s: +}
+  - $
+  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
+  - $$mdi:mouse-left-click-outline$$
+  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: KP 1, h: RGUI}
+  - {t: KP 2, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: KP 3, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: KP 0, h: '$$mdi:apple-keyboard-control$$'}
+  - ^
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '?', h: LGUI}
+  - {t: /, h: '$$mdi:apple-keyboard-option$$', s: '?'}
+  - {t: '*', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '|', h: '$$mdi:apple-keyboard-control$$'}
+  - '&td_lbkt'
+  - $$mdi:volume-off$$
+  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
+  - '&td_rbkt'
+  - {t: KP 4, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: KP 5, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: KP 6, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '~', h: RGUI}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
 combos:
 - p: [15, 16]
   k: {t: ABC, h: toggle}
