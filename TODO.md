@@ -9,6 +9,8 @@
   - [x] asterisk in internal column
   - [ ] mod keys can remain pressed a bit longer? after releasing
   - [ ] parametrize for td?
+  - [ ] remove mods from volume bright down
+  - [ ] lrgui opens every second tap
 - [ ] symbols
 - behavior
   - tapdance
@@ -25,6 +27,7 @@
   -  [?] shortcut combos for ctrlACVFX. seems doable from nav
   -  [x] combo or shortcut for ctrlW
   -  [x] enter, del, backspace on left side on nav layer
+  - [ ] combo to enter abc permanently from nav
   - strings
     - [ ] mail etc commonly used shit
     - [ ] symbols
