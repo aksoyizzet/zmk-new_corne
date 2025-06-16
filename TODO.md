@@ -16,7 +16,7 @@
   - [ ] on nav layer P holded can be windows
   - [?] test homerow mods inverted
   - [ ] NumLock as kombo on numpad
-  - [ ] move bt clear. keep pressin
+  - [?] move bt clear. keep pressin
 - [ ] symbols
 - behavior
   - tapdance
