@@ -200,10 +200,10 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans    &kp HASH          &kp LT            &kp GT            &kp AMPS         &kp BSLH                           &mmv MOVE_UP                  &trans    &kp DQT          &kp QMARK        &kp AT_SIGN     &kp CARET         &none
-&kp EXCL  &hml LCTRL UNDER  &hml LSHFT MINUS  &hml LALT PLUS    &hml LGUI EQUAL  &kp DOLLAR         &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &trans    &hmr RGUI SEMI   &hmr LALT COMMA  &hmr RSHFT DOT  &hmr RCTRL COLON  &kp PERCENT
-&trans    &hml LGUI QMARK   &hml LALT FSLH    &hml LSHFT ASTRK  &hml LCTRL PIPE  &td_lbkt   &kp C_MUTE              &mmv MOVE_DOWN                &td_rbkt  &hmr RCTRL EXCL  &hmr RSHFT AMPS  &hmr LALT PIPE  &hmr RGUI TILDE   &trans
-                              &trans     &trans  &trans                                                                    &trans     &trans    &trans
+&trans     &kp HASH          &kp LT            &kp GT            &kp DOLLAR       &kp BSLH                           &mmv MOVE_UP                  &trans    &kp DQT          &kp QMARK        &kp AT_SIGN     &kp CARET         &none
+&kp CARET  &hml LCTRL UNDER  &hml LSHFT MINUS  &hml LALT PLUS    &hml LGUI EQUAL  &trans         &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT        &kp EXCL  &hmr RGUI SEMI   &hmr LALT COMMA  &hmr RSHFT DOT  &hmr RCTRL COLON  &kp PERCENT
+&trans     &hml LGUI QMARK   &hml LALT FSLH    &hml LSHFT ASTRK  &hml LCTRL LBRC  &td_lbkt   &kp C_MUTE              &mmv MOVE_DOWN                &td_rbkt  &hmr RCTRL RBRC  &hmr RSHFT AMPS  &hmr LALT PIPE  &hmr RGUI TILDE   &trans
+                                             &trans     &trans  &trans                                                                            &trans     &trans    &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
