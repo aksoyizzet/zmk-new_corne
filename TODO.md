@@ -17,9 +17,11 @@
   - [x] arrow keys to keep pressed
   - [ ] td_mo for to tab, space, backspace and del
   - [x] sure way to enter to nav layer
+- shortcuts
+  - [ ] ctrl home 
+  - [ ] alt left arrow
 - macro (or combo)
   -  [ ] shortcut combos for ctrlACVFX
-  -  [ ] alt home 
   -  [ ] enter, del, backspace on left side on nav layer
   - strings
     - [ ] mail etc commonly used shit
