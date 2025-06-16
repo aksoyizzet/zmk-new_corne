@@ -11,20 +11,24 @@
   - [ ] parametrize for td?
   - [ ] remove mods from volume bright down
   - [ ] lrgui opens every second tap
+  - [ ] Add right click menu
+  - [ ] lrGuis working every second tap
+  - [ ] on nav layer P holded can be windows
+  - [ ] test homerow mods inverted
+  - [ ] NumLock as kombo on numpad
 - [ ] symbols
 - behavior
   - tapdance
     - [ ] symbols
     - [ ] accented Turkish, italian, french, spanish letters (another layer for tr)
   - [x] home modes over arrow keys
-  - [?] arrow keys to keep pressed. was already working like that? check also the one below
-  - [?] td_mo for to tab, space, enter and backspace 
+  - [x] arrow keys to keep pressed. was already working like that? check also the one below
+  - [x] td_mo for to tab, space, enter and backspace 
   - [x] sure way to enter to nav layer
 - shortcuts
   - [ ] ctrl home 
   - [?] alt left arrow. seems doable from nav
 - macro (or combo)
-  -  [?] shortcut combos for ctrlACVFX. seems doable from nav
   -  [x] combo or shortcut for ctrlW
   -  [x] enter, del, backspace on left side on nav layer
   - [ ] combo to enter abc permanently from nav
