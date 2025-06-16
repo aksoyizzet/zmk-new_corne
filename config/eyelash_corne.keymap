@@ -31,7 +31,7 @@
 
 #define MO_TOG(layer_mo, layer_tog) &mo_tog layer_mo layer_tog   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
 #define MO_TO(layer_mo, layer_to) &mo_to layer_mo layer_to   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
-#define TD_HML(mod_key, key_press) &td_hml mod_key key_press key_press   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
+// #define TD_HML(mod_key, key_press) &td_hml mod_key key_press key_press   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
 // #define TD_DC(single_tap, double_tap) &td_dc single_tap double_tap   // Macro to apply tap dance
 
 / {
@@ -101,11 +101,29 @@
             //hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
-        td_hml: td_hml {
+        td_left: td_left {
             compatible = "zmk,behavior-tap-dance";
-            display-name = "Double Tap Dance";
-            #binding-cells = <2>;
-            bindings = <&hml>, <&kp>;
+            display-name = "Double Tap Dance Hold";
+            #binding-cells = <0>;
+            bindings = <&hml LCTRL LEFT>, <&kp LEFT>;
+        };
+        td_down: td_down {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Double Tap Dance Hold";
+            #binding-cells = <0>;
+            bindings = <&hml LSHFT DOWN>, <&kp DOWN>;
+        };
+        td_up: td_up {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Double Tap Dance Hold";
+            #binding-cells = <0>;
+            bindings = <&hml LALT UP>, <&kp UP>;
+        };
+        td_right: td_right {
+            compatible = "zmk,behavior-tap-dance";
+            display-name = "Double Tap Dance Hold";
+            #binding-cells = <0>;
+            bindings = <&hml LGUI RIGHT>, <&kp RIGHT>;
         };
         td_caps_print: td_caps_print {
             compatible = "zmk,behavior-tap-dance";
@@ -182,9 +200,9 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&lt 5 ESC    &td_alttab_print     &kp LC(Y)            &kp LC(S)         &kp LC(Z)            &kp FSLH                              &mmv MOVE_UP                 &td_quote &kp N7         &kp N8         &kp N9         &kp KP_PLUS         &kp LA(F4)
-&lt 3 LC(A)  TD_HML(LCTRL, LEFT)  TD_HML(LSHFT, DOWN)  TD_HML(LALT, UP)  TD_HML(LGUI, RIGHT)   &td_comma              &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &td_dot   &hmr RGUI N1   &hmr LALT N2   &hmr RSHFT N3  &hmr RCTRL N0       &kp KP_EQUAL
-&kp LGUI     &hml LGUI LC(X)      &hml LALT LC(V)      &hml LSHFT LC(F)  &hml LCTRL LC(C)     &td_lpar  &kp C_MUTE                  &mmv MOVE_DOWN               &td_rpar  &hmr RCTRL N4  &hmr RSHFT N5  &hmr LALT N6   &hmr RGUI KP_MINUS  &kp DEL
+&lt 5 ESC    &td_alttab_print &kp LC(Y)        &kp LC(S)         &kp LC(Z)         &kp FSLH                              &mmv MOVE_UP                 &td_quote &kp N7         &kp N8         &kp N9         &kp KP_PLUS         &kp LA(F4)
+&lt 3 LC(A)  &td_left         &td_down         &td_up            &td_right         &td_comma              &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &td_dot   &hmr RGUI N1   &hmr LALT N2   &hmr RSHFT N3  &hmr RCTRL N0       &kp KP_EQUAL
+&kp LGUI     &hml LGUI LC(X)  &hml LALT LC(V)  &hml LSHFT LC(F)  &hml LCTRL LC(C)  &td_lpar  &kp C_MUTE                  &mmv MOVE_DOWN               &td_rpar  &hmr RCTRL N4  &hmr RSHFT N5  &hmr LALT N6   &hmr RGUI KP_MINUS  &kp DEL
                                                 &lt 2 TAB  MO_TO(1, 0)  &lt 4 SPACE                                                                      &lt 2 ENTER  MO_TO(0, 1)  &lt 4 BSPC
             >;
 
