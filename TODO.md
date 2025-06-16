@@ -14,8 +14,9 @@
   - [ ] Add right click menu
   - [ ] lrGuis working every second tap
   - [ ] on nav layer P holded can be windows
-  - [ ] test homerow mods inverted
+  - [?] test homerow mods inverted
   - [ ] NumLock as kombo on numpad
+  - [ ] move bt clear. keep pressin
 - [ ] symbols
 - behavior
   - tapdance
