@@ -12,17 +12,17 @@
 - behavior
   - tapdance
     - [ ] symbols
-    - [ ] accented Turkish, italian, french, spanish letters 
+    - [ ] accented Turkish, italian, french, spanish letters (another layer for tr)
   - [x] home modes over arrow keys
   - [x] arrow keys to keep pressed
-  - [ ] td_mo for to tab, space, backspace and del
+  - [x] td_mo for to tab, space, enter and backspace 
   - [x] sure way to enter to nav layer
 - shortcuts
   - [ ] ctrl home 
   - [?] alt left arrow. seems doable from nav
 - macro (or combo)
-  -  [ ] shortcut combos for ctrlACVFX
-  -  [ ] enter, del, backspace on left side on nav layer
+  -  [?] shortcut combos for ctrlACVFX. seems doable from nav
+  -  [x] enter, del, backspace on left side on nav layer
   - strings
     - [ ] mail etc commonly used shit
     - [ ] symbols
