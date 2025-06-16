@@ -161,9 +161,9 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&kp ESC         &td_alttab_print  &kp LC(Y)        &kp LC(S)         &kp LC(Z)         &trans                              &mmv MOVE_UP                &kp ASTRK  &kp N7         &kp N8         &kp N9         &kp KP_PLUS         &kp LA(F4)
-&lt 3 LA(LEFT)  &hml LCTRL LEFT   &hml LSHFT DOWN  &hml LALT UP      &hml LGUI RIGHT   &trans              &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &trans     &hmr RGUI N1   &hmr LALT N2   &hmr RSHFT N3  &hmr RCTRL N0       &kp KP_EQUAL
-&kp LGUI        &hml LGUI LC(X)   &hml LALT LC(V)  &hml LSHFT LC(F)  &hml LCTRL LC(C)  &trans  &kp C_MUTE                  &mmv MOVE_DOWN              &trans     &hmr RCTRL N4  &hmr RSHFT N5  &hmr LALT N6   &hmr RGUI KP_MINUS  &trans
+&kp ESC         &td_alttab_print  &kp LC(Y)        &kp LC(S)         &kp LC(Z)         &kp FSLH                              &mmv MOVE_UP                 &td_quote &kp N7         &kp N8         &kp N9         &kp KP_PLUS         &kp LA(F4)
+&lt 3 LA(LEFT)  &hml LCTRL LEFT   &hml LSHFT DOWN  &hml LALT UP      &hml LGUI RIGHT   &td_comma              &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &td_dot   &hmr RGUI N1   &hmr LALT N2   &hmr RSHFT N3  &hmr RCTRL N0       &kp KP_EQUAL
+&kp LGUI        &hml LGUI LC(X)   &hml LALT LC(V)  &hml LSHFT LC(F)  &hml LCTRL LC(C)  &td_lpar  &kp C_MUTE                  &mmv MOVE_DOWN               &td_rpar  &hmr RCTRL N4  &hmr RSHFT N5  &hmr LALT N6   &hmr RGUI KP_MINUS  &kp DEL
                                                 &lt 2 TAB  MO_TOG(1, 1)  &lt 4 SPACE                                                                      &lt 2 ENTER  MO_TOG(1, 1)  &lt 4 BSPC
             >;
 
@@ -173,9 +173,9 @@
         alpha_layer {
             display-name = "ABC";
             bindings = <
-&trans  &td_caps_print  &kp Y         &kp U          &kp Z         &kp FSLH                          &kp UP                &td_quote  &kp H         &kp D         &kp G         &kp Q         &kp J
-&kp W   &hml LCTRL A    &hml LSHFT E  &hml LALT I    &hml LGUI O   &td_comma               &kp LEFT  &kp ENTER  &kp RIGHT  &td_dot    &hmr RGUI R   &hmr LALT S   &hmr RSHFT T  &hmr RCTRL N  &kp P
-&trans  &hml LGUI X     &hml LALT V   &hml LSHFT F   &hml LCTRL C  &td_lpar  &kp SPACE               &kp DOWN              &td_rpar   &hmr RCTRL L  &hmr RSHFT K  &hmr LALT M   &hmr RGUI B   &kp DEL
+&trans  &td_caps_print  &kp Y         &kp U          &kp Z         &trans                          &kp UP                &kp ASTRK  &kp H         &kp D         &kp G         &kp Q         &kp J
+&kp W   &hml LCTRL A    &hml LSHFT E  &hml LALT I    &hml LGUI O   &trans               &kp LEFT  &kp ENTER  &kp RIGHT   &trans     &hmr RGUI R   &hmr LALT S   &hmr RSHFT T  &hmr RCTRL N  &kp P
+&trans  &hml LGUI X     &hml LALT V   &hml LSHFT F   &hml LCTRL C  &trans  &kp SPACE               &kp DOWN              &trans     &hmr RCTRL L  &hmr RSHFT K  &hmr LALT M   &hmr RGUI B   &trans
                                         &trans           &trans           &trans                                                                         &trans           &trans     &trans
             >;
 
