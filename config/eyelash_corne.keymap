@@ -175,7 +175,7 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&kp ESC      &td_alttab_print  &kp LC(Y)        &kp LC(S)         &kp LC(Z)         &kp FSLH                              &mmv MOVE_UP                 &td_quote &kp N7         &kp N8         &kp N9         &kp KP_PLUS         &kp LA(F4)
+&lt 5 ESC      &td_alttab_print  &kp LC(Y)        &kp LC(S)         &kp LC(Z)         &kp FSLH                              &mmv MOVE_UP                 &td_quote &kp N7         &kp N8         &kp N9         &kp KP_PLUS         &kp LA(F4)
 &lt 3 LC(A)  &hml LCTRL LEFT   &hml LSHFT DOWN  &hml LALT UP      &hml LGUI RIGHT   &td_comma              &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &td_dot   &hmr RGUI N1   &hmr LALT N2   &hmr RSHFT N3  &hmr RCTRL N0       &kp KP_EQUAL
 &kp LGUI    &hml LGUI LC(X)   &hml LALT LC(V)  &hml LSHFT LC(F)  &hml LCTRL LC(C)  &td_lpar  &kp C_MUTE                  &mmv MOVE_DOWN               &td_rpar  &hmr RCTRL N4  &hmr RSHFT N5  &hmr LALT N6   &hmr RGUI KP_MINUS  &kp DEL
                                                 &lt 2 TAB  MO_TO(1, 0)  &lt 4 SPACE                                                                      &lt 2 ENTER  MO_TO(1, 1)  &lt 4 BSPC
@@ -230,6 +230,17 @@
             >;
 
             sensor-bindings = <&scroll_encoder>;
-        };      
+        };
+        
+          numpad_layer {
+            display-name = "NUMPAD";
+            bindings = <
+&trans    &kp HASH          &kp LT            &kp GT            &kp AMPS         &kp PERCENT                        &mmv MOVE_UP                  &trans    &kp KP_N7         &kp KP_N8         &kp KP_N9         &kp DQT             &none
+&kp EXCL  &hml LCTRL UNDER  &hml LSHFT MINUS  &hml LALT PLUS    &hml LGUI EQUAL  &kp DOLLAR         &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &trans    &hmr RGUI KP_N1   &hmr LALT KP_N2   &hmr RSHFT KP_N3  &hmr RCTRL KP_N0  &kp CARET
+&trans    &hml LGUI QMARK   &hml LALT FSLH    &hml LSHFT ASTRK  &hml LCTRL PIPE  &td_lbkt   &kp C_MUTE              &mmv MOVE_DOWN                &td_rbkt  &hmr RCTRL KP_N4  &hmr RSHFT KP_N5  &hmr LALT KP_N6   &hmr RGUI TILDE   &trans
+                              &trans     &trans  &trans                                                                    &trans     &trans    &trans
+            >;
+            sensor-bindings = <&scroll_encoder>;
+        };
     };
 };
