@@ -16,6 +16,7 @@
   - [ ] arrow keys to keep pressed
   - [ ] sure way to enter to nav layer
 - macro (or combo)
+  - shortcut combos for ctrlACVFX
   - strings
     - [ ] mail etc commonly used shit
     - [ ] symbols
