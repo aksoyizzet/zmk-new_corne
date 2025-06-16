@@ -295,7 +295,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [3, 4, 5]
+- p: [2, 3, 4]
   k: {t: ABC, h: toggle}
   l: [NAV, ABC]
 - p: [15, 16]
