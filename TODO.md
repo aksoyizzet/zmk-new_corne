@@ -14,7 +14,7 @@
     - [ ] accented Turkish, italian, french, spanish letters 
   - [x] home modes over arrow keys
   - [ ] arrow keys to keep pressed
-  - [ ] sure way to enter to nav layer
+  - [x] sure way to enter to nav layer
 - macro (or combo)
   - shortcut combos for ctrlACVFX
   - strings
