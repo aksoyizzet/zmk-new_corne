@@ -298,6 +298,9 @@ combos:
 - p: [2, 3]
   k: {t: ABC, h: toggle}
   l: [NAV, ABC]
+- p: [9, 10]
+  k: {t: NAV, h: toggle}
+  l: [NAV, ABC]
 - p: [15, 16]
   k: $$mdi:play-pause$$
   l: [MEDIA]
