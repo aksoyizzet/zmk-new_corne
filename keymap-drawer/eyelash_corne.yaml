@@ -160,7 +160,7 @@ layers:
   - RGB EFF
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - BT CLR ALL
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {h: '5', s: '$$mdi:bluetooth-connect$$', type: held}
   - {t: '$$mdi:skip-previous$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: RW, h: '$$mdi:apple-keyboard-shift$$'}
@@ -175,7 +175,7 @@ layers:
   - {t: PG UP, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: PG DN, h: '$$mdi:apple-keyboard-option$$'}
   - {t: END, h: RGUI}
-  - $$mdi:bluetooth-off$$
+  - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - RGB COLOR HSB(0,0,10)
   - RGB BRD
@@ -322,6 +322,18 @@ combos:
 - p: [8, 9, 10]
   k: $$mdi:keyboard-esc$$
   l: [NAV, ABC]
+- p: [8, 9, 10, 11]
+  k: {t: NUMPAD, h: toggle}
+  l: [NAV, ABC]
+- p: [8, 9, 10]
+  k: KP NUM
+  l: [NUMPAD]
+- p: [10, 11]
+  k: $$mdi:bluetooth-off$$
+  l: [MEDIA]
+- p: [11, 12]
+  k: BT CLR ALL
+  l: [MEDIA]
 - p: [15, 16]
   k: $$mdi:play-pause$$
   l: [MEDIA]
