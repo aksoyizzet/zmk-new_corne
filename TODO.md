@@ -14,6 +14,7 @@
     - [ ] accented Turkish, italian, french, spanish letters 
   - [x] home modes over arrow keys
   - [x] arrow keys to keep pressed
+  - [ ] td_mo for to tab, space, backspace and del
   - [x] sure way to enter to nav layer
 - macro (or combo)
   -  [ ] shortcut combos for ctrlACVFX
