@@ -63,7 +63,7 @@ layers:
   - G
   - Q
   - J
-  - W
+  - {t: W, h: MEDIA}
   - {t: A, h: '$$mdi:apple-keyboard-control$$'}
   - {t: E, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: I, h: '$$mdi:apple-keyboard-option$$'}
@@ -191,10 +191,10 @@ layers:
   - RGUI
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   MOUSE:
   - '&studio_unlock'
