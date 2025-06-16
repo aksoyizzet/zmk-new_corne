@@ -44,7 +44,7 @@ layers:
   - {t: KP MINUS, h: RGUI}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
-  - {t: ABC, h: ABC}
+  - {t: NAV, h: ABC}
   - {t: '$$mdi:keyboard-space$$', h: MOUSE}
   - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
   - {t: ABC, h: ABC}
