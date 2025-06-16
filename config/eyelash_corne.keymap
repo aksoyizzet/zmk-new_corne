@@ -37,6 +37,12 @@
 / {
     combos {
         compatible = "zmk,combos";
+        combo_ctrl_w_left {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            layers = <0 1>;
+            bindings = <&kp LC(W)>;
+        };
         combo_bspc {
             timeout-ms = <50>;
             key-positions = <2 3>;
@@ -54,6 +60,18 @@
             key-positions = <2 3 4>;
             layers = <0 1>;
             bindings = <&kp ENTER>;
+        };
+        combo_alt_f4 {
+            timeout-ms = <50>;
+            key-positions = <4 5>;
+            layers = <0 1>;
+            bindings = <&kp LA(F4)>;
+        };
+        combo_ctrl_w_right {
+            timeout-ms = <50>;
+            key-positions = <7 8>;
+            layers = <0 1>;
+            bindings = <&kp LC(W)>;
         };
         combo_tab {
             timeout-ms = <50>;
