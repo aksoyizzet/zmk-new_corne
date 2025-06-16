@@ -295,9 +295,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [15, 16]
+- p: [3, 4, 5]
   k: {t: ABC, h: toggle}
-  l: [NAV]
+  l: [NAV, ABC]
 - p: [15, 16]
   k: $$mdi:play-pause$$
   l: [MEDIA]
