@@ -14,12 +14,12 @@
   - [ ] Add right click menu
   - [ ] on nav layer P holded can be windows
   - [?] test homerow mods inverted
-  - [ ] NumLock as kombo on numpad
+  - [x] NumLock as kombo on numpad
   - [?] move bt clear. keep pressin
 - [ ] symbols
 - behavior
   - tapdance
-    - [ ] symbols
+    - [?] symbols
     - [ ] accented Turkish, italian, french, spanish letters (another layer for tr)
   - [x] home modes over arrow keys
   - [x] arrow keys to keep pressed. was already working like that? check also the one below

@@ -91,6 +91,18 @@
             layers = <0 1>;
             bindings = <&kp ESC>;
         };
+        combo_num_layer {
+            timeout-ms = <50>;
+            key-positions = <8 9 10 11>;
+            layers = <0 1>;
+            bindings = <&to 5>;
+        };
+        combo_num_layer {
+            timeout-ms = <50>;
+            key-positions = <8 9 10>;
+            layers = <5>;
+            bindings = <&kp KP_NUM>;
+        };
         combo_bt_clr {
             timeout-ms = <50>;
             key-positions = <10 11>;
