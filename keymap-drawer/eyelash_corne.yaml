@@ -295,9 +295,6 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [2, 3]
-  k: {t: ABC, h: toggle}
-  l: [NAV, ABC]
 - p: [9, 10]
   k: {t: NAV, h: toggle}
   l: [NAV, ABC]
@@ -309,12 +306,12 @@ combos:
   l: [MEDIA]
   a: top
   o: 0.15
-- p: [29, 30]
+- p: [2, 3]
   k: {t: '$$mdi:backspace$$', type: backspace}
   l: [NAV, ABC]
-- p: [30, 31]
+- p: [3, 4]
   k: $$mdi:backspace-reverse-outline$$
   l: [NAV, ABC]
-- p: [31, 31]
+- p: [2, 3, 4]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
   l: [NAV, ABC]
