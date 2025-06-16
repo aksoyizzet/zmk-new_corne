@@ -35,17 +35,6 @@
 // #define TD_DC(single_tap, double_tap) &td_dc single_tap double_tap   // Macro to apply tap dance
 
 / {
-    macros {
-        mo_right: macro_mo_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &to 0>
-                , <&macro_pause_for_release>
-                , <&macro_release &to 1>
-                ;
-        };
-    };
     combos {
         compatible = "zmk,combos";
         combo_to_abc {
@@ -86,8 +75,8 @@
         mo_to_right: behavior_mo_to_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
             bindings = <&to>, <&to>;
         };
         
