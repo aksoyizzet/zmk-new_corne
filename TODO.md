@@ -17,6 +17,7 @@
   - [x] NumLock as kombo on numpad
   - [?] move bt clear. keep pressin
   - [ ] create #defines for layers
+  - [ ] mods tapped after they are released if no tap happened
 - [?] symbols
 - behavior
   - tapdance
