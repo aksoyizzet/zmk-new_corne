@@ -97,7 +97,7 @@
             layers = <0 1>;
             bindings = <&to 5>;
         };
-        combo_num_layer {
+        combo_num_lock {
             timeout-ms = <50>;
             key-positions = <8 9 10>;
             layers = <5>;
