@@ -15,10 +15,10 @@ layers:
   - KP PLUS
   - Alt+F4
   - Alt+$$mdi:arrow-left-bold$$
-  - $$mdi:arrow-left-bold$$
-  - $$mdi:arrow-down-bold$$
-  - $$mdi:arrow-up-bold$$
-  - $$mdi:arrow-right-bold$$
+  - {t: '$$mdi:arrow-left-bold$$', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '$$mdi:arrow-down-bold$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:arrow-up-bold$$', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:arrow-right-bold$$', h: LGUI}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
@@ -113,10 +113,10 @@ layers:
   - '"'
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '!'
-  - _
-  - {t: '-', s: _}
-  - +
-  - {t: '=', s: +}
+  - {t: _, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '-', h: '$$mdi:apple-keyboard-shift$$', s: _}
+  - {t: +, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '=', h: LGUI, s: +}
   - $
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
@@ -128,10 +128,10 @@ layers:
   - {t: KP 0, h: '$$mdi:apple-keyboard-control$$'}
   - ^
   - {t: '$$mdi:transfer$$', type: trans}
-  - '?'
-  - {t: /, s: '?'}
-  - '*'
-  - '|'
+  - {t: '?', h: LGUI}
+  - {t: /, h: '$$mdi:apple-keyboard-option$$', s: '?'}
+  - {t: '*', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '|', h: '$$mdi:apple-keyboard-control$$'}
   - '&td_lbkt'
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
@@ -162,33 +162,33 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - BT CLR ALL
   - {h: '5', s: '$$mdi:bluetooth-connect$$'}
-  - $$mdi:skip-previous$$
-  - RW
-  - FF
-  - $$mdi:skip-next$$
+  - {t: '$$mdi:skip-previous$$', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: RW, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: FF, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '$$mdi:skip-next$$', h: LGUI}
   - {h: '2', s: '$$mdi:bluetooth-connect$$'}
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - '&bl BL_TOG'
-  - HOME
-  - PG UP
-  - PG DN
-  - END
+  - {t: HOME, h: RGUI}
+  - {t: PG UP, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: PG DN, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: END, h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:bluetooth-off$$
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - RGB COLOR HSB(0,0,10)
   - RGB BRD
-  - $$mdi:brightness-7$$
-  - $$mdi:volume-low$$
+  - {t: '$$mdi:brightness-7$$', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '$$mdi:volume-low$$', h: '$$mdi:apple-keyboard-control$$'}
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - '&bl BL_DEC'
-  - INS
+  - {t: INS, h: '$$mdi:apple-keyboard-control$$'}
   - RGB EFR
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - $$mdi:apple-keyboard-option$$
+  - RGUI
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
