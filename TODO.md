@@ -10,13 +10,14 @@
   - [ ] mod keys can remain pressed a bit longer? after releasing
   - [ ] parametrize for td?
   - [x] remove mods from volume bright down
-  - [ ] lrgui opens every second tap
-  - [ ] Add right click menu
-  - [ ] on nav layer P holded can be windows
+  - [-] lrgui opens every second tap
+  - [?] Add right click menu
+  - [-] on nav layer P holded can be windows
   - [?] test homerow mods inverted
   - [x] NumLock as kombo on numpad
   - [?] move bt clear. keep pressin
-- [ ] symbols
+  - [ ] create #defines for layers
+- [?] symbols
 - behavior
   - tapdance
     - [?] symbols

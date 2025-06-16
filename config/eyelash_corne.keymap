@@ -278,9 +278,9 @@
         alpha_layer {
             display-name = "ABC";
             bindings = <
-&trans    &td_caps_print  &kp Y         &kp U          &kp Z         &trans                          &kp UP                &trans  &kp H         &kp D         &kp G         &kp Q         &kp J
-&lt 3 W   &hml LGUI A     &hml LALT E   &hml LSHFT I   &hml LCTRL O  &trans               &kp LEFT  &kp ENTER  &kp RIGHT   &trans  &hmr RCTRL R  &hmr RSHFT S  &hmr LALT T   &hmr RGUI N   &kp P
-&trans    &hml LCTRL X    &hml LSHFT V  &hml LALT F    &hml LGUI C   &trans  &kp SPACE               &kp DOWN              &trans  &hmr RGUI L   &hmr LALT K   &hmr RSHFT M  &hmr RCTRL B  &trans
+&trans       &td_caps_print  &kp Y         &kp U          &kp Z         &trans                          &kp UP                &trans  &kp H         &kp D         &kp G         &kp Q         &kp J
+&lt 3 W      &hml LGUI A     &hml LALT E   &hml LSHFT I   &hml LCTRL O  &trans               &kp LEFT  &kp ENTER  &kp RIGHT   &trans  &hmr RCTRL R  &hmr RSHFT S  &hmr LALT T   &hmr RGUI N   &kp P
+&kp K_CMENU  &hml LCTRL X    &hml LSHFT V  &hml LALT F    &hml LGUI C   &trans  &kp SPACE               &kp DOWN              &trans  &hmr RGUI L   &hmr LALT K   &hmr RSHFT M  &hmr RCTRL B  &trans
                                         &trans           &trans           &trans                                                                         &trans           &trans     &trans
             >;
 
