@@ -161,9 +161,9 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&trans     &td_alttab_print  &kp LC(Y)        &kp LC(S)         &kp LC(Z)         &trans                              &mmv MOVE_UP                &kp ASTRK  &kp N7         &kp N8         &kp N9         &kp KP_PLUS         &kp LA(F4)
-&kp LA(LEFT)  &kp LEFT          &kp DOWN         &kp UP            &kp RIGHT         &trans              &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &trans     &hmr RGUI N1   &hmr LALT N2   &hmr RSHFT N3  &hmr RCTRL N0       &kp KP_EQUAL
-&trans     &hml LGUI LC(X)    &hml LALT LC(V)  &hml LSHFT LC(F)  &hml LCTRL LC(C)  &trans  &kp C_MUTE                  &mmv MOVE_DOWN              &trans     &hmr RCTRL N4  &hmr RSHFT N5  &hmr LALT N6   &hmr RGUI KP_MINUS  &trans
+&trans        &td_alttab_print  &kp LC(Y)        &kp LC(S)         &kp LC(Z)         &trans                              &mmv MOVE_UP                &kp ASTRK  &kp N7         &kp N8         &kp N9         &kp KP_PLUS         &kp LA(F4)
+&kp LA(LEFT)  &hml LCTRL LEFT   &hml LSHFT DOWN  &hml LALT UP      &hml LGUI RIGHT   &trans              &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &trans     &hmr RGUI N1   &hmr LALT N2   &hmr RSHFT N3  &hmr RCTRL N0       &kp KP_EQUAL
+&trans        &hml LGUI LC(X)   &hml LALT LC(V)  &hml LSHFT LC(F)  &hml LCTRL LC(C)  &trans  &kp C_MUTE                  &mmv MOVE_DOWN              &trans     &hmr RCTRL N4  &hmr RSHFT N5  &hmr LALT N6   &hmr RGUI KP_MINUS  &trans
                                                 &lt 4 TAB  MO_TOG(2, 1)  &lt 3 SPACE                                                                      &lt 4 ENTER  MO_TOG(1, 1)  &lt 3 BSPC
             >;
 
@@ -186,9 +186,9 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans    &kp HASH   &kp LT     &kp GT     &kp AMPS   &kp PERCENT                        &mmv MOVE_UP                  &trans    &kp KP_N7         &kp KP_N8         &kp KP_N9         &kp DQT             &none
-&kp EXCL  &kp UNDER  &kp MINUS  &kp PLUS   &kp EQUAL  &kp DOLLAR         &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &trans    &hmr RGUI KP_N1   &hmr LALT KP_N2   &hmr RSHFT KP_N3  &hmr RCTRL KP_N0  &kp CARET
-&trans    &kp QMARK  &kp FSLH   &kp ASTRK  &kp PIPE   &td_lbkt   &kp C_MUTE              &mmv MOVE_DOWN                &td_rbkt  &hmr RCTRL KP_N4  &hmr RSHFT KP_N5  &hmr LALT KP_N6   &hmr RGUI TILDE   &trans
+&trans    &kp HASH          &kp LT            &kp GT            &kp AMPS         &kp PERCENT                        &mmv MOVE_UP                  &trans    &kp KP_N7         &kp KP_N8         &kp KP_N9         &kp DQT             &none
+&kp EXCL  &hml LCTRL UNDER  &hml LSHFT MINUS  &hml LALT PLUS    &hml LGUI EQUAL  &kp DOLLAR         &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &trans    &hmr RGUI KP_N1   &hmr LALT KP_N2   &hmr RSHFT KP_N3  &hmr RCTRL KP_N0  &kp CARET
+&trans    &hml LGUI QMARK   &hml LALT FSLH    &hml LSHFT ASTRK  &hml LCTRL PIPE  &td_lbkt   &kp C_MUTE              &mmv MOVE_DOWN                &td_rbkt  &hmr RCTRL KP_N4  &hmr RSHFT KP_N5  &hmr LALT KP_N6   &hmr RGUI TILDE   &trans
                               &trans     &trans  &trans                                                                    &trans     &trans    &trans
             >;
             sensor-bindings = <&scroll_encoder>;
@@ -197,9 +197,9 @@
         media_layer {
             display-name = "MEDIA";
             bindings = <
-&trans        &rgb_ug RGB_TOG                 &rgb_ug RGB_BRI  &kp C_BRI_UP  &kp C_VOLUME_UP    &bt BT_SEL 0                                &mmv MOVE_UP                     &bl BL_INC  &none     &rgb_ug RGB_EFF  &none      &none    &bt BT_CLR_ALL
-&bt BT_SEL 4  &kp C_PREV                      &kp C_RW         &kp C_FF      &kp C_NEXT         &bt BT_SEL 1                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bl BL_TOG  &kp HOME  &kp PG_UP        &kp PG_DN  &kp END  &bt BT_CLR
-&bt BT_SEL 3  &rgb_ug RGB_COLOR_HSB(0,0,10)   &rgb_ug RGB_BRD  &kp C_BRI_DN  &kp C_VOLUME_DOWN  &bt BT_SEL 2 &kp C_MUTE                     &mmv MOVE_DOWN                   &bl BL_DEC  &kp INS   &rgb_ug RGB_EFR  &none      &none    &trans
+&trans        &rgb_ug RGB_TOG                 &rgb_ug RGB_BRI  &kp C_BRI_UP         &kp C_VOLUME_UP           &bt BT_SEL 0                                &mmv MOVE_UP                     &bl BL_INC  &none           &rgb_ug RGB_EFF  &none             &none           &bt BT_CLR_ALL
+&bt BT_SEL 4  &hml LCTRL C_PREV               &hml LSHFT C_RW  &hml LALT C_FF       &hml LGUI C_NEXT          &bt BT_SEL 1                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bl BL_TOG  &hmr RGUI HOME  &hmr LALT PG_UP  &hmr RSHFT PG_DN  &hmr RCTRL END  &bt BT_CLR
+&bt BT_SEL 3  &rgb_ug RGB_COLOR_HSB(0,0,10)   &rgb_ug RGB_BRD  &hml LSHFT C_BRI_DN  &hml LCTRL C_VOLUME_DOWN  &bt BT_SEL 2 &kp C_MUTE                     &mmv MOVE_DOWN                   &bl BL_DEC  &hmr RCTRL INS  &rgb_ug RGB_EFR  &kp LALT          &kp RGUI        &trans
                                           &trans        &trans             &trans                                                                             &trans &trans &trans
             >;
 
