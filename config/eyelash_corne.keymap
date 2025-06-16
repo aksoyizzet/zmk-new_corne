@@ -169,7 +169,7 @@
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
             //hold-trigger-key-positions = < ... >; // List of keys on the right side of the keyboard
-            hold-trigger-on-release;
+            // hold-trigger-on-release;
         };
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
@@ -180,7 +180,7 @@
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
             //hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
-            hold-trigger-on-release;
+            // hold-trigger-on-release;
         };
         td_caps_print: td_caps_print {
             compatible = "zmk,behavior-tap-dance";
