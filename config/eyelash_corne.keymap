@@ -196,7 +196,7 @@
             display-name = "Double Tap Dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&kp COMMA>, <&kp SEMI>;
+            bindings = <&lt 5 COMMA>, <&kp SEMI>;
         };
         td_dot: td_dot {
             compatible = "zmk,behavior-tap-dance";

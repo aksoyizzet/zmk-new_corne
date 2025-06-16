@@ -9,10 +9,9 @@
   - [x] asterisk in internal column
   - [ ] mod keys can remain pressed a bit longer? after releasing
   - [ ] parametrize for td?
-  - [ ] remove mods from volume bright down
+  - [x] remove mods from volume bright down
   - [ ] lrgui opens every second tap
   - [ ] Add right click menu
-  - [ ] lrGuis working every second tap
   - [ ] on nav layer P holded can be windows
   - [?] test homerow mods inverted
   - [ ] NumLock as kombo on numpad
