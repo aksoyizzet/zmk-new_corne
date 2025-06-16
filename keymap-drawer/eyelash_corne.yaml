@@ -15,10 +15,10 @@ layers:
   - KP PLUS
   - Alt+F4
   - {t: Ctl+A, h: MEDIA}
-  - {t: '$$mdi:arrow-left-bold$$', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '$$mdi:arrow-down-bold$$', h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '$$mdi:arrow-up-bold$$', h: '$$mdi:apple-keyboard-option$$'}
-  - {t: '$$mdi:arrow-right-bold$$', h: LGUI}
+  - '&td_hml LCTRL LEFT'
+  - '&td_hml LSHFT DOWN'
+  - '&td_hml LALT UP'
+  - '&td_hml LGUI RIGHT'
   - '&td_comma'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
