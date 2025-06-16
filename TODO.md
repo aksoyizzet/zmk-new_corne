@@ -6,6 +6,7 @@
   - [x] remove ctrlW
   - [x] add at 
   - [x] double click speed
+  - [x] asterisk in internal column
   - [ ] mod keys can remain pressed a bit longer? after releasing
   - [ ] parametrize for td?
 - [ ] symbols
@@ -22,6 +23,7 @@
   - [?] alt left arrow. seems doable from nav
 - macro (or combo)
   -  [?] shortcut combos for ctrlACVFX. seems doable from nav
+  -  [ ] combo or shortcut for ctrlW
   -  [x] enter, del, backspace on left side on nav layer
   - strings
     - [ ] mail etc commonly used shit
