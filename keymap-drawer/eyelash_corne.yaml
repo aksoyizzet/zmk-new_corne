@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: eyelash_corne}
 layers:
   NAV:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-esc$$
   - '&td_alttab_print'
   - Ctl+Y
   - Ctl+S
@@ -14,7 +14,7 @@ layers:
   - {t: '9', s: (}
   - KP PLUS
   - Alt+F4
-  - Alt+$$mdi:arrow-left-bold$$
+  - {t: 'Alt+$$mdi:arrow-left-bold$$', h: MEDIA}
   - {t: '$$mdi:arrow-left-bold$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:arrow-down-bold$$', h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '$$mdi:arrow-up-bold$$', h: '$$mdi:apple-keyboard-option$$'}
@@ -29,7 +29,7 @@ layers:
   - {t: '3', h: '$$mdi:apple-keyboard-shift$$', s: '#'}
   - {t: '0', h: '$$mdi:apple-keyboard-control$$', s: )}
   - KP EQUAL
-  - {t: '$$mdi:transfer$$', type: trans}
+  - LGUI
   - {t: Ctl+X, h: LGUI}
   - {t: Ctl+V, h: '$$mdi:apple-keyboard-option$$'}
   - {t: Ctl+F, h: '$$mdi:apple-keyboard-shift$$'}
@@ -43,14 +43,14 @@ layers:
   - {t: '6', h: '$$mdi:apple-keyboard-option$$', s: ^}
   - {t: KP MINUS, h: RGUI}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:keyboard-tab$$', h: MOUSE}
-  - {t: ABC, h: SYMBOL}
-  - {t: '$$mdi:keyboard-space$$', h: MEDIA}
-  - {t: '$$mdi:keyboard-return$$', h: MOUSE}
+  - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
   - {t: ABC, h: ABC}
-  - {t: '$$mdi:backspace$$', h: MEDIA}
+  - {t: '$$mdi:keyboard-space$$', h: MOUSE}
+  - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
+  - {t: ABC, h: ABC}
+  - {t: '$$mdi:backspace$$', h: MOUSE}
   ABC:
-  - $$mdi:keyboard-esc$$
+  - {t: '$$mdi:transfer$$', type: trans}
   - '&td_caps_print'
   - Y
   - U
@@ -78,7 +78,7 @@ layers:
   - {t: T, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: N, h: '$$mdi:apple-keyboard-control$$'}
   - P
-  - {t: LGUI, h: ABC}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: X, h: LGUI}
   - {t: V, h: '$$mdi:apple-keyboard-option$$'}
   - {t: F, h: '$$mdi:apple-keyboard-shift$$'}
@@ -93,10 +93,10 @@ layers:
   - {t: B, h: RGUI}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -141,10 +141,10 @@ layers:
   - {t: KP 6, h: '$$mdi:apple-keyboard-option$$'}
   - {t: '~', h: RGUI}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   MEDIA:
@@ -161,7 +161,7 @@ layers:
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - BT CLR ALL
-  - {h: '5', s: '$$mdi:bluetooth-connect$$'}
+  - {h: '5', s: '$$mdi:bluetooth-connect$$', type: held}
   - {t: '$$mdi:skip-previous$$', h: '$$mdi:apple-keyboard-control$$'}
   - {t: RW, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: FF, h: '$$mdi:apple-keyboard-option$$'}
@@ -192,10 +192,10 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   MOUSE:
   - '&studio_unlock'
   - F2
@@ -239,12 +239,12 @@ layers:
   - $$mdi:pan-down$$
   - $$mdi:pan-right$$
   - $$mdi:progress-download$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:backspace-reverse-outline$$
+  - {t: '$$mdi:backspace-reverse-outline$$', type: held alternate}
 combos:
 - p: [15, 16]
   k: $$mdi:play-pause$$
