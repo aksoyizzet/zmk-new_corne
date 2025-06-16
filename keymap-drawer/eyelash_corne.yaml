@@ -47,7 +47,7 @@ layers:
   - {t: NAV, h: ABC}
   - {t: '$$mdi:keyboard-space$$', h: MOUSE}
   - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
-  - '&mo_right'
+  - '&mo_to_right'
   - {t: '$$mdi:backspace$$', h: MOUSE}
   ABC:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -295,7 +295,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [2, 3, 4]
+- p: [2, 3]
   k: {t: ABC, h: toggle}
   l: [NAV, ABC]
 - p: [15, 16]
