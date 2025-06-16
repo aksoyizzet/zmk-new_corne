@@ -248,7 +248,7 @@ layers:
 combos:
 - p: [15, 16]
   k: {t: ABC, h: toggle}
-  l: [ABC]
+  l: [NAV]
 - p: [15, 16]
   k: $$mdi:play-pause$$
   l: [MEDIA]
