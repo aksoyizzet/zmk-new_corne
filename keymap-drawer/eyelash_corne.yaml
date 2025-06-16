@@ -295,17 +295,6 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
-- p: [9, 10]
-  k: {t: NAV, h: toggle}
-  l: [NAV, ABC]
-- p: [15, 16]
-  k: $$mdi:play-pause$$
-  l: [MEDIA]
-- p: [16, 17]
-  k: $$mdi:volume-off$$
-  l: [MEDIA]
-  a: top
-  o: 0.15
 - p: [2, 3]
   k: {t: '$$mdi:backspace$$', type: backspace}
   l: [NAV, ABC]
@@ -315,3 +304,20 @@ combos:
 - p: [2, 3, 4]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
   l: [NAV, ABC]
+- p: [8, 9]
+  k: $$mdi:keyboard-tab$$
+  l: [NAV, ABC]
+- p: [9, 10]
+  k: space
+  l: [NAV, ABC]
+- p: [8, 9, 10]
+  k: $$mdi:keyboard-esc$$
+  l: [NAV, ABC]
+- p: [15, 16]
+  k: $$mdi:play-pause$$
+  l: [MEDIA]
+- p: [16, 17]
+  k: $$mdi:volume-off$$
+  l: [MEDIA]
+  a: top
+  o: 0.15
