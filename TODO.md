@@ -17,8 +17,8 @@
     - [ ] symbols
     - [ ] accented Turkish, italian, french, spanish letters (another layer for tr)
   - [x] home modes over arrow keys
-  - [x] arrow keys to keep pressed
-  - [x] td_mo for to tab, space, enter and backspace 
+  - [?] arrow keys to keep pressed. was already working like that? check also the one below
+  - [?] td_mo for to tab, space, enter and backspace 
   - [x] sure way to enter to nav layer
 - shortcuts
   - [ ] ctrl home 
