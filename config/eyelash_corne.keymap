@@ -37,24 +37,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_to_nav {
-            timeout-ms = <50>;
-            key-positions = <9 10>;
-            layers = <0 1>;
-            bindings = <&to 0>;
-        };
-        combo_pp {
-            timeout-ms = <50>;
-            key-positions = <15 16>;
-            layers = <3>;
-            bindings = <&kp C_PP>;
-        };
-        combo_mute {
-            timeout-ms = <50>;
-            key-positions = <16 17>;
-            layers = <3>;
-            bindings = <&kp C_MUTE>;
-        };
         combo_bspc {
             timeout-ms = <50>;
             key-positions = <2 3>;
@@ -72,6 +54,36 @@
             key-positions = <2 3 4>;
             layers = <0 1>;
             bindings = <&kp ENTER>;
+        };
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <8 9>;
+            layers = <0 1>;
+            bindings = <&kp TAB>;
+        };
+        combo_space {
+            timeout-ms = <50>;
+            key-positions = <9 10>;
+            layers = <0 1>;
+            bindings = <&kp space>;
+        };
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <8 9 10>;
+            layers = <0 1>;
+            bindings = <&kp ESC>;
+        };
+        combo_pp {
+            timeout-ms = <50>;
+            key-positions = <15 16>;
+            layers = <3>;
+            bindings = <&kp C_PP>;
+        };
+        combo_mute {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            layers = <3>;
+            bindings = <&kp C_MUTE>;
         };
     };
     behaviors {
