@@ -43,12 +43,12 @@ layers:
   - {t: '6', h: '$$mdi:apple-keyboard-option$$', s: ^}
   - {t: KP MINUS, h: RGUI}
   - $$mdi:backspace-reverse-outline$$
-  - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
+  - '&td_tab'
   - {t: NAV, h: ABC}
-  - {t: '$$mdi:keyboard-space$$', h: MOUSE}
-  - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
+  - '&td_space'
+  - '&td_enter'
   - {t: ABC, h: NAV}
-  - {t: '$$mdi:backspace$$', h: MOUSE}
+  - '&td_bspc'
   ABC:
   - {t: '$$mdi:transfer$$', type: trans}
   - '&td_caps_print'
@@ -141,10 +141,10 @@ layers:
   - {t: '|', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '~', h: RGUI}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   MEDIA:
@@ -241,10 +241,10 @@ layers:
   - $$mdi:progress-download$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:backspace-reverse-outline$$', type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:backspace-reverse-outline$$
   NUMPAD:
   - {type: held}
   - '#'
@@ -309,3 +309,12 @@ combos:
   l: [MEDIA]
   a: top
   o: 0.15
+- p: [29, 30]
+  k: {t: '$$mdi:backspace$$', type: backspace}
+  l: [NAV, ABC]
+- p: [30, 31]
+  k: $$mdi:backspace-reverse-outline$$
+  l: [NAV, ABC]
+- p: [31, 31]
+  k: {t: '$$mdi:keyboard-return$$', type: enter}
+  l: [NAV, ABC]
