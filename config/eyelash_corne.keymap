@@ -35,17 +35,6 @@
 // #define TD_DC(single_tap, double_tap) &td_dc single_tap double_tap   // Macro to apply tap dance
 
 / {
-    macros {
-        mo_right: mo_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <2>;
-            bindings
-                = <&macro_press &to>
-                , <&macro_pause_for_release>
-                , <&macro_release &to>
-                ;
-        };
-    };
     combos {
         compatible = "zmk,combos";
         combo_to_abc {
@@ -82,12 +71,19 @@
             tapping-term-ms = <200>;
             bindings = <&mo>, <&to>;
         };
+        
+        tog_off: behavior_tog_off {
+            compatible = "zmk,behavior-toggle-layer";
+            #binding-cells = <1>;
+            display-name = "Toggle layer off";
+            toggle-mode = "off";
+        };
         mo_to_right: behavior_mo_to-right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <0>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&mo_right 0 1>, <&to 1>;
+            bindings = <&tog_off 1>, <&to 1>;
         };
         mt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
