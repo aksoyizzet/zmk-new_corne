@@ -104,7 +104,7 @@
         td_hml: td_hml {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double Tap Dance";
-            #binding-cells = <3>;
+            #binding-cells = <2>;
             bindings = <&hml>, <&kp>;
         };
         td_caps_print: td_caps_print {
