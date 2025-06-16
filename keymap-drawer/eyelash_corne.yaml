@@ -57,7 +57,7 @@ layers:
   - Z
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:arrow-up-bold$$
-  - '*'
+  - {t: '$$mdi:transfer$$', type: trans}
   - H
   - D
   - G
@@ -295,6 +295,9 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
 combos:
+- p: [0, 1]
+  k: Ctl+W
+  l: [NAV, ABC]
 - p: [2, 3]
   k: {t: '$$mdi:backspace$$', type: backspace}
   l: [NAV, ABC]
@@ -303,6 +306,12 @@ combos:
   l: [NAV, ABC]
 - p: [2, 3, 4]
   k: {t: '$$mdi:keyboard-return$$', type: enter}
+  l: [NAV, ABC]
+- p: [4, 5]
+  k: Alt+F4
+  l: [NAV, ABC]
+- p: [7, 8]
+  k: Ctl+W
   l: [NAV, ABC]
 - p: [8, 9]
   k: $$mdi:keyboard-tab$$
