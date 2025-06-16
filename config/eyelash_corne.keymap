@@ -38,11 +38,11 @@
     macros {
         mo_right: mo_right {
             compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             bindings
-                = <&macro_press &to 0>
+                = <&macro_press &to>
                 , <&macro_pause_for_release>
-                , <&macro_release &to 1>
+                , <&macro_release &to>
                 ;
         };
     };
@@ -81,6 +81,13 @@
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&mo>, <&to>;
+        };
+        mo_to_right: behavior_mo_to-right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <0>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&mo_right 0 1>, <&to 1>;
         };
         mt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -227,7 +234,7 @@
 &lt 5 ESC    &td_alttab_print &kp LC(Y)        &kp LC(S)         &kp LC(Z)         &kp FSLH                              &mmv MOVE_UP                 &td_quote &kp N7         &kp N8         &kp N9         &kp KP_PLUS         &kp LA(F4)
 &lt 3 LC(A)  &td_left         &td_down         &td_up            &td_right         &td_comma              &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &td_dot   &hmr RGUI N1   &hmr LALT N2   &hmr RSHFT N3  &hmr RCTRL N0       &kp KP_EQUAL
 &kp LGUI     &hml LGUI LC(X)  &hml LALT LC(V)  &hml LSHFT LC(F)  &hml LCTRL LC(C)  &td_lpar  &kp C_MUTE                  &mmv MOVE_DOWN               &td_rpar  &hmr RCTRL N4  &hmr RSHFT N5  &hmr LALT N6   &hmr RGUI KP_MINUS  &kp DEL
-                                                &lt 2 TAB  MO_TO(1, 0)  &lt 4 SPACE                                                                      &lt 2 ENTER  &mo_right  &lt 4 BSPC
+                                                &lt 2 TAB  MO_TO(1, 0)  &lt 4 SPACE                                                                      &lt 2 ENTER  &mo_to_right  &lt 4 BSPC
             >;
 
             sensor-bindings = <&scroll_encoder>;
