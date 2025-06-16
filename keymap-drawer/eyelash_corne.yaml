@@ -247,6 +247,9 @@ layers:
   - {t: '$$mdi:backspace-reverse-outline$$', type: held alternate}
 combos:
 - p: [15, 16]
+  k: {t: ABC, h: toggle}
+  l: [ABC]
+- p: [15, 16]
   k: $$mdi:play-pause$$
   l: [MEDIA]
 - p: [16, 17]
