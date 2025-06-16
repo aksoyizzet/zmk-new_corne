@@ -15,10 +15,10 @@ layers:
   - KP PLUS
   - Alt+F4
   - {t: Ctl+A, h: MEDIA}
-  - '&td_hml LCTRL LEFT LEFT'
-  - '&td_hml LSHFT DOWN DOWN'
-  - '&td_hml LALT UP UP'
-  - '&td_hml LGUI RIGHT RIGHT'
+  - '&td_left'
+  - '&td_down'
+  - '&td_up'
+  - '&td_right'
   - '&td_comma'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
