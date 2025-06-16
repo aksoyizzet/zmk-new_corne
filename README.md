@@ -1,5 +1,5 @@
-- [Chinese](README.md)
-- [English](README_EN.md)
+- [Chinese](README_ZH.md)
+- [English](README.md)
 
 # (Eyelash Peripherals) Corne ZMK Repository
 
