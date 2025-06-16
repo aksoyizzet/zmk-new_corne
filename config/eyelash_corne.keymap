@@ -120,91 +120,91 @@
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double Tap Dance Hold";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&hml LCTRL LEFT>, <&kp LEFT>;
         };
         td_down: td_down {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double Tap Dance Hold";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&hml LSHFT DOWN>, <&kp DOWN>;
         };
         td_up: td_up {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double Tap Dance Hold";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&hml LALT UP>, <&kp UP>;
         };
         td_right: td_right {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double Tap Dance Hold";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&hml LGUI RIGHT>, <&kp RIGHT>;
         };
         td_caps_print: td_caps_print {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double Tap Dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&kp CAPS>, <&kp PSCRN>;
         };
         td_alttab_print: td_alttab_print {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double Tap Dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&kp LA(TAB)>, <&kp PSCRN>;
         };
         td_quote: td_quote {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double Tap Dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&kp SQT>, <&kp DQT>;
         };
         td_comma: td_comma {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double Tap Dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&kp COMMA>, <&kp SEMI>;
         };
         td_dot: td_dot {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double Tap Dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&kp DOT>, <&kp COLON>;
         };
         td_lpar: td_lpar {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double Tap Dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&kp LPAR>, <&kp LBRC>;
         };
         td_rpar: td_rpar {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double Tap Dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&kp RPAR>, <&kp RBRC>;
         };
         td_lbkt: td_lbkt {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double Tap Dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&kp LBKT>, <&kp LBRC>;
         };
         td_rbkt: td_rbkt {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Double Tap Dance";
             #binding-cells = <0>;
-            tapping-term-ms = <400>;
+            tapping-term-ms = <300>;
             bindings = <&kp RBKT>, <&kp RBRC>;
         };
     };
