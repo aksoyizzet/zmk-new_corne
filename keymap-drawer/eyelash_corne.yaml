@@ -78,7 +78,7 @@ layers:
   - {t: T, h: '$$mdi:apple-keyboard-option$$'}
   - {t: N, h: RGUI}
   - P
-  - {t: '$$mdi:transfer$$', type: trans}
+  - CMENU
   - {t: X, h: '$$mdi:apple-keyboard-control$$'}
   - {t: V, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: F, h: '$$mdi:apple-keyboard-option$$'}
