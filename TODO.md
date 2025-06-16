@@ -5,7 +5,7 @@
   - [x] back slash
   - [x] remove ctrlW
   - [x] add at 
-  - [ ] double click speed
+  - [x] double click speed
   - [ ] mod keys can remain pressed a bit longer? after releasing
   - [ ] parametrize for td?
 - [ ] symbols
