@@ -31,7 +31,7 @@
 
 #define MO_TOG(layer_mo, layer_tog) &mo_tog layer_mo layer_tog   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
 #define MO_TO(layer_mo, layer_to) &mo_to layer_mo layer_to   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
-#define TD_HML(mod_key, key_press) &td_hml mod_key key_press   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
+#define TD_HML(mod_key, key_press) &td_hml mod_key key_press key_press   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
 // #define TD_DC(single_tap, double_tap) &td_dc single_tap double_tap   // Macro to apply tap dance
 
 / {
