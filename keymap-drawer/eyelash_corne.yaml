@@ -308,7 +308,7 @@ combos:
   k: $$mdi:keyboard-tab$$
   l: [NAV, ABC]
 - p: [9, 10]
-  k: space
+  k: $$mdi:keyboard-space$$
   l: [NAV, ABC]
 - p: [8, 9, 10]
   k: $$mdi:keyboard-esc$$
