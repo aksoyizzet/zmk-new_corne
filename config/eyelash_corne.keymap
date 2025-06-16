@@ -180,7 +180,7 @@
             display-name = "ABC";
             bindings = <
 &trans  &td_caps_print  &kp Y         &kp U          &kp Z         &trans                          &kp UP                &kp ASTRK  &kp H         &kp D         &kp G         &kp Q         &kp J
-&kp W   &hml LCTRL A    &hml LSHFT E  &hml LALT I    &hml LGUI O   &trans               &kp LEFT  &kp ENTER  &kp RIGHT   &trans     &hmr RGUI R   &hmr LALT S   &hmr RSHFT T  &hmr RCTRL N  &kp P
+&lt 3 W   &hml LCTRL A    &hml LSHFT E  &hml LALT I    &hml LGUI O   &trans               &kp LEFT  &kp ENTER  &kp RIGHT   &trans     &hmr RGUI R   &hmr LALT S   &hmr RSHFT T  &hmr RCTRL N  &kp P
 &trans  &hml LGUI X     &hml LALT V   &hml LSHFT F   &hml LCTRL C  &trans  &kp SPACE               &kp DOWN              &trans     &hmr RCTRL L  &hmr RSHFT K  &hmr LALT M   &hmr RGUI B   &trans
                                         &trans           &trans           &trans                                                                         &trans           &trans     &trans
             >;
