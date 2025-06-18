@@ -32,8 +32,8 @@
 #define MO_TOG(layer_mo, layer_tog) &mo_tog layer_mo layer_tog   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
 #define MO_TO(layer_mo, layer_to) &mo_to layer_mo layer_to   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
 #define HML_GUI_TO_CTRL(lgui, lalt, lshift, lctrl) &hml LGUI lgui    &hml LALT lalt     &hml LSHFT lshift  &hml LCTRL lctrl
-#define HML_CTRL_TO_GUI(lctrl, lshift, lalt, lgui) &hml LCTRL lctrl  &hml LSHFT lshift  &hml LALT lalt     &hml LGUI lgui
 #define HMR_GUI_TO_CTRL(rgui, lalt, rshift, rctrl) &hmr RGUI rgui    &hmr LALT lalt     &hmr RSHFT rshift  &hmr RCTRL rctrl
+#define HML_CTRL_TO_GUI(lctrl, lshift, lalt, lgui) &hml LCTRL lctrl  &hml LSHFT lshift  &hml LALT lalt     &hml LGUI lgui
 #define HMR_CTRL_TO_GUI(rctrl, rshift, lalt, rgui) &hmr RCTRL rctrl  &hmr RSHFT rshift  &hmr LALT lalt     &hmr RGUI rgui
 // #define TD_HML(mod_key, key_press) &td_hml mod_key key_press key_press   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
 // #define TD_DC(single_tap, double_tap) &td_dc single_tap double_tap   // Macro to apply tap dance
@@ -332,9 +332,9 @@
           numpad_layer {
             display-name = "NUMPAD";
             bindings = <
-&trans    &kp HASH     &kp LT    &kp GT     &kp AMPS  &kp PERCENT                  &mmv MOVE_UP                 &trans    &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp DQT   &none
-&kp EXCL  HML_GUI_TO_CTRL(UNDER, MINUS, PLUS, EQUAL)  &kp DOLLAR   &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT   &trans    HMR_CTRL_TO_GUI(KP_N11, KP_N2, KP_N3, KP_N0)  &kp CARET
-&trans    HML_CTRL_TO_GUI(QMARK, FSLH, ASTRK, LBRC)   &td_lbkt   &kp C_MUTE        &mmv MOVE_DOWN               &td_rbkt  HMR_GUI_TO_CTRL(KP_N41, KP_N5, KP_N6, TILDE)  &trans
+&trans    &kp HASH     &kp LT    &kp GT     &kp AMPS  &kp PERCENT                  &mmv MOVE_UP                 &trans    &kp KP_N7   &kp KP_N8  &kp KP_N9   &kp DQT   &none
+&kp EXCL  HML_GUI_TO_CTRL(UNDER, MINUS, PLUS, EQUAL)  &kp DOLLAR   &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT   &trans    HMR_CTRL_TO_GUI(KP_N1, KP_N2, KP_N3, KP_N0)  &kp CARET
+&trans    HML_CTRL_TO_GUI(QMARK, FSLH, ASTRK, LBRC)   &td_lbkt   &kp C_MUTE        &mmv MOVE_DOWN               &td_rbkt  HMR_GUI_TO_CTRL(KP_N1, KP_N5, KP_N6, TILDE)  &trans
                                               &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
             sensor-bindings = <&scroll_encoder>;
