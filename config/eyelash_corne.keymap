@@ -190,7 +190,7 @@
             //hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
-        hml_retro: home_row_mod_left {
+        hml_retro: home_row_mod_left_retro {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -202,7 +202,7 @@
             hold-trigger-on-release;
             retro-tap;
         };
-        hmr_retro: home_row_mod_right {
+        hmr_retro: home_row_mod_right_retro {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -310,10 +310,10 @@
         alpha_layer {
             display-name = "ABC";
             bindings = <
-&trans     &td_caps_print  KP_3(Y, U, Z)  &trans               &kp UP                &trans             KP_4(H, D, G, Q)  &kp J
-&lt 3 W      HML_GUI_TO_CTRL(A, E, I, O)  &trans     &kp LEFT  &kp ENTER  &kp RIGHT  &trans  HMR_CTRL_TO_GUI(R, S, T, N)  &kp P
-&kp K_CMENU  HML_CTRL_TO_GUI(X, V, F, C)  &trans  &kp SPACE    &kp DOWN              &trans  HMR_GUI_TO_CTRL(L, K, M, B)  &trans
-                                  &trans  &trans  &trans                     &trans  &trans  &trans
+&trans     &td_caps_print  KP_3(Y, U, Z)  &trans               &kp UP           &trans             KP_4(H, D, G, Q)  &kp J
+&lt 3 W      HML_GUI_TO_CTRL(A, E, I, O)  &trans       KP_3(LEFT, ENTER, RIGHT) &trans  HMR_CTRL_TO_GUI(R, S, T, N)  &kp P
+&kp K_CMENU  HML_CTRL_TO_GUI(X, V, F, C)  &trans  &kp SPACE    &kp DOWN         &trans  HMR_GUI_TO_CTRL(L, K, M, B)  &trans
+                                  &trans  &trans  &trans                &trans  &trans  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
