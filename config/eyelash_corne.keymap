@@ -33,6 +33,8 @@
 #define MO_TO(layer_mo, layer_to) &mo_to layer_mo layer_to   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
 #define HML_GUI_TO_CTRL(lgui, lalt, lshift, lctrl) &hml LGUI lgui    &hml LALT lalt     &hml LSHFT lshift  &hml LCTRL lctrl
 #define HML_CTRL_TO_GUI(lctrl, lshift, lalt, lgui) &hml LCTRL lctrl  &hml LSHFT lshift  &hml LALT lalt     &hml LGUI lgui
+#define HMR_GUI_TO_CTRL(rgui, lalt, rshift, rctrl) &hmr RGUI rgui    &hmr LALT lalt     &hmr RSHFT rshift  &hmr RCTRL rctrl
+#define HMR_CTRL_TO_GUI(rctrl, rshift, lalt, rgui) &hmr RCTRL rctrl  &hmr RSHFT rshift  &hmr LALT lalt     &hmr RGUI rgui
 // #define TD_HML(mod_key, key_press) &td_hml mod_key key_press key_press   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
 // #define TD_DC(single_tap, double_tap) &td_dc single_tap double_tap   // Macro to apply tap dance
 
@@ -270,10 +272,10 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&lt 5 ESC   &td_alttab_print  &kp LC(Y)  &kp LC(S)  &kp LC(Z)  &kp FSLH                       &mmv MOVE_UP                &td_quote &kp N7         &kp N8         &kp N9         &kp KP_PLUS         &kp LA(F4)
-&lt 3 LC(A)       HML_GUI_TO_CTRL(LEFT, DOWN, UP, RIGHT)       &td_comma      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &td_dot   &hmr RCTRL N1  &hmr RSHFT N2  &hmr LALT N3   &hmr RGUI N0         &kp KP_EQUAL
-&kp LGUI        HML_CTRL_TO_GUI(LC(X), LC(V), LC(F), LC(C))    &td_lpar   &kp C_MUTE          &mmv MOVE_DOWN              &td_rpar  &hmr RGUI N4   &hmr LALT N5   &hmr RSHFT N6  &hmr RCTRL KP_MINUS  &kp DEL
-                                                &lt 2 TAB  MO_TO(1, 0)  &lt 4 SPACE                                                                      &lt 2 ENTER  &mo_to_right 0 1   &lt 4 BSPC
+&lt 5 ESC   &td_alttab_print  &kp LC(Y)  &kp LC(S)  &kp LC(Z)  &kp FSLH                       &mmv MOVE_UP                &td_quote  &kp N7  &kp N8   &kp N9   &kp KP_PLUS  &kp LA(F4)
+&lt 3 LC(A)       HML_GUI_TO_CTRL(LEFT, DOWN, UP, RIGHT)       &td_comma      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &td_dot       HMR_CTRL_TO_GUI(N1, N2, N3, N0)     &kp KP_EQUAL
+&kp LGUI        HML_CTRL_TO_GUI(LC(X), LC(V), LC(F), LC(C))    &td_lpar   &kp C_MUTE          &mmv MOVE_DOWN              &td_rpar   HMR_GUI_TO_CTRL(N4, N5, N6, KP_MINUS)  &kp DEL
+                                                    &lt 2 TAB  MO_TO(1, 0)  &lt 4 SPACE                      &lt 2 ENTER  &mo_to_right 0 1   &lt 4 BSPC
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -282,10 +284,10 @@
         alpha_layer {
             display-name = "ABC";
             bindings = <
-&trans       &td_caps_print  &kp Y  &kp U  &kp Z  &trans                          &kp UP                &trans  &kp H         &kp D         &kp G         &kp Q         &kp J
-&lt 3 W          HML_GUI_TO_CTRL(A, E, I, O)      &trans               &kp LEFT  &kp ENTER  &kp RIGHT   &trans  &hmr RCTRL R  &hmr RSHFT S  &hmr LALT T   &hmr RGUI N   &kp P
-&kp K_CMENU      HML_CTRL_TO_GUI(X, V, F, C)      &trans  &kp SPACE               &kp DOWN              &trans  &hmr RGUI L   &hmr LALT K   &hmr RSHFT M  &hmr RCTRL B  &trans
-                                        &trans           &trans           &trans                                                                         &trans           &trans     &trans
+&trans       &td_caps_print  &kp Y  &kp U  &kp Z  &trans               &kp UP                &trans  &kp H  &kp D  &kp G   &kp Q   &kp J
+&lt 3 W          HML_GUI_TO_CTRL(A, E, I, O)      &trans     &kp LEFT  &kp ENTER  &kp RIGHT  &trans  HMR_CTRL_TO_GUI(R, S, T, N)  &kp P
+&kp K_CMENU      HML_CTRL_TO_GUI(X, V, F, C)      &trans  &kp SPACE    &kp DOWN              &trans  HMR_GUI_TO_CTRL(L, K, M, B)  &trans
+                                          &trans  &trans  &trans                     &trans  &trans  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -295,10 +297,10 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans     &kp HASH    &kp LT    &kp GT    &kp DOLLAR  &kp BSLH                       &mmv MOVE_UP                  &trans    &kp DQT          &kp QMARK         &kp AT_SIGN      &kp CARET         &none
-&kp CARET  HML_GUI_TO_CTRL(UNDER, MINUS, PLUS, EQUAL)  &trans         &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &kp EXCL  &hmr RCTRL SEMI  &hmr RSHFT COMMA  &hmr LALT DOT    &hmr RGUI COLON   &kp PERCENT
-&trans     HML_CTRL_TO_GUI(QMARK, FSLH, ASTRK, LBRC)   &td_lbkt   &kp C_MUTE          &mmv MOVE_DOWN                &td_rbkt  &hmr RGUI RBRC   &hmr LALT AMPS    &hmr RSHFT PIPE  &hmr RCTRL TILDE  &trans
-                                             &trans     &trans  &trans                                                                            &trans     &trans    &trans
+&trans     &kp HASH    &kp LT    &kp GT    &kp DOLLAR  &kp BSLH                       &mmv MOVE_UP                  &trans    &kp DQT  &kp QMARK  &kp AT_SIGN  &kp CARET  &none
+&kp CARET  HML_GUI_TO_CTRL(UNDER, MINUS, PLUS, EQUAL)  &trans         &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &kp EXCL   HMR_CTRL_TO_GUI(SEMI, COMMA, DOT, COLON)   &kp PERCENT
+&trans     HML_CTRL_TO_GUI(QMARK, FSLH, ASTRK, LBRC)   &td_lbkt   &kp C_MUTE          &mmv MOVE_DOWN                &td_rbkt   HMR_GUI_TO_CTRL(RBRC, AMPS, PIPE, TILDE)   &trans
+                                               &trans  &trans  &trans                                       &trans  &trans  &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -306,10 +308,10 @@
         media_layer {
             display-name = "MEDIA";
             bindings = <
-&trans        &rgb_ug RGB_TOG &rgb_ug RGB_BRI  &kp C_BRI_UP  &kp C_VOLUME_UP                   &bt BT_SEL 0                      &mmv MOVE_UP                &bl BL_INC  &none            &rgb_ug RGB_EFF   &none            &none          &none
-&bt BT_SEL 4           HML_GUI_TO_CTRL(C_PREV, C_RW, C_FF, C_NEXT)                             &bt BT_SEL 1      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &bl BL_TOG  &hmr RCTRL HOME  &hmr RSHFT PG_UP  &hmr LALT PG_DN  &hmr RGUI END  &none
-&bt BT_SEL 3  &rgb_ug RGB_COLOR_HSB(0,0,10)  &rgb_ug RGB_BRD  &kp C_BRI_DN  &kp C_VOLUME_DOWN  &bt BT_SEL 2   &kp C_MUTE         &mmv MOVE_DOWN              &bl BL_DEC  &hmr RGUI INS    &rgb_ug RGB_EFR   &kp RSHFT        &kp RCTRL      &trans
-                                          &trans        &trans             &trans                                                                             &trans &trans &trans
+&trans        &rgb_ug RGB_TOG &rgb_ug RGB_BRI  &kp C_BRI_UP  &kp C_VOLUME_UP                   &bt BT_SEL 0                      &mmv MOVE_UP                &bl BL_INC  &none          &rgb_ug RGB_EFF  &none      &none      &none
+&bt BT_SEL 4           HML_GUI_TO_CTRL(C_PREV, C_RW, C_FF, C_NEXT)                             &bt BT_SEL 1      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &bl BL_TOG        HMR_CTRL_TO_GUI(HOME, PG_UP, PG_DN, END)        &none
+&bt BT_SEL 3  &rgb_ug RGB_COLOR_HSB(0,0,10)  &rgb_ug RGB_BRD  &kp C_BRI_DN  &kp C_VOLUME_DOWN  &bt BT_SEL 2   &kp C_MUTE         &mmv MOVE_DOWN              &bl BL_DEC  &hmr RGUI INS  &rgb_ug RGB_EFR  &kp RSHFT  &kp RCTRL  &trans
+                                                                                       &trans  &trans  &trans                                         &trans &trans &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
@@ -321,7 +323,7 @@
 &studio_unlock  &kp F2          &kp F3          &kp F4        &kp F5           &kp F6                               &mmv MOVE_UP                     &none  &mkp LCLK       &mkp MCLK       &mkp RCLK       &none            &sys_reset
 &kp F1          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp F7               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
 &bootloader                 HML_CTRL_TO_GUI(F9, F10, F11, F12)                 &kp F8  &kp C_MUTE                   &mmv MOVE_DOWN                   &none  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &bootloader        
-                                                &trans          &trans           &trans                                                                &trans &trans &kp DEL
+                                                                       &trans  &trans  &trans                                                 &trans &trans &kp DEL
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -330,10 +332,10 @@
           numpad_layer {
             display-name = "NUMPAD";
             bindings = <
-&trans    &kp HASH     &kp LT    &kp GT     &kp AMPS  &kp PERCENT                  &mmv MOVE_UP                 &trans    &kp KP_N7         &kp KP_N8         &kp KP_N9         &kp DQT           &none
-&kp EXCL  HML_GUI_TO_CTRL(UNDER, MINUS, PLUS, EQUAL)  &kp DOLLAR   &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT   &trans    &hmr RCTRL KP_N1  &hmr RSHFT KP_N2  &hmr LALT KP_N3   &hmr RGUI KP_N0   &kp CARET
-&trans    HML_CTRL_TO_GUI(QMARK, FSLH, ASTRK, LBRC)   &td_lbkt   &kp C_MUTE        &mmv MOVE_DOWN               &td_rbkt  &hmr RGUI KP_N4   &hmr LALT KP_N5   &hmr RSHFT KP_N6  &hmr RCTRL TILDE  &trans
-                              &trans     &trans  &trans                                                                    &trans     &trans    &trans
+&trans    &kp HASH     &kp LT    &kp GT     &kp AMPS  &kp PERCENT                  &mmv MOVE_UP                 &trans    &kp KP_N7   &kp KP_N8   &kp KP_N9   &kp DQT   &none
+&kp EXCL  HML_GUI_TO_CTRL(UNDER, MINUS, PLUS, EQUAL)  &kp DOLLAR   &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT   &trans    HMR_CTRL_TO_GUI(KP_N11, KP_N2, KP_N3, KP_N0)  &kp CARET
+&trans    HML_CTRL_TO_GUI(QMARK, FSLH, ASTRK, LBRC)   &td_lbkt   &kp C_MUTE        &mmv MOVE_DOWN               &td_rbkt  HMR_GUI_TO_CTRL(KP_N41, KP_N5, KP_N6, TILDE)  &trans
+                                              &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
