@@ -32,10 +32,13 @@
 #define KP_4(kp1, kp2, kp3, kp4) &kp kp1  &kp kp2  &kp kp3  &kp kp4
 #define MO_TOG(layer_mo, layer_tog) &mo_tog layer_mo layer_tog   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
 #define MO_TO(layer_mo, layer_to) &mo_to layer_mo layer_to   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
+#define HML_GUI_TO_CTRL_RETRO(lgui, lalt, lshift, lctrl) &hml_retro LGUI lgui  &hml_retro LALT lalt  &hml_retro LSHFT lshift  &hml_retro LCTRL lctrl
 #define HML_GUI_TO_CTRL(lgui, lalt, lshift, lctrl) &hml LGUI lgui    &hml LALT lalt     &hml LSHFT lshift  &hml LCTRL lctrl
 #define HMR_GUI_TO_CTRL(rgui, lalt, rshift, rctrl) &hmr RGUI rgui    &hmr LALT lalt     &hmr RSHFT rshift  &hmr RCTRL rctrl
 #define HML_CTRL_TO_GUI(lctrl, lshift, lalt, lgui) &hml LCTRL lctrl  &hml LSHFT lshift  &hml LALT lalt     &hml LGUI lgui
 #define HMR_CTRL_TO_GUI(rctrl, rshift, lalt, rgui) &hmr RCTRL rctrl  &hmr RSHFT rshift  &hmr LALT lalt     &hmr RGUI rgui
+#define HMR_GUI_TO_CTRL_RETRO(rgui, lalt, rshift, rctrl) &hmr_retro RGUI rgui    &hmr_retro LALT lalt     &hmr_retro RSHFT rshift  &hmr_retro RCTRL rctrl
+#define HMR_CTRL_TO_GUI_RETRO(rctrl, rshift, lalt, rgui) &hmr_retro RCTRL rctrl  &hmr_retro RSHFT rshift  &hmr_retro LALT lalt     &hmr_retro RGUI rgui
 // #define TD_HML(mod_key, key_press) &td_hml mod_key key_press key_press   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
 // #define TD_DC(single_tap, double_tap) &td_dc single_tap double_tap   // Macro to apply tap dance
 
@@ -175,9 +178,31 @@
             bindings = <&kp>, <&kp>;
             //hold-trigger-key-positions = < ... >; // List of keys on the right side of the keyboard
             hold-trigger-on-release;
-            retro-tap;
         };
         hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            //hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
+            hold-trigger-on-release;
+        };
+        hml_retro: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+            //hold-trigger-key-positions = < ... >; // List of keys on the right side of the keyboard
+            hold-trigger-on-release;
+            retro-tap;
+        };
+        hmr_retro: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -273,9 +298,9 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&lt 5 ESC   &td_alttab_print  KP_3(LC(Y), LC(S), LC(Z))  &kp FSLH                       &mmv MOVE_UP                &td_quote            KP_4(N7, N8, N9, KP_PLUS)   &kp LA(F4)
-&lt 3 LC(A)      HML_GUI_TO_CTRL(LEFT, DOWN, UP, RIGHT)  &td_comma      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &td_dot   HMR_CTRL_TO_GUI(N1, N2, N3, N0)        &kp KP_EQUAL
-&kp LGUI    HML_CTRL_TO_GUI(LC(X), LC(V), LC(F), LC(C))  &td_lpar   &kp C_MUTE          &mmv MOVE_DOWN              &td_rpar  HMR_GUI_TO_CTRL(N4, N5, N6, KP_MINUS)  &kp DEL
+&lt 5 ESC    &td_alttab_print  KP_3(LC(Y), LC(S), LC(Z))   &kp FSLH                       &mmv MOVE_UP                &td_quote                  KP_4(N7, N8, N9, KP_PLUS)   &kp LA(F4)
+&lt 3 LC(A)  HML_GUI_TO_CTRL_RETRO(LEFT, DOWN, UP, RIGHT)  &td_comma      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &td_dot   HMR_CTRL_TO_GUI_RETRO(N1, N2, N3, N0)        &kp KP_EQUAL
+&kp LGUI     HML_CTRL_TO_GUI(LC(X), LC(V), LC(F), LC(C))   &td_lpar   &kp C_MUTE          &mmv MOVE_DOWN              &td_rpar  HMR_GUI_TO_CTRL_RETRO(N4, N5, N6, KP_MINUS)  &kp DEL
                                               &lt 2 TAB  MO_TO(1, 0)  &lt 4 SPACE                      &lt 2 ENTER  &mo_to_right 0 1   &lt 4 BSPC
             >;
 
