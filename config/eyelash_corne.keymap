@@ -38,6 +38,7 @@
 #define HMR_GUI_TO_CTRL(rgui, lalt, rshift, rctrl) &hmr RGUI rgui    &hmr LALT lalt     &hmr RSHFT rshift  &hmr RCTRL rctrl
 #define HML_CTRL_TO_GUI(lctrl, lshift, lalt, lgui) &hml LCTRL lctrl  &hml LSHFT lshift  &hml LALT lalt     &hml LGUI lgui
 #define HMR_CTRL_TO_GUI(rctrl, rshift, lalt, rgui) &hmr RCTRL rctrl  &hmr RSHFT rshift  &hmr LALT lalt     &hmr RGUI rgui
+#define HMR_CTRL_TO_GUI_MACRO(m1, m2, m3, m4) &m1 &m2 &m3 &m4
 #define HMR_GUI_TO_CTRL_RETRO(rgui, lalt, rshift, rctrl) &hmr_retro RGUI rgui    &hmr_retro LALT lalt     &hmr_retro RSHFT rshift  &hmr_retro RCTRL rctrl
 #define HMR_CTRL_TO_GUI_RETRO(rctrl, rshift, lalt, rgui) &hmr_retro RCTRL rctrl  &hmr_retro RSHFT rshift  &hmr_retro LALT lalt     &hmr_retro RGUI rgui
 // #define TD_HML(mod_key, key_press) &td_hml mod_key key_press key_press   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
@@ -67,6 +68,26 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&macro_tap KP_5(A, K, S, O, Y) &kp DOT KP_5(I, Z, Z, E, T) &kp AT KP_5(G, M, A, I, L) &kp DOT KP_3(C, O, M)>;
+        };
+        comma_space: comma_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp COMMA  &kp SPACE>;
+        };
+        dot_space: dot_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp DOT  &kp SPACE>;
+        };
+        semi_space: semi_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp SEMI  &kp SPACE>;
+        };
+        colon_space: colon_space {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp COLON  &kp SPACE>;
         };
     };
     combos {
@@ -349,9 +370,9 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans                KP_4(HASH,  LT,    GT,   DOLLAR)  &kp BSLH                       &mmv MOVE_UP                  &trans               KP_4(DQT, QMARK, AT_SIGN, CARET)  &none
-&l_guilmt  HML_GUI_TO_CTRL(UNDER, MINUS, PLUS , EQUAL)  &r_guilmt      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &kp EXCL   HMR_CTRL_TO_GUI(SEMI, COMMA, DOT, COLON)    &kp PERCENT
-&trans     HML_CTRL_TO_GUI(QMARK, FSLH, ASTRK, LBRC)    &td_lbkt   &kp C_MUTE          &mmv MOVE_DOWN                &td_rbkt   HMR_GUI_TO_CTRL(RBRC, AMPS, PIPE, TILDE)    &trans
+&trans                KP_4(HASH,  LT,    GT,   DOLLAR)  &kp BSLH                       &mmv MOVE_UP                  &trans                                   KP_4(DQT, QMARK, AT_SIGN, CARET)          &none
+&l_guilmt  HML_GUI_TO_CTRL(UNDER, MINUS, PLUS , EQUAL)  &r_guilmt      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &kp EXCL   HMR_CTRL_TO_GUI_MACRO(semi_space, comma_space, dot_space, colon_space)  &kp PERCENT
+&trans     HML_CTRL_TO_GUI(QMARK, FSLH, ASTRK, LBRC)    &td_lbkt   &kp C_MUTE          &mmv MOVE_DOWN                &td_rbkt                      HMR_GUI_TO_CTRL(RBRC, AMPS, PIPE, TILDE)             &trans
                                                &trans  &trans  &trans                                        &trans  &trans  &trans
             >;
             sensor-bindings = <&scroll_encoder>;
