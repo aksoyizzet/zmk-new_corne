@@ -30,6 +30,7 @@
 
 #define KP_3(kp1, kp2, kp3) &kp kp1  &kp kp2  &kp kp3
 #define KP_4(kp1, kp2, kp3, kp4) &kp kp1  &kp kp2  &kp kp3  &kp kp4
+#define KP_5(kp1, kp2, kp3, kp4, kp5) &kp kp1  &kp kp2  &kp kp3  &kp kp4  &kp kp5
 #define MO_TOG(layer_mo, layer_tog) &mo_tog layer_mo layer_tog   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
 #define MO_TO(layer_mo, layer_to) &mo_to layer_mo layer_to   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
 #define HML_GUI_TO_CTRL_RETRO(lgui, lalt, lshift, lctrl) &hml_retro LGUI lgui  &hml_retro LALT lalt  &hml_retro LSHFT lshift  &hml_retro LCTRL lctrl
@@ -61,6 +62,11 @@
                 , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N8 &kp KP_N7>
                 , <&macro_release &kp LALT>
                 ;
+        };
+        gmail: gmail {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap KP_5(A, K, S, O, Y) &kp DOT KP_5(I, Z, Z, E, T) &kp AT KP_5(G, M, A, I, L) &kp DOT KP_3(C, O, M)>;
         };
     };
     combos {
@@ -378,7 +384,7 @@
           numpad_layer {
             display-name = "NUMPAD";
             bindings = <
-&trans               KP_4(HASH,  LT,    GT,   AMPS)   &kp PERCENT                  &mmv MOVE_UP                 &trans               KP_4(KP_N7, KP_N8, KP_N9, DQT)    &none
+&trans    &trans      &trans      &trans      &gmail  &kp PERCENT                  &mmv MOVE_UP                 &trans               KP_4(KP_N7, KP_N8, KP_N9, DQT)    &none
 &kp EXCL  HML_GUI_TO_CTRL(UNDER, MINUS, PLUS, EQUAL)  &kp DOLLAR   &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT   &trans    HMR_CTRL_TO_GUI(KP_N1, KP_N2, KP_N3, KP_N0)  &kp CARET
 &trans    HML_CTRL_TO_GUI(QMARK, FSLH, ASTRK, LBRC)   &td_lbkt   &kp C_MUTE        &mmv MOVE_DOWN               &td_rbkt  HMR_GUI_TO_CTRL(KP_N1, KP_N5, KP_N6, TILDE)  &trans
                                               &trans  &trans  &trans                                    &trans  &trans  &trans

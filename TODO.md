@@ -22,7 +22,7 @@
 - macro (or combo)
   - [ ] combo to enter abc permanently from nav
   - strings
-    - [ ] mail etc commonly used shit
+    - [x] mail etc commonly used shit
     - [ ] symbols
       - [ ] ", " 
       - [ ] ". " 
