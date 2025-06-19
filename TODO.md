@@ -7,10 +7,10 @@
   - [-] lrgui opens every second tap
   - [-] on nav layer P holded can be windows
   - [?] test homerow mods inverted
-  - [ ] create #defines for layers
+  - [x] create #defines for layers
   - [ ] mods tapped after they are released if no tap happened
 - [?] symbols
-  - [?] guillemets
+  - [x] guillemets
 - behavior
   - tapdance
     - [?] symbols
@@ -24,8 +24,8 @@
   - strings
     - [x] mail etc commonly used shit
     - [ ] symbols
-      - [ ] ", " 
-      - [ ] ". " 
+      - [x] ", " 
+      - [x] ". " 
   - [ ] media
     - [ ] mic
 - led indicators

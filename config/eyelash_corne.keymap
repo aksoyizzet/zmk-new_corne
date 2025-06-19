@@ -28,6 +28,13 @@
     trigger-period-ms = <16>;
 };
 
+#define NAV_LAYER    0
+#define ABC_LAYER    1
+#define SYMBOL_LAYER 2
+#define MEDIA_LAYER  3
+#define MOUSE_LAYER  4
+#define NUMPAD_LAYER 5
+
 #define KP_3(kp1, kp2, kp3) &kp kp1  &kp kp2  &kp kp3
 #define KP_4(kp1, kp2, kp3, kp4) &kp kp1  &kp kp2  &kp kp3  &kp kp4
 #define KP_5(kp1, kp2, kp3, kp4, kp5) &kp kp1  &kp kp2  &kp kp3  &kp kp4  &kp kp5
@@ -95,91 +102,91 @@
         combo_ctrl_w_left {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            layers = <0 1>;
+            layers = <NAV_LAYER ABC_LAYER>;
             bindings = <&kp LC(W)>;
         };
         combo_bspc {
             timeout-ms = <50>;
             key-positions = <2 3>;
-            layers = <0 1>;
+            layers = <NAV_LAYER ABC_LAYER>;
             bindings = <&kp BSPC>;
         };
         combo_del {
             timeout-ms = <50>;
             key-positions = <3 4>;
-            layers = <0 1>;
+            layers = <NAV_LAYER ABC_LAYER>;
             bindings = <&kp DEL>;
         };
         combo_enter {
             timeout-ms = <50>;
             key-positions = <2 3 4>;
-            layers = <0 1>;
+            layers = <NAV_LAYER ABC_LAYER>;
             bindings = <&kp ENTER>;
         };
         combo_alt_f4 {
             timeout-ms = <50>;
             key-positions = <4 5>;
-            layers = <0 1>;
+            layers = <NAV_LAYER ABC_LAYER>;
             bindings = <&kp LA(F4)>;
         };
         combo_ctrl_w_right {
             timeout-ms = <50>;
             key-positions = <7 8>;
-            layers = <0 1>;
+            layers = <NAV_LAYER ABC_LAYER>;
             bindings = <&kp LC(W)>;
         };
         combo_tab {
             timeout-ms = <50>;
             key-positions = <8 9>;
-            layers = <0 1>;
+            layers = <NAV_LAYER ABC_LAYER>;
             bindings = <&kp TAB>;
         };
         combo_space {
             timeout-ms = <50>;
             key-positions = <9 10>;
-            layers = <0 1>;
+            layers = <NAV_LAYER ABC_LAYER>;
             bindings = <&kp SPACE>;
         };
         combo_esc {
             timeout-ms = <50>;
             key-positions = <8 9 10>;
-            layers = <0 1>;
+            layers = <NAV_LAYER ABC_LAYER>;
             bindings = <&kp ESC>;
         };
         combo_num_layer {
             timeout-ms = <50>;
             key-positions = <8 9 10 11>;
-            layers = <0 1>;
+            layers = <NAV_LAYER ABC_LAYER>;
             bindings = <&to 5>;
         };
         combo_num_lock {
             timeout-ms = <50>;
             key-positions = <8 9 10>;
-            layers = <5>;
+            layers = <NUMPAD_LAYER>;
             bindings = <&kp KP_NUM>;
         };
         combo_bt_clr {
             timeout-ms = <50>;
             key-positions = <10 11>;
-            layers = <3>;
+            layers = <MEDIA_LAYER>;
             bindings = <&bt BT_CLR>;
         };
         combo_bt_clr_all {
             timeout-ms = <50>;
             key-positions = <11 12>;
-            layers = <3>;
+            layers = <MEDIA_LAYER>;
             bindings = <&bt BT_CLR_ALL>;
         };
         combo_pp {
             timeout-ms = <50>;
             key-positions = <15 16>;
-            layers = <3>;
+            layers = <MEDIA_LAYER>;
             bindings = <&kp C_PP>;
         };
         combo_mute {
             timeout-ms = <50>;
             key-positions = <16 17>;
-            layers = <3>;
+            layers = <MEDIA_LAYER>;
             bindings = <&kp C_MUTE>;
         };
     };
@@ -287,7 +294,7 @@
             display-name = "Double Tap Dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&lt 5 COMMA>, <&kp SEMI>;
+            bindings = <&lt NUMPAD_LAYER COMMA>, <&kp SEMI>;
         };
         td_dot: td_dot {
             compatible = "zmk,behavior-tap-dance";
@@ -345,10 +352,10 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&lt 5 ESC    &td_alttab_print  KP_3(LC(Y), LC(S), LC(Z))   &kp FSLH                       &mmv MOVE_UP                &td_quote                  KP_4(N7, N8, N9, KP_PLUS)   &kp LA(F4)
-&lt 3 LC(A)  HML_GUI_TO_CTRL_RETRO(LEFT, DOWN, UP, RIGHT)  &td_comma      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &td_dot   HMR_CTRL_TO_GUI_RETRO(N1, N2, N3, N0)        &kp KP_EQUAL
-&kp LGUI     HML_CTRL_TO_GUI(LC(X), LC(V), LC(F), LC(C))   &td_lpar   &kp C_MUTE          &mmv MOVE_DOWN              &td_rpar  HMR_GUI_TO_CTRL_RETRO(N4, N5, N6, KP_MINUS)  &kp DEL
-                                              &lt 2 TAB  MO_TO(1, 0)  &lt 4 SPACE                      &lt 2 ENTER  &mo_to_right 0 1   &lt 4 BSPC
+&lt NUMPAD_LAYER ESC    &td_alttab_print  KP_3(LC(Y), LC(S), LC(Z))   &kp FSLH                       &mmv MOVE_UP                &td_quote                  KP_4(N7, N8, N9, KP_PLUS)   &kp LA(F4)
+&lt MEDIA_LAYER LC(A)   HML_GUI_TO_CTRL_RETRO(LEFT, DOWN, UP, RIGHT)  &td_comma      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &td_dot   HMR_CTRL_TO_GUI_RETRO(N1, N2, N3, N0)        &kp KP_EQUAL
+&kp LGUI                HML_CTRL_TO_GUI(LC(X), LC(V), LC(F), LC(C))   &td_lpar   &kp C_MUTE          &mmv MOVE_DOWN              &td_rpar  HMR_GUI_TO_CTRL_RETRO(N4, N5, N6, KP_MINUS)  &kp DEL
+               &lt SYMBOL_LAYER TAB  MO_TO(ABC_LAYER, NAV_LAYER)  &lt MOUSE_LAYER SPACE                  &lt SYMBOL_LAYER ENTER  &mo_to_right NAV_LAYER ABC_LAYER   &lt MOUSE_LAYER BSPC
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -357,9 +364,9 @@
         alpha_layer {
             display-name = "ABC";
             bindings = <
-&trans     &td_caps_print  KP_3(Y, U, Z)  &trans               &kp UP           &trans             KP_4(H, D, G, Q)  &kp J
-&lt 3 W      HML_GUI_TO_CTRL(A, E, I, O)  &trans       KP_3(LEFT, ENTER, RIGHT) &trans  HMR_CTRL_TO_GUI(R, S, T, N)  &kp P
-&kp K_CMENU  HML_CTRL_TO_GUI(X, V, F, C)  &trans  &kp SPACE    &kp DOWN         &trans  HMR_GUI_TO_CTRL(L, K, M, B)  &trans
+&trans             &td_caps_print  KP_3(Y, U, Z)  &trans               &kp UP           &trans             KP_4(H, D, G, Q)  &kp J
+&lt MEDIA_LAYER W  HML_GUI_TO_CTRL(A, E, I, O)    &trans       KP_3(LEFT, ENTER, RIGHT) &trans  HMR_CTRL_TO_GUI(R, S, T, N)  &kp P
+&kp K_CMENU        HML_CTRL_TO_GUI(X, V, F, C)    &trans  &kp SPACE    &kp DOWN         &trans  HMR_GUI_TO_CTRL(L, K, M, B)  &trans
                                   &trans  &trans  &trans                &trans  &trans  &trans
             >;
 
