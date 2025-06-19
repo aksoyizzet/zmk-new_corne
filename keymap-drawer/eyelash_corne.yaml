@@ -112,12 +112,12 @@ layers:
   - '@'
   - ^
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - ^
+  - '&l_guilmt'
   - {t: _, h: LGUI}
   - {t: '-', h: '$$mdi:apple-keyboard-option$$', s: _}
   - {t: +, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '=', h: '$$mdi:apple-keyboard-control$$', s: +}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&r_guilmt'
   - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
