@@ -43,6 +43,26 @@
 // #define TD_DC(single_tap, double_tap) &td_dc single_tap double_tap   // Macro to apply tap dance
 
 / {
+    macros {
+        l_guilmt: l_guilmt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N1>
+                , <&macro_release &kp LALT>
+                ;
+        };
+        r_guilmt: r_guilmt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N8 &kp KP_N7>
+                , <&macro_release &kp LALT>
+                ;
+        };
+    };
     combos {
         compatible = "zmk,combos";
         combo_ctrl_w_left {
@@ -324,7 +344,7 @@
             display-name = "SYMBOL";
             bindings = <
 &trans                KP_4(HASH,  LT,    GT,   DOLLAR)  &kp BSLH                       &mmv MOVE_UP                  &trans               KP_4(DQT, QMARK, AT_SIGN, CARET)  &none
-&kp CARET  HML_GUI_TO_CTRL(UNDER, MINUS, PLUS , EQUAL)  &trans         &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &kp EXCL   HMR_CTRL_TO_GUI(SEMI, COMMA, DOT, COLON)    &kp PERCENT
+&l_guilmt  HML_GUI_TO_CTRL(UNDER, MINUS, PLUS , EQUAL)  &r_guilmt      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &kp EXCL   HMR_CTRL_TO_GUI(SEMI, COMMA, DOT, COLON)    &kp PERCENT
 &trans     HML_CTRL_TO_GUI(QMARK, FSLH, ASTRK, LBRC)    &td_lbkt   &kp C_MUTE          &mmv MOVE_DOWN                &td_rbkt   HMR_GUI_TO_CTRL(RBRC, AMPS, PIPE, TILDE)    &trans
                                                &trans  &trans  &trans                                        &trans  &trans  &trans
             >;
