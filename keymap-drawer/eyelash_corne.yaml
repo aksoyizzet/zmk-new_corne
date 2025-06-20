@@ -122,10 +122,10 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - '!'
-  - '&semi_space'
-  - '&comma_space'
-  - '&dot_space'
-  - '&colon_space'
+  - {t: '&macro_tap semi_space', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '&macro_tap comma_space', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '&macro_tap dot_space', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '&macro_tap colon_space', h: RGUI}
   - '%'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '?', h: '$$mdi:apple-keyboard-control$$'}
