@@ -259,17 +259,6 @@
         HOLDTAP_SYMBOL(hmr_comma, &comma_space)
         HOLDTAP_SYMBOL(hmr_dot, &dot_space)
         HOLDTAP_SYMBOL(hmr_colon, &colon_space)
-        hmr_macro: home_row_mod_right_macro {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <150>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&macro_tap>;
-            //hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
-            hold-trigger-on-release;
-        };
         hml_retro: home_row_mod_left_retro {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
