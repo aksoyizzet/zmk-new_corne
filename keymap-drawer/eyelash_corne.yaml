@@ -122,10 +122,10 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - '!'
-  - '&hmr_semi'
-  - '&hmr_comma'
-  - '&hmr_dot'
-  - '&hmr_colon'
+  - '&hmr_semi RCTRL'
+  - '&hmr_comma RSHFT'
+  - '&hmr_dot LALT'
+  - '&hmr_colon RGUI'
   - '%'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '?', h: '$$mdi:apple-keyboard-control$$'}
