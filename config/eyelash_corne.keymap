@@ -255,10 +255,10 @@
             //hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };
-        HOLDTAP_SYMBOL(hmr_semi, &kp RCTRL, semi_space)
-        HOLDTAP_SYMBOL(hmr_comma, &kp RSHFT, comma_space)
-        HOLDTAP_SYMBOL(hmr_dot, &kp LALT, dot_space)
-        HOLDTAP_SYMBOL(hmr_colon, &kp RGUI, colon_space)
+        HOLDTAP_SYMBOL(hmr_semi, &kp RCTRL, &semi_space)
+        HOLDTAP_SYMBOL(hmr_comma, &kp RSHFT, &comma_space)
+        HOLDTAP_SYMBOL(hmr_dot, &kp LALT, &dot_space)
+        HOLDTAP_SYMBOL(hmr_colon, &kp RGUI, &colon_space)
         hmr_macro: home_row_mod_right_macro {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
