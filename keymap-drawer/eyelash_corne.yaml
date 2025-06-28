@@ -122,10 +122,10 @@ layers:
   - $$mdi:mouse-left-click-outline$$
   - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
   - '!'
-  - {t: ;, h: '$$mdi:apple-keyboard-control$$', s: ':'}
-  - {t: ',', h: '$$mdi:apple-keyboard-shift$$', s: <}
-  - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '>'}
-  - {t: ':', h: RGUI}
+  - {t: '&macro_tap semi_space', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '&macro_tap comma_space', h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: '&macro_tap dot_space', h: '$$mdi:apple-keyboard-option$$'}
+  - {t: '&macro_tap colon_space', h: RGUI}
   - '%'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '?', h: '$$mdi:apple-keyboard-control$$'}
@@ -247,10 +247,10 @@ layers:
   - {t: '$$mdi:backspace-reverse-outline$$', type: held alternate}
   NUMPAD:
   - {type: held}
-  - '#'
-  - <
-  - '>'
-  - '&'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '&gmail'
   - '%'
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -283,7 +283,7 @@ layers:
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - '&td_rbkt'
-  - {t: KP 1, h: RGUI}
+  - {t: KP 4, h: RGUI}
   - {t: KP 5, h: '$$mdi:apple-keyboard-option$$'}
   - {t: KP 6, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: '~', h: '$$mdi:apple-keyboard-control$$'}
