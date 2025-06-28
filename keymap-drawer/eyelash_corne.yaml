@@ -257,7 +257,7 @@ layers:
   - KP 7
   - KP 8
   - KP 9
-  - '"'
+  - KP PLUS
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '!'
   - {t: _, h: LGUI}
@@ -273,7 +273,7 @@ layers:
   - {t: KP 2, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: KP 3, h: '$$mdi:apple-keyboard-option$$'}
   - {t: KP 0, h: RGUI}
-  - ^
+  - KP EQUAL
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '?', h: '$$mdi:apple-keyboard-control$$'}
   - {t: /, h: '$$mdi:apple-keyboard-shift$$', s: '?'}
@@ -283,11 +283,11 @@ layers:
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - '&td_rbkt'
-  - {t: KP 1, h: RGUI}
+  - {t: KP 4, h: RGUI}
   - {t: KP 5, h: '$$mdi:apple-keyboard-option$$'}
   - {t: KP 6, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: '~', h: '$$mdi:apple-keyboard-control$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: KP MINUS, h: '$$mdi:apple-keyboard-control$$'}
+  - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
