@@ -45,7 +45,7 @@
 #define HMR_GUI_TO_CTRL(rgui, lalt, rshift, rctrl) &hmr RGUI rgui    &hmr LALT lalt     &hmr RSHFT rshift  &hmr RCTRL rctrl
 #define HML_CTRL_TO_GUI(lctrl, lshift, lalt, lgui) &hml LCTRL lctrl  &hml LSHFT lshift  &hml LALT lalt     &hml LGUI lgui
 #define HMR_CTRL_TO_GUI(rctrl, rshift, lalt, rgui) &hmr RCTRL rctrl  &hmr RSHFT rshift  &hmr LALT lalt     &hmr RGUI rgui
-#define HMR_CTRL_TO_GUI_MACRO(m1, m2, m3, m4) &hmr_macro RCTRL m1  &hmr_macro RSHFT m2  &hmr_macro LALT m3  &hmr_macro RGUI m4
+#define HMR_CTRL_TO_GUI_MACRO(m1, m2, m3, m4) &m1 &m2 &m3 &m4
 #define HMR_GUI_TO_CTRL_RETRO(rgui, lalt, rshift, rctrl) &hmr_retro RGUI rgui    &hmr_retro LALT lalt     &hmr_retro RSHFT rshift  &hmr_retro RCTRL rctrl
 #define HMR_CTRL_TO_GUI_RETRO(rctrl, rshift, lalt, rgui) &hmr_retro RCTRL rctrl  &hmr_retro RSHFT rshift  &hmr_retro LALT lalt     &hmr_retro RGUI rgui
 // #define TD_HML(mod_key, key_press) &td_hml mod_key key_press key_press   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
@@ -241,17 +241,6 @@
             tapping-term-ms = <280>;
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
-            //hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
-            hold-trigger-on-release;
-        };
-        hmr_macro: home_row_mod_right_macro {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            require-prior-idle-ms = <150>;
-            tapping-term-ms = <280>;
-            quick-tap-ms = <175>;
-            bindings = <&kp>, <&macro_tap>;
             //hold-trigger-key-positions = < ... >; // List of keys on the left side of the keyboard
             hold-trigger-on-release;
         };

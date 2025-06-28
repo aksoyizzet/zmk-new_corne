@@ -1,17 +1,37 @@
 - Fix
+  - [ ] Scroll by sensor
   - [ ] Space delay?
+  - [ ] consumer keys not working on android: when CONFIG_ZMK_HID_CONSUMER_REPORT_USAGES_BASIC is uncommented, works on android but not on windows.
   - [ ] mod keys can remain pressed a bit longer? after releasing
   - [ ] parametrize for td?
+  - [-] lrgui opens every second tap
   - [-] on nav layer P holded can be windows
   - [?] test homerow mods inverted
+  - [x] create #defines for layers
   - [ ] mods tapped after they are released if no tap happened
 - [?] symbols
   - [x] guillemets
 - behavior
   - tapdance
     - [?] symbols
+    - [ ] accented Turkish, italian, french, spanish letters (another layer for tr)
+  - [x] sure way to enter to nav layer
 - shortcuts
   - [ ] ctrl home 
   - [?] alt left arrow. seems doable from nav
 - macro (or combo)
   - [ ] combo to enter abc permanently from nav
+  - strings
+    - [x] mail etc commonly used shit
+    - [ ] symbols
+      - [x] ", " 
+      - [x] ". " 
+  - [ ] media
+    - [ ] mic
+- led indicators
+  - [ ] layer
+  - [ ] bluetooth connection
+  - [ ] capslock
+
+- [ ] display
+- [ ] later, russian layer
