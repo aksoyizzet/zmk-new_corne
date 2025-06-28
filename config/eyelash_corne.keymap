@@ -423,9 +423,9 @@
           numpad_layer {
             display-name = "NUMPAD";
             bindings = <
-&trans    &trans      &trans      &trans      &gmail  &kp PERCENT                  &mmv MOVE_UP                 &trans               KP_4(KP_N7, KP_N8, KP_N9, DQT)    &none
-&kp EXCL  HML_GUI_TO_CTRL(UNDER, MINUS, PLUS, EQUAL)  &kp DOLLAR   &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT   &trans    HMR_CTRL_TO_GUI(KP_N1, KP_N2, KP_N3, KP_N0)  &kp CARET
-&trans    HML_CTRL_TO_GUI(QMARK, FSLH, ASTRK, LBRC)   &td_lbkt   &kp C_MUTE        &mmv MOVE_DOWN               &td_rbkt  HMR_GUI_TO_CTRL(KP_N4, KP_N5, KP_N6, TILDE)  &trans
+&trans    &trans      &trans      &trans      &gmail  &kp PERCENT                  &mmv MOVE_UP                 &trans               KP_4(KP_N7, KP_N8, KP_N9, KP_PLUS)    &none
+&kp EXCL  HML_GUI_TO_CTRL(UNDER, MINUS, PLUS, EQUAL)  &kp DOLLAR   &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT   &trans    HMR_CTRL_TO_GUI(KP_N1, KP_N2, KP_N3, KP_N0)      &kp KP_EQUAL
+&trans    HML_CTRL_TO_GUI(QMARK, FSLH, ASTRK, LBRC)   &td_lbkt   &kp C_MUTE        &mmv MOVE_DOWN               &td_rbkt  HMR_GUI_TO_CTRL(KP_N4, KP_N5, KP_N6, KP_MINUS)   &kp DEL
                                               &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
             sensor-bindings = <&scroll_encoder>;
