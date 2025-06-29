@@ -400,9 +400,9 @@
         mouse_layer {
             display-name = "MOUSE";
             bindings = <
-&studio_unlock                         KP_4(F2, F3, F4, F5)                    &kp F6                               &mmv MOVE_UP                     &none  &mkp LCLK       &mkp MCLK       &mkp RCLK       &none            &sys_reset
-&kp F1          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp F7               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &none  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-&bootloader                 HML_CTRL_TO_GUI(F9, F10, F11, F12)                 &kp F8  &kp C_MUTE                   &mmv MOVE_DOWN                   &none  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &bootloader        
+&studio_unlock                         KP_4(F2, F3, F4, F5)                    &kp F6                               &mmv MOVE_UP                     &kp F13  &mkp LCLK       &mkp MCLK       &mkp RCLK       &none            &sys_reset
+&kp F1          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp F7               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp F14  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
+&bootloader                 HML_CTRL_TO_GUI(F9, F10, F11, F12)                 &kp F8  &kp C_MUTE                   &mmv MOVE_DOWN                   &kp F15  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &bootloader        
                                                                        &trans  &trans  &trans                                                 &trans &trans &kp DEL
             >;
 
