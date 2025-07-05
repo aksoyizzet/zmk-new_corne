@@ -9,9 +9,9 @@ layers:
   - {t: /, s: '?'}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - '&td_quote'
-  - {t: '7', s: '&'}
-  - {t: '8', s: '*'}
-  - {t: '9', s: (}
+  - {t: '4', s: $}
+  - {t: '5', s: '%'}
+  - {t: '6', s: ^}
   - KP PLUS
   - Alt+F4
   - {t: Ctl+A, h: MEDIA}
@@ -38,9 +38,9 @@ layers:
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - '&td_rpar'
-  - {t: '4', h: RGUI, s: $}
-  - {t: '5', h: '$$mdi:apple-keyboard-option$$', s: '%'}
-  - {t: '6', h: '$$mdi:apple-keyboard-shift$$', s: ^}
+  - {t: '7', h: RGUI, s: '&'}
+  - {t: '8', h: '$$mdi:apple-keyboard-option$$', s: '*'}
+  - {t: '9', h: '$$mdi:apple-keyboard-shift$$', s: (}
   - {t: KP MINUS, h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
@@ -254,9 +254,9 @@ layers:
   - '%'
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: '$$mdi:transfer$$', type: trans}
-  - KP 7
-  - KP 8
-  - KP 9
+  - KP 4
+  - KP 5
+  - KP 6
   - KP PLUS
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - '!'
@@ -283,9 +283,9 @@ layers:
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - '&td_rbkt'
-  - {t: KP 4, h: RGUI}
-  - {t: KP 5, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: KP 6, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: KP 7, h: RGUI}
+  - {t: KP 8, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: KP 9, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: KP MINUS, h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
