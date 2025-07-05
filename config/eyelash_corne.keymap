@@ -352,9 +352,9 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&lt NUMPAD_LAYER ESC    &td_alttab_print  KP_3(LC(Y), LC(S), LC(Z))   &kp FSLH                       &mmv MOVE_UP                &td_quote                  KP_4(N7, N8, N9, KP_PLUS)   &kp LA(F4)
+&lt NUMPAD_LAYER ESC    &td_alttab_print  KP_3(LC(Y), LC(S), LC(Z))   &kp FSLH                       &mmv MOVE_UP                &td_quote                  KP_4(N4, N5, N6, KP_PLUS)   &kp LA(F4)
 &lt MEDIA_LAYER LC(A)   HML_GUI_TO_CTRL_RETRO(LEFT, DOWN, UP, RIGHT)  &td_comma      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &td_dot   HMR_CTRL_TO_GUI_RETRO(N1, N2, N3, N0)        &kp KP_EQUAL
-&kp LGUI                HML_CTRL_TO_GUI(LC(X), LC(V), LC(F), LC(C))   &td_lpar   &kp C_MUTE          &mmv MOVE_DOWN              &td_rpar  HMR_GUI_TO_CTRL_RETRO(N4, N5, N6, KP_MINUS)  &kp DEL
+&kp LGUI                HML_CTRL_TO_GUI(LC(X), LC(V), LC(F), LC(C))   &td_lpar   &kp C_MUTE          &mmv MOVE_DOWN              &td_rpar  HMR_GUI_TO_CTRL_RETRO(N7, N8, N9, KP_MINUS)  &kp DEL
                &lt SYMBOL_LAYER TAB  MO_TO(ABC_LAYER, NAV_LAYER)  &lt MOUSE_LAYER SPACE                  &lt SYMBOL_LAYER ENTER  &mo_to_right NAV_LAYER ABC_LAYER   &lt MOUSE_LAYER BSPC
             >;
 
@@ -412,9 +412,9 @@
           numpad_layer {
             display-name = "NUMPAD";
             bindings = <
-&trans    &trans      &trans      &trans      &gmail  &kp PERCENT                  &mmv MOVE_UP                 &trans               KP_4(KP_N7, KP_N8, KP_N9, KP_PLUS)    &none
+&trans    &trans      &trans      &trans      &gmail  &kp PERCENT                  &mmv MOVE_UP                 &trans               KP_4(KP_N4, KP_N5, KP_N6, KP_PLUS)    &none
 &kp EXCL  HML_GUI_TO_CTRL(UNDER, MINUS, PLUS, EQUAL)  &kp DOLLAR   &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT   &trans    HMR_CTRL_TO_GUI(KP_N1, KP_N2, KP_N3, KP_N0)      &kp KP_EQUAL
-&trans    HML_CTRL_TO_GUI(QMARK, FSLH, ASTRK, LBRC)   &td_lbkt   &kp C_MUTE        &mmv MOVE_DOWN               &td_rbkt  HMR_GUI_TO_CTRL(KP_N4, KP_N5, KP_N6, KP_MINUS)   &kp DEL
+&trans    HML_CTRL_TO_GUI(QMARK, FSLH, ASTRK, LBRC)   &td_lbkt   &kp C_MUTE        &mmv MOVE_DOWN               &td_rbkt  HMR_GUI_TO_CTRL(KP_N7, KP_N8, KP_N9, KP_MINUS)   &kp DEL
                                               &trans  &trans  &trans                                    &trans  &trans  &trans
             >;
             sensor-bindings = <&scroll_encoder>;
