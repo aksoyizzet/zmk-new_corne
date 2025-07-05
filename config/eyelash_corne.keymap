@@ -352,7 +352,7 @@
         nav_layer {
             display-name = "NAV";
             bindings = <
-&lt NUMPAD_LAYER ESC    &td_alttab_print  KP_3(LC(Y), LC(S), LC(Z))   &kp FSLH                       &mmv MOVE_UP                &td_quote                  KP_4(N4, N5, N6, KP_PLUS)   &kp LA(F4)
+&lt NUMPAD_LAYER ESC    &td_alttab_print  KP_3(LC(Y), LC(S), LC(Z))   &td_quote                      &mmv MOVE_UP                &kp FSLH                   KP_4(N4, N5, N6, KP_PLUS)   &kp LA(F4)
 &lt MEDIA_LAYER LC(A)   HML_GUI_TO_CTRL_RETRO(LEFT, DOWN, UP, RIGHT)  &td_comma      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &td_dot   HMR_CTRL_TO_GUI_RETRO(N1, N2, N3, N0)        &kp KP_EQUAL
 &kp LGUI                HML_CTRL_TO_GUI(LC(X), LC(V), LC(F), LC(C))   &td_lpar   &kp C_MUTE          &mmv MOVE_DOWN              &td_rpar  HMR_GUI_TO_CTRL_RETRO(N7, N8, N9, KP_MINUS)  &kp DEL
                &lt SYMBOL_LAYER TAB  MO_TO(ABC_LAYER, NAV_LAYER)  &lt MOUSE_LAYER SPACE                  &lt SYMBOL_LAYER ENTER  &mo_to_right NAV_LAYER ABC_LAYER   &lt MOUSE_LAYER BSPC
@@ -377,9 +377,9 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&trans                KP_4(HASH,  LT,    GT,   DOLLAR)  &kp BSLH                       &mmv MOVE_UP                  &trans                                   KP_4(DQT, QMARK, AT_SIGN, CARET)          &none
-&l_guilmt  HML_GUI_TO_CTRL(UNDER, MINUS, PLUS , EQUAL)  &r_guilmt      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &kp EXCL   HMR_CTRL_TO_GUI_MACRO(semi_space, comma_space, dot_space, colon_space)  &kp PERCENT
-&trans     HML_CTRL_TO_GUI(QMARK, FSLH, ASTRK, LBRC)    &td_lbkt   &kp C_MUTE          &mmv MOVE_DOWN                &td_rbkt                      HMR_GUI_TO_CTRL(RBRC, AMPS, PIPE, TILDE)             &trans
+&trans                KP_4(HASH,  LT,    GT,   DQT)    &trans                         &mmv MOVE_UP                  &kp BSLH                              KP_4(DOLLAR, QMARK, AT_SIGN, CARET)          &none
+&l_guilmt  HML_GUI_TO_CTRL(UNDER, MINUS, PLUS, EQUAL)  &r_guilmt      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &kp EXCL   HMR_CTRL_TO_GUI_MACRO(semi_space, comma_space, dot_space, colon_space)  &kp PERCENT
+&trans     HML_CTRL_TO_GUI(QMARK, FSLH, ASTRK, LBRC)   &td_lbkt   &kp C_MUTE          &mmv MOVE_DOWN                &td_rbkt                      HMR_GUI_TO_CTRL(RBRC, AMPS, PIPE, TILDE)             &trans
                                                &trans  &trans  &trans                                        &trans  &trans  &trans
             >;
             sensor-bindings = <&scroll_encoder>;
