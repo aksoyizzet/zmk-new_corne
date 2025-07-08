@@ -29,7 +29,7 @@ layers:
   - {t: '3', h: '$$mdi:apple-keyboard-option$$', s: '#'}
   - {t: '0', h: RGUI, s: )}
   - KP EQUAL
-  - LGUI
+  - $$mdi:backspace-reverse-outline$$
   - {t: Ctl+X, h: '$$mdi:apple-keyboard-control$$'}
   - {t: Ctl+V, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: Ctl+F, h: '$$mdi:apple-keyboard-option$$'}
@@ -78,7 +78,7 @@ layers:
   - {t: T, h: '$$mdi:apple-keyboard-option$$'}
   - {t: N, h: RGUI}
   - P
-  - CMENU
+  - LGUI
   - {t: X, h: '$$mdi:apple-keyboard-control$$'}
   - {t: V, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: F, h: '$$mdi:apple-keyboard-option$$'}
@@ -127,7 +127,7 @@ layers:
   - '&dot_space'
   - '&colon_space'
   - '%'
-  - {t: '$$mdi:transfer$$', type: trans}
+  - CMENU
   - {t: '?', h: '$$mdi:apple-keyboard-control$$'}
   - {t: /, h: '$$mdi:apple-keyboard-shift$$', s: '?'}
   - {t: '*', h: '$$mdi:apple-keyboard-option$$'}
