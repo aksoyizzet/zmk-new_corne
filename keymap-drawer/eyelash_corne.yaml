@@ -6,9 +6,9 @@ layers:
   - Ctl+Y
   - Ctl+S
   - Ctl+Z
-  - {t: /, s: '?'}
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - '&td_quote'
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - {t: /, s: '?'}
   - {t: '4', s: $}
   - {t: '5', s: '%'}
   - {t: '6', s: ^}
@@ -103,11 +103,11 @@ layers:
   - '#'
   - <
   - '>'
-  - $
-  - {t: \, s: '|'}
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
   - '"'
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
+  - {t: \, s: '|'}
+  - $
   - '?'
   - '@'
   - ^
