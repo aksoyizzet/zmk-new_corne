@@ -128,7 +128,7 @@ layers:
   - '&colon_space'
   - '%'
   - CMENU
-  - {t: '?', h: '$$mdi:apple-keyboard-control$$'}
+  - {t: ., h: '$$mdi:apple-keyboard-control$$', s: '>'}
   - {t: /, h: '$$mdi:apple-keyboard-shift$$', s: '?'}
   - {t: '*', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '{', h: LGUI}
