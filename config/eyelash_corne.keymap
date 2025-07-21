@@ -40,14 +40,14 @@
 #define KP_5(kp1, kp2, kp3, kp4, kp5) &kp kp1  &kp kp2  &kp kp3  &kp kp4  &kp kp5
 #define MO_TOG(layer_mo, layer_tog) &mo_tog layer_mo layer_tog   // Macro to apply momentary-layer-on-hold/toggle-layer-on-tap to a specific layer
 #define MO_TO(layer_mo, layer_to) &mo_to layer_mo layer_to   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
-#define HML_GUI_TO_CTRL_RETRO(lgui, lalt, lshift, lctrl) &hml_retro LGUI lgui  &hml_retro LALT lalt  &hml_retro LSHFT lshift  &hml_retro LCTRL lctrl
-#define HML_GUI_TO_CTRL(lgui, lalt, lshift, lctrl) &hml LGUI lgui    &hml LALT lalt     &hml LSHFT lshift  &hml LCTRL lctrl
-#define HMR_GUI_TO_CTRL(rgui, lalt, rshift, rctrl) &hmr RGUI rgui    &hmr LALT lalt     &hmr RSHFT rshift  &hmr RCTRL rctrl
-#define HML_CTRL_TO_GUI(lctrl, lshift, lalt, lgui) &hml LCTRL lctrl  &hml LSHFT lshift  &hml LALT lalt     &hml LGUI lgui
-#define HMR_CTRL_TO_GUI(rctrl, rshift, lalt, rgui) &hmr RCTRL rctrl  &hmr RSHFT rshift  &hmr LALT lalt     &hmr RGUI rgui
+#define HML_GUI_TO_CTRL_RETRO(lgui, ralt, lshift, lctrl) &hml_retro LGUI lgui  &hml_retro RALT ralt  &hml_retro LSHFT lshift  &hml_retro LCTRL lctrl
+#define HML_GUI_TO_CTRL(lgui, ralt, lshift, lctrl) &hml LGUI lgui    &hml RALT ralt     &hml LSHFT lshift  &hml LCTRL lctrl
+#define HMR_GUI_TO_CTRL(rgui, ralt, rshift, rctrl) &hmr RGUI rgui    &hmr RALT ralt     &hmr RSHFT rshift  &hmr RCTRL rctrl
+#define HML_CTRL_TO_GUI(lctrl, lshift, ralt, lgui) &hml LCTRL lctrl  &hml LSHFT lshift  &hml RALT ralt     &hml LGUI lgui
+#define HMR_CTRL_TO_GUI(rctrl, rshift, ralt, rgui) &hmr RCTRL rctrl  &hmr RSHFT rshift  &hmr RALT ralt     &hmr RGUI rgui
 #define HMR_CTRL_TO_GUI_MACRO(m1, m2, m3, m4) &m1 &m2 &m3 &m4
-#define HMR_GUI_TO_CTRL_RETRO(rgui, lalt, rshift, rctrl) &hmr_retro RGUI rgui    &hmr_retro LALT lalt     &hmr_retro RSHFT rshift  &hmr_retro RCTRL rctrl
-#define HMR_CTRL_TO_GUI_RETRO(rctrl, rshift, lalt, rgui) &hmr_retro RCTRL rctrl  &hmr_retro RSHFT rshift  &hmr_retro LALT lalt     &hmr_retro RGUI rgui
+#define HMR_GUI_TO_CTRL_RETRO(rgui, ralt, rshift, rctrl) &hmr_retro RGUI rgui    &hmr_retro RALT ralt     &hmr_retro RSHFT rshift  &hmr_retro RCTRL rctrl
+#define HMR_CTRL_TO_GUI_RETRO(rctrl, rshift, ralt, rgui) &hmr_retro RCTRL rctrl  &hmr_retro RSHFT rshift  &hmr_retro RALT ralt     &hmr_retro RGUI rgui
 // #define TD_HML(mod_key, key_press) &td_hml mod_key key_press key_press   // Macro to apply momentary-layer-on-hold/to-layer-on-tap to a specific layer
 // #define TD_DC(single_tap, double_tap) &td_dc single_tap double_tap   // Macro to apply tap dance
 
@@ -57,18 +57,18 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LALT>
+                = <&macro_press &kp RALT>
                 , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N1>
-                , <&macro_release &kp LALT>
+                , <&macro_release &kp RALT>
                 ;
         };
         r_guilmt: r_guilmt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LALT>
+                = <&macro_press &kp RALT>
                 , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N8 &kp KP_N7>
-                , <&macro_release &kp LALT>
+                , <&macro_release &kp RALT>
                 ;
         };
         gmail: gmail {
