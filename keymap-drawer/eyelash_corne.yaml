@@ -99,7 +99,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backspace$$', h: NUMPAD}
   SYMBOL:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: NUMPAD, h: toggle}
   - '#'
   - <
   - '>'
@@ -148,7 +148,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backspace$$', h: MOUSE}
   MEDIA:
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-esc$$
   - RGB TOG
   - RGB BRI
   - $$mdi:brightness-5$$
