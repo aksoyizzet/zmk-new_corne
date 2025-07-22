@@ -97,7 +97,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:backspace$$', h: NUMPAD}
   SYMBOL:
   - {t: '$$mdi:transfer$$', type: trans}
   - '#'
@@ -146,7 +146,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:backspace$$', h: MOUSE}
   MEDIA:
   - {t: '$$mdi:transfer$$', type: trans}
   - RGB TOG
@@ -182,7 +182,7 @@ layers:
   - $$mdi:brightness-7$$
   - $$mdi:volume-low$$
   - {h: '3', s: '$$mdi:bluetooth-connect$$'}
-  - $$mdi:volume-off$$
+  - {t: MOUSE, h: toggle}
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
   - '&bl BL_DEC'
   - {t: INS, h: RGUI}
@@ -239,10 +239,10 @@ layers:
   - $$mdi:pan-down$$
   - $$mdi:pan-right$$
   - $$mdi:progress-download$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backspace-reverse-outline$$', type: held alternate}
   NUMPAD:
@@ -289,11 +289,11 @@ layers:
   - {t: KP MINUS, h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
 combos:
 - p: [0, 1]
   k: Ctl+W
