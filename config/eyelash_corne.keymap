@@ -32,8 +32,9 @@
 #define ABC_LAYER    1
 #define SYMBOL_LAYER 2
 #define MEDIA_LAYER  3
-#define MOUSE_LAYER  4
-#define NUMPAD_LAYER 5
+#define NUMPAD_LAYER 4
+#define MOUSE1_LAYER 5
+#define MOUSE2_LAYER 6 
 
 #define KP_3(kp1, kp2, kp3) &kp kp1  &kp kp2  &kp kp3
 #define KP_4(kp1, kp2, kp3, kp4) &kp kp1  &kp kp2  &kp kp3  &kp kp4
@@ -362,7 +363,7 @@
 &lt NUMPAD_LAYER ESC    &td_alttab_print  KP_3(LC(Y), LC(S), LC(Z))   &kp ENTER                      &mmv MOVE_UP                &kp FSLH                   KP_4(N4, N5, N6, KP_PLUS)   &kp LA(F4)
 &lt MEDIA_LAYER LC(A)   HML_GUI_TO_CTRL_RETRO(LEFT, DOWN, UP, RIGHT)  &td_comma      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &td_dot   HMR_CTRL_TO_GUI_RETRO(N1, N2, N3, N0)        &kp KP_EQUAL
 &kp DEL                 HML_CTRL_TO_GUI(LC(X), LC(V), LC(F), LC(C))   &td_lpar   &kp C_MUTE          &mmv MOVE_DOWN              &td_rpar  HMR_GUI_TO_CTRL_RETRO(N7, N8, N9, KP_MINUS)  &kp DEL
-               &lt SYMBOL_LAYER TAB  MO_TO(ABC_LAYER, NAV_LAYER)  &lt MOUSE_LAYER SPACE                  &lt SYMBOL_LAYER ENTER  &mo_to_right NAV_LAYER ABC_LAYER   &lt MOUSE_LAYER BSPC
+                   &lt SYMBOL_LAYER TAB  MO_TO(ABC_LAYER, NAV_LAYER)  &lt MOUSE1_LAYER SPACE             &lt SYMBOL_LAYER ENTER  &mo_to_right NAV_LAYER ABC_LAYER   &lt MOUSE1_LAYER BSPC
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -384,10 +385,10 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&to MOUSE_LAYER       KP_4(HASH,  LT,    GT,   DQT)     &trans                         &mmv MOVE_UP                  &kp BSLH                              KP_4(DOLLAR, QMARK, AT_SIGN, CARET)          &none
+&to MOUSE1_LAYER       KP_4(HASH,  LT,    GT,   DQT)    &trans                         &mmv MOVE_UP                  &kp BSLH                              KP_4(DOLLAR, QMARK, AT_SIGN, CARET)          &none
 &l_guilmt  HML_GUI_TO_CTRL(UNDER, MINUS, PLUS, EQUAL)   &r_guilmt      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &kp EXCL   HMR_CTRL_TO_GUI_MACRO(semi_space, comma_space, dot_space, colon_space)  &kp PERCENT
 &kp K_CMENU  HML_CTRL_TO_GUI(DOT, FSLH, ASTRK, LBRC)    &td_lbkt   &kp C_MUTE          &mmv MOVE_DOWN                &td_rbkt                      HMR_GUI_TO_CTRL(RBRC, AMPS, PIPE, TILDE)             &trans
-                                               &trans  &trans  &trans                                        &trans  &trans  &lt MOUSE_LAYER BSPC
+                                               &trans  &trans  &trans                                        &trans  &trans  &lt MOUSE1_LAYER BSPC
             >;
             sensor-bindings = <&scroll_encoder>;
         };
@@ -397,26 +398,14 @@
             bindings = <
 &kp ESC       &rgb_ug RGB_TOG &rgb_ug RGB_BRI  &kp C_BRI_UP  &kp C_VOLUME_UP                   &bt BT_SEL 0                      &mmv MOVE_UP                &bl BL_INC  &none          &rgb_ug RGB_EFF  &none      &none      &none
 &bt BT_SEL 4           HML_GUI_TO_CTRL(C_PREV, C_RW, C_FF, C_NEXT)                             &bt BT_SEL 1      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &bl BL_TOG        HMR_CTRL_TO_GUI(HOME, PG_UP, PG_DN, END)        &none
-&bt BT_SEL 3  &rgb_ug RGB_COLOR_HSB(0,0,10)  &rgb_ug RGB_BRD  &kp C_BRI_DN  &kp C_VOLUME_DOWN  &bt BT_SEL 2   &to MOUSE_LAYER    &mmv MOVE_DOWN              &bl BL_DEC  &hmr RGUI INS  &rgb_ug RGB_EFR  &kp RSHFT  &kp RCTRL  &trans
+&bt BT_SEL 3  &rgb_ug RGB_COLOR_HSB(0,0,10)  &rgb_ug RGB_BRD  &kp C_BRI_DN  &kp C_VOLUME_DOWN  &bt BT_SEL 2   &to MOUSE1_LAYER   &mmv MOVE_DOWN              &bl BL_DEC  &hmr RGUI INS  &rgb_ug RGB_EFR  &kp RSHFT  &kp RCTRL  &trans
                                                                                        &trans  &trans  &trans                                         &trans &trans &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
-
-        mouse_layer {
-            display-name = "MOUSE";
-            bindings = <
-&studio_unlock                         KP_4(F2, F3, F4, F5)                    &kp F6                               &mmv MOVE_UP                     &kp F13  &mkp LCLK       &mkp MCLK       &mkp RCLK       &none            &sys_reset
-&kp F1          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp F7               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp F14  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
-&bootloader                 HML_CTRL_TO_GUI(F9, F10, F11, F12)                 &kp F8  &kp C_MUTE                   &mmv MOVE_DOWN                   &kp F15  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &bootloader        
-                                                                     &kp LALT  &trans  &trans                                                 &trans &trans &kp DEL
-            >;
-
-            sensor-bindings = <&mmv_encoder>;
-        };
         
-          numpad_layer {
+        numpad_layer {
             display-name = "NUMPAD";
             bindings = <
 &trans    &trans      &trans      &trans      &gmail  &kp PERCENT                  &mmv MOVE_UP                 &trans               KP_4(KP_N4, KP_N5, KP_N6, KP_PLUS)    &none
@@ -426,5 +415,30 @@
             >;
             sensor-bindings = <&scroll_encoder>;
         };
+        
+        mouse1_layer {
+            display-name = "MOUSE1";
+            bindings = <
+&studio_unlock                         KP_4(F2, F3, F4, F5)                    &kp F6                               &mmv MOVE_UP                     &kp F13  &mkp LCLK       &mkp MCLK       &mkp RCLK       &none            &sys_reset
+&kp F1          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &kp F7               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp F14  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
+&bootloader                 HML_CTRL_TO_GUI(F9, F10, F11, F12)                 &kp F8  &kp C_MUTE                   &mmv MOVE_DOWN                   &kp F15  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &bootloader        
+                                                                     &kp LALT  &trans  &mo MOUSE2_LAYER                                                 &trans &trans &kp DEL
+            >;
+
+            sensor-bindings = <&mmv_encoder>;
+        };
+        
+        mouse2_layer {
+            display-name = "MOUSE2";
+            bindings = <
+&studio_unlock        &none  &mkp RCLK       &mkp MCLK      &mkp LCLK        &kp F6                               &mmv MOVE_UP                     &kp F13  &mkp LCLK       &mkp MCLK       &mkp RCLK       &none            &sys_reset
+&kp F1       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP   &mmv MOVE_RIGHT  &kp F7               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp F14  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none
+&bootloader         HML_CTRL_TO_GUI(F9, F10, F11, F12)                       &kp F8  &kp C_MUTE                   &mmv MOVE_DOWN                   &kp F15  &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT  &bootloader        
+                                                                   &kp LALT  &trans  &trans                                                 &trans &trans &kp DEL
+            >;
+
+            sensor-bindings = <&mmv_encoder>;
+        };
+        
     };
 };
