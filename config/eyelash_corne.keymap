@@ -397,7 +397,7 @@
             bindings = <
 &trans        &rgb_ug RGB_TOG &rgb_ug RGB_BRI  &kp C_BRI_UP  &kp C_VOLUME_UP                   &bt BT_SEL 0                      &mmv MOVE_UP                &bl BL_INC  &none          &rgb_ug RGB_EFF  &none      &none      &none
 &bt BT_SEL 4           HML_GUI_TO_CTRL(C_PREV, C_RW, C_FF, C_NEXT)                             &bt BT_SEL 1      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &bl BL_TOG        HMR_CTRL_TO_GUI(HOME, PG_UP, PG_DN, END)        &none
-&bt BT_SEL 3  &rgb_ug RGB_COLOR_HSB(0,0,10)  &rgb_ug RGB_BRD  &kp C_BRI_DN  &kp C_VOLUME_DOWN  &bt BT_SEL 2   &kp C_MUTE         &mmv MOVE_DOWN              &bl BL_DEC  &hmr RGUI INS  &rgb_ug RGB_EFR  &kp RSHFT  &kp RCTRL  &trans
+&bt BT_SEL 3  &rgb_ug RGB_COLOR_HSB(0,0,10)  &rgb_ug RGB_BRD  &kp C_BRI_DN  &kp C_VOLUME_DOWN  &bt BT_SEL 2   &to MOUSE_LAYER    &mmv MOVE_DOWN              &bl BL_DEC  &hmr RGUI INS  &rgb_ug RGB_EFR  &kp RSHFT  &kp RCTRL  &trans
                                                                                        &trans  &trans  &trans                                         &trans &trans &trans
             >;
 
