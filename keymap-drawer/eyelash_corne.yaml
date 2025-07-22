@@ -99,7 +99,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:backspace$$', h: NUMPAD}
   SYMBOL:
-  - {t: NUMPAD, h: toggle}
+  - {t: MOUSE, h: toggle}
   - '#'
   - <
   - '>'
