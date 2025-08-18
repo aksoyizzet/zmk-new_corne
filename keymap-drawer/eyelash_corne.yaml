@@ -372,7 +372,7 @@ combos:
   k: $$mdi:keyboard-esc$$
   l: [NAV, ABC]
 - p: [8, 9, 10, 11]
-  k: {t: MOUSE1, h: toggle}
+  k: {t: NUMPAD, h: toggle}
   l: [NAV, ABC]
 - p: [8, 9, 10]
   k: KP NUM

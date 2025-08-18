@@ -664,8 +664,8 @@ rect.held, rect.combo.held {
 <path d="M812,37 l-65,-1" class="combo"/>
 <path d="M812,37 l66,10" class="combo"/>
 <rect rx="6" ry="6" x="798" y="24" width="28" height="26" class="combo"/>
-<a href="#MOUSE1">
-<text x="812" y="37" class="combo tap layer-activator">MOUSE1</text>
+<a href="#NUMPAD">
+<text x="812" y="37" class="combo tap layer-activator">NUMPAD</text>
 </a><text x="812" y="48" class="combo hold">toggle</text>
 </g>
 </g>
@@ -976,8 +976,8 @@ rect.held, rect.combo.held {
 <path d="M812,37 l-65,-1" class="combo"/>
 <path d="M812,37 l66,10" class="combo"/>
 <rect rx="6" ry="6" x="798" y="24" width="28" height="26" class="combo"/>
-<a href="#MOUSE1">
-<text x="812" y="37" class="combo tap layer-activator">MOUSE1</text>
+<a href="#NUMPAD">
+<text x="812" y="37" class="combo tap layer-activator">NUMPAD</text>
 </a><text x="812" y="48" class="combo hold">toggle</text>
 </g>
 </g>
