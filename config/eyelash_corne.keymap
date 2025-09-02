@@ -72,6 +72,15 @@
                 , <&macro_release &kp LALT>
                 ;
         };
+        backtick: backtick {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N9 &kp KP_N6>
+                , <&macro_release &kp LALT>
+                ;
+        };
         gmail: gmail {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -385,7 +394,7 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&to MOUSE1_LAYER       KP_4(HASH,  LT,    GT,   DQT)    &trans                         &mmv MOVE_UP                  &kp BSLH                              KP_4(DOLLAR, QMARK, AT_SIGN, CARET)          &none
+&to MOUSE1_LAYER       KP_4(HASH,  LT,    GT,   DQT)    &backtick                         &mmv MOVE_UP                  &kp BSLH                              KP_4(DOLLAR, QMARK, AT_SIGN, CARET)          &none
 &l_guilmt  HML_GUI_TO_CTRL(UNDER, MINUS, PLUS, EQUAL)   &r_guilmt      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &kp EXCL   HMR_CTRL_TO_GUI_MACRO(semi_space, comma_space, dot_space, colon_space)  &kp PERCENT
 &kp K_CMENU  HML_CTRL_TO_GUI(DOT, FSLH, ASTRK, LBRC)    &td_lbkt   &kp C_MUTE          &mmv MOVE_DOWN                &td_rbkt                      HMR_GUI_TO_CTRL(RBRC, AMPS, PIPE, TILDE)             &trans
                                                &trans  &trans  &trans                                        &trans  &trans  &lt MOUSE1_LAYER BSPC
