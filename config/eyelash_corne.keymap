@@ -54,20 +54,32 @@
 
 / {
     macros {
-        l_guilmt: l_guilmt { // 00AB 
+        l_guilmt: l_guilmt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LC(LS(U))>, <&macro_tap &kp N0 &kp N0 &kp A &kp B>, <&macro_release &kp LC(LS(U))>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N7 &kp KP_N1>
+                , <&macro_release &kp LALT>
+                ;
         };
-        r_guilmt: r_guilmt { // 00BB
+        r_guilmt: r_guilmt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LC(LS(U))>, <&macro_tap &kp N0 &kp N0 &kp B &kp B>, <&macro_release &kp LC(LS(U))>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N0 &kp KP_N1 &kp KP_N8 &kp KP_N7>
+                , <&macro_release &kp LALT>
+                ;
         };
-        backtick: backtick { // 0060 
+        backtick: backtick {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LC(LS(U))>, <&macro_tap &kp N0 &kp N0 &kp N6 &kp N0>, <&macro_release &kp LC(LS(U))>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N9 &kp KP_N6>
+                , <&macro_release &kp LALT>
+                ;
         };
         gmail: gmail {
             compatible = "zmk,behavior-macro";
