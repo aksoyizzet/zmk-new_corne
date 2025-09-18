@@ -28,7 +28,7 @@ layers:
   - {t: '2', h: '$$mdi:apple-keyboard-shift$$', s: '@'}
   - {t: '3', h: '$$mdi:apple-keyboard-option$$', s: '#'}
   - {t: '0', h: RGUI, s: )}
-  - KP EQUAL
+  - {t: KP EQUAL, h: NAV}
   - $$mdi:backspace-reverse-outline$$
   - {t: Ctl+X, h: '$$mdi:apple-keyboard-control$$'}
   - {t: Ctl+V, h: '$$mdi:apple-keyboard-shift$$'}
@@ -47,7 +47,7 @@ layers:
   - {t: NAV, h: ABC}
   - {t: '$$mdi:keyboard-space$$', h: MOUSE1}
   - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
-  - {t: ABC, h: NAV}
+  - {t: ABC, h: NUMPAD}
   - {t: '$$mdi:backspace$$', h: MOUSE1}
   ABC:
   - {t: '$$mdi:transfer$$', type: trans}
@@ -77,7 +77,7 @@ layers:
   - {t: S, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: T, h: '$$mdi:apple-keyboard-option$$'}
   - {t: N, h: RGUI}
-  - P
+  - {t: P, h: NAV}
   - LGUI
   - {t: X, h: '$$mdi:apple-keyboard-control$$'}
   - {t: V, h: '$$mdi:apple-keyboard-shift$$'}
@@ -243,7 +243,7 @@ layers:
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {type: held alternate}
   MOUSE1:
   - '&studio_unlock'
