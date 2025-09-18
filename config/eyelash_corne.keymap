@@ -106,6 +106,15 @@
             #binding-cells = <0>;
             bindings = <&macro_tap &kp COLON  &kp SPACE>;
         };
+        tr_c: tr_c { // ç - U+00E7
+            compatible = "zmk,behavior-macro";
+            bindings = <&macro_press &kp LC(LS(U))>, <&macro_tap &kp N0 &kp N0 &kp E &kp N7>, <&macro_release &kp LC(LS(U))>;
+        };
+
+        it_a_grave: it_a_grave { // à - U+00E0
+            compatible = "zmk,behavior-macro";
+            bindings = <&macro_press &kp LC(LS(U))>, <&macro_tap &kp N0 &kp N0 &kp E &kp N0>, <&macro_release &kp LC(LS(U))>;
+        };
     };
     combos {
         compatible = "zmk,combos";
@@ -414,8 +423,8 @@
         media_layer {
             display-name = "MEDIA";
             bindings = <
-&kp ESC       &rgb_ug RGB_TOG &rgb_ug RGB_BRI  &kp C_BRI_UP  &kp C_VOLUME_UP                   &bt BT_SEL 0                      &mmv MOVE_UP                &bl BL_INC  &none          &rgb_ug RGB_EFF  &none      &none      &none
-&bt BT_SEL 4           HML_GUI_TO_CTRL(C_PREV, C_RW, C_FF, C_NEXT)                             &bt BT_SEL 1      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &bl BL_TOG        HMR_CTRL_TO_GUI(HOME, PG_UP, PG_DN, END)        &none
+&kp ESC       &rgb_ug RGB_TOG &rgb_ug RGB_BRI  &kp C_BRI_UP  &kp C_VOLUME_UP                   &bt BT_SEL 0                      &mmv MOVE_UP                &bl BL_INC  &none          &rgb_ug RGB_EFF  &none      &none      &tr_c
+&bt BT_SEL 4           HML_GUI_TO_CTRL(C_PREV, C_RW, C_FF, C_NEXT)                             &bt BT_SEL 1      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &bl BL_TOG        HMR_CTRL_TO_GUI(HOME, PG_UP, PG_DN, END)        &it_a_grave
 &bt BT_SEL 3  &rgb_ug RGB_COLOR_HSB(0,0,10)  &rgb_ug RGB_BRD  &kp C_BRI_DN  &kp C_VOLUME_DOWN  &bt BT_SEL 2   &to MOUSE1_LAYER   &mmv MOVE_DOWN              &bl BL_DEC  &hmr RGUI INS  &rgb_ug RGB_EFR  &kp RSHFT  &kp RCTRL  &trans
                                                                                        &trans  &trans  &trans                                         &trans &trans &trans
             >;
