@@ -1,7 +1,7 @@
 - [中文](README.md)
 - [English](README_EN.md)
 
-# 睫毛外设 (Eyelash Peripherals) Corne ZMK 仓库
+# 睫毛外设 (Eyelash Peripherals) Corne [ZMK](https://zmk.dev/docs) 仓库
 
 **该键盘与 [foostan's Corne](https://github.com/foostan/crkbd) 不同，无法与标准的 `corne` 固件兼容。**
 

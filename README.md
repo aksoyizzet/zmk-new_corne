@@ -1,7 +1,4 @@
-- [Chinese](README_ZH.md)
-- [English](README.md)
-
-# (Eyelash Peripherals) Corne ZMK Repository
+# (Eyelash Peripherals) Corne [ZMK](https://zmk.dev/docs) Repository
 
 ## Keymap Diagram
 
@@ -22,3 +19,5 @@ If you need a 3D model of this keyboard, email `380465425@qq.com`.
 
 **If you already have a ZMK config repository, [you can add this one as a module instead of forking](https://zmk.dev/docs/features/modules#building-with-modules).**
 
+- [Chinese](README_ZH.md)
+- [English](README.md)
