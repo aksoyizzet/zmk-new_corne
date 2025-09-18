@@ -106,11 +106,11 @@
             #binding-cells = <0>;
             bindings = <&macro_tap &kp COLON  &kp SPACE>;
         };
-    // Using dead keys with US International layout
+        // Using dead keys with US International layout
         tr_c: tr_c { // ç
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap &kp GRAVE &kp A>;
+            bindings = <&macro_tap &kp SQT &kp C>;
         };
 
         it_a_grave: it_a_grave { // à
