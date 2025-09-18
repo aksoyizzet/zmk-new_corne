@@ -97,7 +97,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:backspace$$', h: NUMPAD}
+  - {t: '$$mdi:backspace$$', h: MOUSE1}
   SYMBOL:
   - {t: MOUSE1, h: toggle}
   - '#'
@@ -160,7 +160,7 @@ layers:
   - RGB EFF
   - {t: '$$mdi:minus-circle-outline$$', type: none}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&tr_c'
   - {h: '5', s: '$$mdi:bluetooth-connect$$', type: held}
   - {t: '$$mdi:skip-previous$$', h: LGUI}
   - {t: RW, h: '$$mdi:apple-keyboard-option$$'}
@@ -175,7 +175,7 @@ layers:
   - {t: PG UP, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: PG DN, h: '$$mdi:apple-keyboard-option$$'}
   - {t: END, h: RGUI}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - '&it_a_grave'
   - {h: '4', s: '$$mdi:bluetooth-connect$$'}
   - RGB COLOR HSB(0,0,10)
   - RGB BRD
@@ -240,11 +240,11 @@ layers:
   - {t: KP MINUS, h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {type: held alternate}
-  - {type: held alternate}
+  - {t: '$$mdi:transfer$$', type: trans}
   MOUSE1:
   - '&studio_unlock'
   - F2
@@ -289,7 +289,7 @@ layers:
   - $$mdi:pan-right$$
   - $$mdi:progress-download$$
   - {t: '$$mdi:apple-keyboard-option$$', type: held alternate}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: MOUSE2, type: held}
   - {type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -338,7 +338,7 @@ layers:
   - $$mdi:pan-right$$
   - $$mdi:progress-download$$
   - {t: '$$mdi:apple-keyboard-option$$', type: held}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {type: held}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
