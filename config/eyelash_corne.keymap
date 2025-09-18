@@ -393,7 +393,7 @@
 &trans             &td_caps_print  KP_3(Y, U, Z)  &td_quote               &kp UP        &trans             KP_4(H, D, G, Q)  &kp J
 &lt MEDIA_LAYER W  HML_GUI_TO_CTRL(A, E, I, O)    &trans       KP_3(LEFT, ENTER, RIGHT) &trans  HMR_CTRL_TO_GUI(R, S, T, N)  &to_kp NAV_LAYER P
 &kp LGUI           HML_CTRL_TO_GUI(X, V, F, C)    &trans  &kp SPACE    &kp DOWN         &trans  HMR_GUI_TO_CTRL(L, K, M, B)  &trans
-                                  &trans  &trans  &trans                &trans  &trans  &lt NUMPAD_LAYER BSPC
+                                  &trans  &trans  &trans                &trans  &trans  &lt MOUSE1_LAYER BSPC
             >;
 
             sensor-bindings = <&scroll_encoder>;
