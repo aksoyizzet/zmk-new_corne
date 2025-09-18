@@ -106,16 +106,17 @@
             #binding-cells = <0>;
             bindings = <&macro_tap &kp COLON  &kp SPACE>;
         };
-        tr_c: tr_c { // ç - U+00E7
+    // Using dead keys with US International layout
+        tr_c: tr_c { // ç
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LC(LS(U))>, <&macro_tap &kp N0 &kp N0 &kp E &kp N7>, <&macro_release &kp LC(LS(U))>;
+            bindings = <&macro_tap &kp GRAVE &kp A>;
         };
 
-        it_a_grave: it_a_grave { // à - U+00E0
+        it_a_grave: it_a_grave { // à
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LC(LS(U))>, <&macro_tap &kp N0 &kp N0 &kp E &kp N0>, <&macro_release &kp LC(LS(U))>;
+            bindings = <&macro_tap &kp GRAVE &kp A>;
         };
     };
     combos {
