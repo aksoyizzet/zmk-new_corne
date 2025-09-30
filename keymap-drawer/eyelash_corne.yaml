@@ -104,7 +104,7 @@ layers:
   - <
   - '>'
   - '"'
-  - '&backtick'
+  - {t: '`', s: '~'}
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
   - {t: \, s: '|'}
   - $
