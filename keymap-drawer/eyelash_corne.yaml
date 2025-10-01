@@ -209,7 +209,7 @@ layers:
   - KP 5
   - KP 6
   - KP PLUS
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - {t: /, s: '?'}
   - '!'
   - {t: _, h: LGUI}
   - {t: '-', h: '$$mdi:apple-keyboard-option$$', s: _}
@@ -238,7 +238,7 @@ layers:
   - {t: KP 8, h: '$$mdi:apple-keyboard-option$$'}
   - {t: KP 9, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: KP MINUS, h: '$$mdi:apple-keyboard-control$$'}
-  - $$mdi:backspace-reverse-outline$$
+  - '*'
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
