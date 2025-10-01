@@ -204,7 +204,7 @@ layers:
   - '&gmail'
   - '%'
   - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - '&td_comma'
   - KP 4
   - KP 5
   - KP 6
@@ -230,10 +230,10 @@ layers:
   - {t: /, h: '$$mdi:apple-keyboard-shift$$', s: '?'}
   - {t: '*', h: '$$mdi:apple-keyboard-option$$'}
   - {t: '{', h: LGUI}
-  - '&td_lbkt'
+  - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:volume-off$$
   - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - '&td_rbkt'
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: KP 7, h: RGUI}
   - {t: KP 8, h: '$$mdi:apple-keyboard-option$$'}
   - {t: KP 9, h: '$$mdi:apple-keyboard-shift$$'}
