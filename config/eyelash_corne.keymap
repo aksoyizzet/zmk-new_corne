@@ -30,11 +30,13 @@
 
 #define NAV_LAYER    0
 #define ABC_LAYER    1
-#define SYMBOL_LAYER 2
-#define MEDIA_LAYER  3
-#define NUMPAD_LAYER 4
-#define MOUSE1_LAYER 5
-#define MOUSE2_LAYER 6 
+#define NAV_X_LAYER  2
+#define ABC_X_LAYER  3
+#define SYMBOL_LAYER 4
+#define MEDIA_LAYER  5
+#define NUMPAD_LAYER 6
+#define MOUSE1_LAYER 7
+#define MOUSE2_LAYER 8 
 
 #define KP_3(kp1, kp2, kp3) &kp kp1  &kp kp2  &kp kp3
 #define KP_4(kp1, kp2, kp3, kp4) &kp kp1  &kp kp2  &kp kp3  &kp kp4
@@ -106,61 +108,61 @@
         combo_ctrl_w_left {
             timeout-ms = <50>;
             key-positions = <0 1>;
-            layers = <NAV_LAYER ABC_LAYER>;
+            layers = <NAV_LAYER ABC_LAYER NAV_X_LAYER ABC_X_LAYER>;
             bindings = <&kp LC(W)>;
         };
         combo_bspc {
             timeout-ms = <50>;
             key-positions = <2 3>;
-            layers = <NAV_LAYER ABC_LAYER>;
+            layers = <NAV_LAYER ABC_LAYER NAV_X_LAYER ABC_X_LAYER>;
             bindings = <&kp BSPC>;
         };
         combo_del {
             timeout-ms = <50>;
             key-positions = <3 4>;
-            layers = <NAV_LAYER ABC_LAYER>;
+            layers = <NAV_LAYER ABC_LAYER NAV_X_LAYER ABC_X_LAYER>;
             bindings = <&kp DEL>;
         };
         combo_enter {
             timeout-ms = <50>;
             key-positions = <2 3 4>;
-            layers = <NAV_LAYER ABC_LAYER>;
+            layers = <NAV_LAYER ABC_LAYER NAV_X_LAYER ABC_X_LAYER>;
             bindings = <&kp ENTER>;
         };
         combo_alt_f4 {
             timeout-ms = <50>;
             key-positions = <4 5>;
-            layers = <NAV_LAYER ABC_LAYER>;
+            layers = <NAV_LAYER ABC_LAYER NAV_X_LAYER ABC_X_LAYER>;
             bindings = <&kp LA(F4)>;
         };
         combo_ctrl_w_right {
             timeout-ms = <50>;
             key-positions = <7 8>;
-            layers = <NAV_LAYER ABC_LAYER>;
+            layers = <NAV_LAYER ABC_LAYER NAV_X_LAYER ABC_X_LAYER>;
             bindings = <&kp LC(W)>;
         };
         combo_tab {
             timeout-ms = <50>;
             key-positions = <8 9>;
-            layers = <NAV_LAYER ABC_LAYER>;
+            layers = <NAV_LAYER ABC_LAYER NAV_X_LAYER ABC_X_LAYER>;
             bindings = <&kp TAB>;
         };
         combo_space {
             timeout-ms = <50>;
             key-positions = <9 10>;
-            layers = <NAV_LAYER ABC_LAYER>;
+            layers = <NAV_LAYER ABC_LAYER NAV_X_LAYER ABC_X_LAYER>;
             bindings = <&kp SPACE>;
         };
         combo_esc {
             timeout-ms = <50>;
             key-positions = <8 9 10>;
-            layers = <NAV_LAYER ABC_LAYER>;
+            layers = <NAV_LAYER ABC_LAYER NAV_X_LAYER ABC_X_LAYER>;
             bindings = <&kp ESC>;
         };
         combo_num_layer {
             timeout-ms = <50>;
             key-positions = <8 9 10 11>;
-            layers = <NAV_LAYER ABC_LAYER>;
+            layers = <NAV_LAYER ABC_LAYER NAV_X_LAYER ABC_X_LAYER>;
             bindings = <&to NUMPAD_LAYER>;
         };
         combo_num_lock {
@@ -394,7 +396,31 @@
 &trans             &td_caps_print  KP_3(Y, U, Z)  &td_quote               &kp UP        &trans             KP_4(H, D, G, Q)  &kp J
 &lt MEDIA_LAYER W  HML_GUI_TO_CTRL(A, E, I, O)    &trans       KP_3(LEFT, ENTER, RIGHT) &trans  HMR_CTRL_TO_GUI(R, S, T, N)  &to_kp NAV_LAYER P
 &kp LGUI           HML_CTRL_TO_GUI(X, V, F, C)    &trans  &kp SPACE    &kp DOWN         &trans  HMR_GUI_TO_CTRL(L, K, M, B)  &trans
-                                  &trans  &trans  &trans                &trans  &trans  &lt MOUSE1_LAYER BSPC
+                                          &trans  &trans  &trans                &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        nav_x_layer {
+            display-name = "NAV_X";
+            bindings = <
+&kp LA(F4)                            KP_4(KP_PLUS, N6, N5, N4)    &kp FSLH                      &mmv MOVE_UP                    &kp ENTER     KP_3(LC(Z), LC(S), LC(Y))   &td_alttab_print   &lt NUMPAD_LAYER ESC
+&lt MEDIA_LAYER KP_EQUAL  HML_GUI_TO_CTRL_RETRO(N0, N3, N2, N1)    &td_dot       &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT      &td_comma     HMR_CTRL_TO_GUI_RETRO(LEFT, UP, DOWN, RIGHT)   &to_kp NAV_X_LAYER LC(A)
+&kp DEL                     HML_CTRL_TO_GUI(N7, N8, N9, KP_MINUS)  &td_rpar  &kp C_MUTE          &mmv MOVE_DOWN                  &td_lpar  HMR_GUI_TO_CTRL_RETRO(LC(C), LC(F), LC(V), LC(X))  &kp DEL
+                   &lt SYMBOL_LAYER TAB  MO_TO(ABC_LAYER, NAV_X_LAYER)  &lt MOUSE1_LAYER SPACE             &lt SYMBOL_LAYER ENTER  MO_TO(NUMPAD_LAYER, ABC_X_LAYER)  &lt MOUSE1_LAYER BSPC
+            >;
+
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        alpha_x_layer {
+            display-name = "ABC_X";
+            bindings = <
+&kp J                         KP_4(Q, G, D, H)  &td_quote            &kp UP           &trans  KP_3(Z, U, Y) &td_caps_print  &trans
+&lt MEDIA_LAYER P  HML_GUI_TO_CTRL(N, T, S, R)  &trans       KP_3(LEFT, ENTER, RIGHT) &trans  HMR_CTRL_TO_GUI(O, I, E, A)   &to_kp NAV_X_LAYER W
+&trans             HML_CTRL_TO_GUI(B, M, K, L)  &trans  &kp SPACE    &kp DOWN         &trans  HMR_GUI_TO_CTRL(C, F, V, X)   &kp LGUI 
+                                        &trans  &trans  &trans                &trans  &trans  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
