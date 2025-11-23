@@ -408,7 +408,7 @@
 &kp LA(F4)                            KP_4(KP_PLUS, N6, N5, N4)    &kp FSLH                      &mmv MOVE_UP                    &kp ENTER     KP_3(LC(Z), LC(S), LC(Y))   &td_alttab_print   &lt NUMPAD_LAYER ESC
 &lt MEDIA_LAYER KP_EQUAL  HML_GUI_TO_CTRL_RETRO(N0, N3, N2, N1)    &td_dot       &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT      &td_comma     HMR_CTRL_TO_GUI_RETRO(LEFT, UP, DOWN, RIGHT)   &to_kp NAV_X_LAYER LC(A)
 &to_kp ABC_X_LAYER DEL      HML_CTRL_TO_GUI(N7, N8, N9, KP_MINUS)  &td_rpar  &kp C_MUTE          &mmv MOVE_DOWN                  &td_lpar  HMR_GUI_TO_CTRL_RETRO(LC(C), LC(F), LC(V), LC(X))  &kp DEL
-                   &lt SYMBOL_LAYER TAB  MO_TO(ABC_LAYER, NAV_X_LAYER)  &lt MOUSE1_LAYER SPACE             &lt SYMBOL_LAYER ENTER  MO_TO(NUMPAD_LAYER, ABC_X_LAYER)  &lt MOUSE1_LAYER BSPC
+                                            &trans  MO_TO(ABC_LAYER, NAV_X_LAYER)  &trans                &trans  MO_TO(NUMPAD_LAYER, ABC_X_LAYER)  &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -430,10 +430,10 @@
         symbol_layer {
             display-name = "SYMBOL";
             bindings = <
-&to MOUSE1_LAYER       KP_4(HASH,  LT,    GT,   DQT)   &kp GRAVE                         &mmv MOVE_UP                  &kp BSLH                              KP_4(DOLLAR, QMARK, AT_SIGN, CARET)          &none
-&none      HML_GUI_TO_CTRL(UNDER, MINUS, PLUS, EQUAL)  &none             &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &kp EXCL   HMR_CTRL_TO_GUI_MACRO(semi_space, comma_space, dot_space, colon_space)  &kp PERCENT
-&kp K_CMENU  HML_CTRL_TO_GUI(DOT, FSLH, ASTRK, LBRC)   &td_lbkt   &kp C_MUTE             &mmv MOVE_DOWN                &td_rbkt                      HMR_GUI_TO_CTRL(RBRC, AMPS, PIPE, TILDE)             &trans
-                                               &trans  &trans  &trans                                        &trans  &trans  &lt MOUSE1_LAYER BSPC
+&to MOUSE1_LAYER                   KP_4(HASH,  LT,    GT,   DQT)   &kp GRAVE                         &mmv MOVE_UP                            &kp BSLH                              KP_4(DOLLAR, QMARK, AT_SIGN, CARET)          &none
+&to NAV_X_LAYER        HML_GUI_TO_CTRL(UNDER, MINUS, PLUS, EQUAL)  &to ABC_X_LAYER             &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT    &kp EXCL   HMR_CTRL_TO_GUI_MACRO(semi_space, comma_space, dot_space, colon_space)  &kp PERCENT
+&to_kp NAV_LAYER K_CMENU  HML_CTRL_TO_GUI(DOT, FSLH, ASTRK, LBRC)  &td_lbkt   &kp C_MUTE             &mmv MOVE_DOWN                          &td_rbkt                      HMR_GUI_TO_CTRL(RBRC, AMPS, PIPE, TILDE)             &trans
+                                                           &trans  &trans  &trans                                                    &trans  &trans  &trans
             >;
             sensor-bindings = <&scroll_encoder>;
         };
