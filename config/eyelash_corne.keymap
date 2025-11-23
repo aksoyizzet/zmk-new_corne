@@ -383,7 +383,7 @@
             bindings = <
 &lt NUMPAD_LAYER ESC    &td_alttab_print  KP_3(LC(Y), LC(S), LC(Z))   &kp ENTER                      &mmv MOVE_UP                &kp FSLH                   KP_4(N4, N5, N6, KP_PLUS)   &kp LA(F4)
 &lt MEDIA_LAYER LC(A)   HML_GUI_TO_CTRL_RETRO(LEFT, DOWN, UP, RIGHT)  &td_comma      &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT  &td_dot   HMR_CTRL_TO_GUI_RETRO(N1, N2, N3, N0)        &to_kp NAV_LAYER KP_EQUAL
-&kp DEL                 HML_CTRL_TO_GUI(LC(X), LC(V), LC(F), LC(C))   &td_lpar   &kp C_MUTE          &mmv MOVE_DOWN              &td_rpar  HMR_GUI_TO_CTRL_RETRO(N7, N8, N9, KP_MINUS)  &kp DEL
+&to_kp ABC_LAYER DEL    HML_CTRL_TO_GUI(LC(X), LC(V), LC(F), LC(C))   &td_lpar   &kp C_MUTE          &mmv MOVE_DOWN              &td_rpar  HMR_GUI_TO_CTRL_RETRO(N7, N8, N9, KP_MINUS)  &kp DEL
                    &lt SYMBOL_LAYER TAB  MO_TO(ABC_LAYER, NAV_LAYER)  &lt MOUSE1_LAYER SPACE             &lt SYMBOL_LAYER ENTER  MO_TO(NUMPAD_LAYER, ABC_LAYER)  &lt MOUSE1_LAYER BSPC
             >;
 
@@ -407,7 +407,7 @@
             bindings = <
 &kp LA(F4)                            KP_4(KP_PLUS, N6, N5, N4)    &kp FSLH                      &mmv MOVE_UP                    &kp ENTER     KP_3(LC(Z), LC(S), LC(Y))   &td_alttab_print   &lt NUMPAD_LAYER ESC
 &lt MEDIA_LAYER KP_EQUAL  HML_GUI_TO_CTRL_RETRO(N0, N3, N2, N1)    &td_dot       &mmv MOVE_LEFT  &mkp LCLK  &mmv MOVE_RIGHT      &td_comma     HMR_CTRL_TO_GUI_RETRO(LEFT, UP, DOWN, RIGHT)   &to_kp NAV_X_LAYER LC(A)
-&kp DEL                     HML_CTRL_TO_GUI(N7, N8, N9, KP_MINUS)  &td_rpar  &kp C_MUTE          &mmv MOVE_DOWN                  &td_lpar  HMR_GUI_TO_CTRL_RETRO(LC(C), LC(F), LC(V), LC(X))  &kp DEL
+&to_kp ABC_X_LAYER DEL      HML_CTRL_TO_GUI(N7, N8, N9, KP_MINUS)  &td_rpar  &kp C_MUTE          &mmv MOVE_DOWN                  &td_lpar  HMR_GUI_TO_CTRL_RETRO(LC(C), LC(F), LC(V), LC(X))  &kp DEL
                    &lt SYMBOL_LAYER TAB  MO_TO(ABC_LAYER, NAV_X_LAYER)  &lt MOUSE1_LAYER SPACE             &lt SYMBOL_LAYER ENTER  MO_TO(NUMPAD_LAYER, ABC_X_LAYER)  &lt MOUSE1_LAYER BSPC
             >;
 
