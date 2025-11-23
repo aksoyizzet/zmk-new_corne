@@ -414,7 +414,7 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        alpha_layer {
+        abc_layer {
             display-name = "ABC";
             bindings = <
 &trans             &td_caps_print  KP_3(Y, U, Z)  &td_quote               &kp UP        &trans             KP_4(H, D, G, Q)  &kp J
@@ -438,7 +438,7 @@
             sensor-bindings = <&scroll_encoder>;
         };
 
-        alpha_x_layer {
+        abc_x_layer {
             display-name = "ABC_X";
             bindings = <
 &kp J                         KP_4(Q, G, D, H)  &td_quote            &kp UP           &trans  KP_3(Z, U, Y) &td_caps_print  &trans
