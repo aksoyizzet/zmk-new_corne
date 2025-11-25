@@ -142,7 +142,7 @@ layers:
   - {t: Ctl+X, h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: NAV_X, h: ABC}
+  - {t: NAV_X, h: ABC_X}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: ABC_X, h: NUMPAD}
@@ -191,7 +191,7 @@ layers:
   - {t: X, h: '$$mdi:apple-keyboard-control$$'}
   - LGUI
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
