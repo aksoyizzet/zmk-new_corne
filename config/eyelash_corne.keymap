@@ -30,12 +30,11 @@
 
 #define NAV_LAYER    0
 #define ABC_LAYER    1
-#define abc_LAYER    2
-#define SYMBOL_LAYER 3
-#define MEDIA_LAYER  4
-#define NUMPAD_LAYER 5
-#define MOUSE1_LAYER 6
-#define MOUSE2_LAYER 7 
+#define SYMBOL_LAYER 2
+#define MEDIA_LAYER  3
+#define NUMPAD_LAYER 4
+#define MOUSE1_LAYER 5
+#define MOUSE2_LAYER 6 
 
 #define KP_3(kp1, kp2, kp3) &kp kp1  &kp kp2  &kp kp3
 #define KP_4(kp1, kp2, kp3, kp4) &kp kp1  &kp kp2  &kp kp3  &kp kp4
@@ -244,6 +243,15 @@
             tapping-term-ms = <300>;
             bindings = <&to>, <&kp>;
         };
+
+        
+        kp_to: behavior_kp_to {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            bindings = <&kp>, <&to>;
+        };
         
         mt: mod_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -413,19 +421,7 @@
 &trans             &td_caps_print  KP_3(Y, U, Z)  &td_quote               &kp UP        &trans             KP_4(H, D, G, Q)  &kp J
 &lt MEDIA_LAYER W  HML_GUI_TO_CTRL(A, E, I, O)    &trans       KP_3(LEFT, ENTER, RIGHT) &trans  HMR_CTRL_TO_GUI(R, S, T, N)  &to_kp NAV_LAYER P
 &kp LGUI           HML_CTRL_TO_GUI(X, V, F, C)    &trans  &kp SPACE    &kp DOWN         &trans  HMR_GUI_TO_CTRL(L, K, M, B)  &trans
-                            &trans  &to_kp NAV_LAYER LSHFT  &trans                      &trans  &trans  &lt MOUSE1_LAYER BSPC
-            >;
-
-            sensor-bindings = <&scroll_encoder>;
-        };
-
-        alpha_shift_layer {
-            display-name = "abc";
-            bindings = <
-&trans                 &td_caps_print  KP_3(LS(Y), LS(U), LS(Z))      &td_quote               &kp UP        &trans             KP_4(LS(H), LS(D), LS(G), LS(Q))  &kp LS(J)
-&lt MEDIA_LAYER LS(W)  HML_GUI_TO_CTRL(LS(A), LS(E), LS(I), LS(O))    &trans       KP_3(LEFT, ENTER, RIGHT) &trans  HMR_CTRL_TO_GUI(LS(R), LS(S), LS(T), LS(N))  &to_kp NAV_LAYER LS(P)
-&kp LGUI               HML_CTRL_TO_GUI(LS(X), LS(V), LS(F), LS(C))    &trans  &kp SPACE    &kp DOWN         &trans  HMR_GUI_TO_CTRL(LS(L), LS(K), LS(M), LS(B))  &trans
-                                  &trans  &trans  &trans                &trans  &trans  &lt MOUSE1_LAYER BSPC
+                            &trans  &kp_to LSHFT NAV_LAYER  &trans                      &trans  &trans  &lt MOUSE1_LAYER BSPC
             >;
 
             sensor-bindings = <&scroll_encoder>;
