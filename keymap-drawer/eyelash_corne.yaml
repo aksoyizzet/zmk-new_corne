@@ -44,7 +44,7 @@ layers:
   - {t: KP MINUS, h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
-  - {t: NAV, h: abc}
+  - {t: NAV, h: ABC}
   - {t: '$$mdi:keyboard-space$$', h: MOUSE1}
   - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
   - {t: ABC, h: NUMPAD}
@@ -93,7 +93,7 @@ layers:
   - {t: B, h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: NAV, h: abc, type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
