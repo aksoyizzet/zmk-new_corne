@@ -44,7 +44,7 @@ layers:
   - {t: KP MINUS, h: '$$mdi:apple-keyboard-control$$'}
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:keyboard-tab$$', h: SYMBOL}
-  - {t: NAV, h: ABC}
+  - {t: NAV, h: abc}
   - {t: '$$mdi:keyboard-space$$', h: MOUSE1}
   - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
   - {t: ABC, h: NUMPAD}
@@ -91,6 +91,55 @@ layers:
   - {t: K, h: '$$mdi:apple-keyboard-option$$'}
   - {t: M, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: B, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:backspace$$', h: MOUSE1}
+  abc:
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '&td_caps_print'
+  - Sft+Y
+  - Sft+U
+  - Sft+Z
+  - '&td_quote'
+  - $$mdi:arrow-up-bold$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - Sft+H
+  - Sft+D
+  - Sft+G
+  - Sft+Q
+  - Sft+J
+  - {t: Sft+W, h: MEDIA}
+  - {t: Sft+A, h: LGUI}
+  - {t: Sft+E, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: Sft+I, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: Sft+O, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:arrow-left-bold$$
+  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - $$mdi:arrow-right-bold$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Sft+R, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: Sft+S, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: Sft+T, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: Sft+N, h: RGUI}
+  - {t: Sft+P, h: NAV}
+  - LGUI
+  - {t: Sft+X, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: Sft+V, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: Sft+F, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: Sft+C, h: LGUI}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:keyboard-space$$
+  - $$mdi:arrow-down-bold$$
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: Sft+L, h: RGUI}
+  - {t: Sft+K, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: Sft+M, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: Sft+B, h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {type: held}
