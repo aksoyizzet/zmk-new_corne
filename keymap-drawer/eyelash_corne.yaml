@@ -97,7 +97,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:backspace$$', h: MOUSE1}
   NAV_X:
   - Alt+F4
   - KP PLUS
@@ -191,11 +191,11 @@ layers:
   - {t: X, h: '$$mdi:apple-keyboard-control$$'}
   - LGUI
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: NAV_X, h: '$$mdi:apple-keyboard-shift$$', type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:backspace$$', h: MOUSE1}
   SYMBOL:
   - {t: MOUSE1, h: toggle}
   - '#'
@@ -387,7 +387,7 @@ layers:
   - $$mdi:pan-right$$
   - $$mdi:progress-download$$
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held alternate}
   - {t: MOUSE2, type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -436,7 +436,7 @@ layers:
   - $$mdi:pan-right$$
   - $$mdi:progress-download$$
   - $$mdi:apple-keyboard-option$$
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
