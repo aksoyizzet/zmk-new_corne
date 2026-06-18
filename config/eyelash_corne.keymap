@@ -251,6 +251,15 @@
             tapping-term-ms = <300>;
             bindings = <&to>, <&kp>;
         };
+
+        
+        kp_to: behavior_kp_to {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <300>;
+            bindings = <&kp>, <&to>;
+        };
         
         lt: layer_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -430,7 +439,7 @@
 &trans             &td_caps_print  KP_3(Y, U, Z)  &td_quote               &kp UP        &trans             KP_4(H, D, G, Q)  &kp J
 &lt MEDIA_LAYER W  HML_GUI_TO_CTRL(A, E, I, O)    &trans       KP_3(LEFT, ENTER, RIGHT) &trans  HMR_CTRL_TO_GUI(R, S, T, N)  &to_kp NAV_LAYER P
 &kp LGUI           HML_CTRL_TO_GUI(X, V, F, C)    &trans  &kp SPACE    &kp DOWN         &trans  HMR_GUI_TO_CTRL(L, K, M, B)  &trans
-                                          &trans  &trans  &trans                &trans  &trans  &trans
+                            &trans  &kp_to LSHFT NAV_LAYER  &trans                      &trans  &trans  &lt MOUSE1_LAYER BSPC
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -454,7 +463,7 @@
 &kp J                         KP_4(Q, G, D, H)  &td_quote            &kp UP           &trans  KP_3(Z, U, Y) &td_caps_print  &trans
 &lt MEDIA_LAYER P  HML_GUI_TO_CTRL(N, T, S, R)  &trans       KP_3(LEFT, ENTER, RIGHT) &trans  HMR_CTRL_TO_GUI(O, I, E, A)   &to_kp NAV_X_LAYER W
 &trans             HML_CTRL_TO_GUI(B, M, K, L)  &trans  &kp SPACE    &kp DOWN         &trans  HMR_GUI_TO_CTRL(C, F, V, X)   &kp LGUI 
-                                        &trans  &trans  &trans                &trans  &trans  &trans
+                            &trans  &kp_to LSHFT NAV_X_LAYER  &trans                  &trans  &trans  &lt MOUSE1_LAYER BSPC
             >;
 
             sensor-bindings = <&scroll_encoder>;
