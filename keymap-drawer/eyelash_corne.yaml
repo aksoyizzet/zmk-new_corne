@@ -93,7 +93,7 @@ layers:
   - {t: B, h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: NAV, h: abc, type: held}
+  - {t: '$$mdi:apple-keyboard-shift$$', h: NAV, type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -142,7 +142,7 @@ layers:
   - {t: Sft+B, h: '$$mdi:apple-keyboard-control$$'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {type: held}
+  - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
